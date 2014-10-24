@@ -1,4 +1,4 @@
-If the make command does work:
+If the make command does not work:
 	This is because a new XCode changed the path.  You need to put the CrossPack compiler path before the /usr/bin/
 
 do a "echo $PATH"
