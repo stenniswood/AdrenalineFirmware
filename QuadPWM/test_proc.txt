@@ -1,0 +1,9 @@
+Steve's Test Methodology:
+===============================================
+A) "Hello world" / Bring to life test
+	Repeat for each unit
+B) Simple inter module connections Test	
+	Operate via CAN msg.
+C) Add robustness/more sophistication/
+	Define protocol
+D) 

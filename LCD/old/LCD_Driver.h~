@@ -1,0 +1,74 @@
+/*****************************************************************
+ * Driver for ACM0802C LCD Module (8 characters by 2 lines )
+ * on the Renesas SKP boards - header file
+ *
+ *  Copyright (c) 2003 Renesas Technology America, Inc.
+ *  All rights reserved.
+ *  v0.4 1/05/2004
+ *****************************************************************/
+#ifndef _LCD_DRIVER_H
+#define _LCD_DRIVER_H
+
+
+/**********************************************************************************/
+/* External Application Interface												  */
+/**********************************************************************************/
+byte Get_x_address();
+byte Get_y_address();
+byte Set_x_address(byte new_x);		// [0..7] Row number
+byte Set_y_address(byte new_y);		// [0..128] "column" ad
+byte Increment_y_address();
+byte Increment_x_address();
+void SendAddresses();  				// Send to display x and y address
+
+#define MAX_Y 128
+#define MAX_X 7
+
+
+/**********************************************************************************/
+/* External Application Interface												  */
+/**********************************************************************************/
+void InitDisplay				( void 					);
+void TransferBuffer				( _far char * buffer	);
+void TransferBufferFixedLength	( _far const char * mData, byte length );
+
+void send_controller_x_address	();
+void send_controller_y_address	();
+void send_controller_xy_address ( byte controller, char x, char y);
+void GotoAddress				( char x, char y		);
+//char Busy(char controller);
+void WaitForReset				( char controller		);
+void WaitForNotBusy				( char controller		);
+void LCD_write					( unsigned char data_or_ctrl, _far unsigned char value, char controller=1);
+void LCD_write_data				( _far unsigned char value, char controller=1);
+unsigned char LCD_read			( unsigned char data_or_ctrl, unsigned char controller);
+void DisplayDelay				( unsigned long int units);
+void DrawAllOn					( 						 );
+void Clear_EOL					( 						 );
+void DrawTach					( byte origy, byte origx, byte msetting);
+void DrawIcon					( byte origy, byte origx, _far struct stIcon* mIcon );
+
+
+/**********************************************************************************/
+// LCD commands - use disp_ctrlw function to write these commands to the LCD. 
+/**********************************************************************************/
+#define DISPLAY_ON  	0x3F	// 
+#define DISPLAY_OFF 	0x3E	// 
+#define SET_Y_ADDRESS	0x40	// Plus the 5 bit address
+#define SET_X_ADDRESS	0xB8	// Plus the 3 bit page
+#define SET_DISPLAY_START		0xC0	// Plus the 5 bit page
+
+#define BOTH   3				// Both controllers param
+#define DATA 1
+#define CTRL 0
+
+
+#endif
+
+/**********************************************************************************/
+/* NOT USED YET 																  */
+/**********************************************************************************/
+/*#define MAXIMUM_LINES		8		// number of lines on the LCD display
+#define NUMB_CHARS_PER_LINE	20		// Maximum charactors per line of LCD display.  
+#define LCD_LINE1 0
+#define LCD_LINE2 16 */

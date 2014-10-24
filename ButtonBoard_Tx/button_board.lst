@@ -1,0 +1,2027 @@
+
+button_board.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000016  00800100  000009c0  00000a54  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000009c0  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000046  00800116  00800116  00000a6a  2**0
+                  ALLOC
+  3 .stab         000006cc  00000000  00000000  00000a6c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  4 .stabstr      00000081  00000000  00000000  00001138  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_aranges 000000a0  00000000  00000000  000011b9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_pubnames 00000419  00000000  00000000  00001259  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_info   00001161  00000000  00000000  00001672  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_abbrev 000006f1  00000000  00000000  000027d3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_line   00000d8d  00000000  00000000  00002ec4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_frame  00000320  00000000  00000000  00003c54  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_str    0000082e  00000000  00000000  00003f74  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_loc    00000671  00000000  00000000  000047a2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_pubtypes 000000ad  00000000  00000000  00004e13  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_ranges 000000c8  00000000  00000000  00004ec0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__ctors_end>
+   4:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+   8:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+   c:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  10:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  14:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  18:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  1c:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  20:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  24:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  28:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  2c:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  30:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  34:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  38:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  3c:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  40:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  44:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  48:	0c 94 75 02 	jmp	0x4ea	; 0x4ea <__vector_18>
+  4c:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  50:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  54:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  58:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  5c:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  60:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  64:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  68:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  6c:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  70:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  74:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  78:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+
+0000007c <__ctors_end>:
+  7c:	11 24       	eor	r1, r1
+  7e:	1f be       	out	0x3f, r1	; 63
+  80:	cf ef       	ldi	r28, 0xFF	; 255
+  82:	d4 e0       	ldi	r29, 0x04	; 4
+  84:	de bf       	out	0x3e, r29	; 62
+  86:	cd bf       	out	0x3d, r28	; 61
+
+00000088 <__do_copy_data>:
+  88:	11 e0       	ldi	r17, 0x01	; 1
+  8a:	a0 e0       	ldi	r26, 0x00	; 0
+  8c:	b1 e0       	ldi	r27, 0x01	; 1
+  8e:	e0 ec       	ldi	r30, 0xC0	; 192
+  90:	f9 e0       	ldi	r31, 0x09	; 9
+  92:	02 c0       	rjmp	.+4      	; 0x98 <__do_copy_data+0x10>
+  94:	05 90       	lpm	r0, Z+
+  96:	0d 92       	st	X+, r0
+  98:	a6 31       	cpi	r26, 0x16	; 22
+  9a:	b1 07       	cpc	r27, r17
+  9c:	d9 f7       	brne	.-10     	; 0x94 <__do_copy_data+0xc>
+
+0000009e <__do_clear_bss>:
+  9e:	11 e0       	ldi	r17, 0x01	; 1
+  a0:	a6 e1       	ldi	r26, 0x16	; 22
+  a2:	b1 e0       	ldi	r27, 0x01	; 1
+  a4:	01 c0       	rjmp	.+2      	; 0xa8 <.do_clear_bss_start>
+
+000000a6 <.do_clear_bss_loop>:
+  a6:	1d 92       	st	X+, r1
+
+000000a8 <.do_clear_bss_start>:
+  a8:	ac 35       	cpi	r26, 0x5C	; 92
+  aa:	b1 07       	cpc	r27, r17
+  ac:	e1 f7       	brne	.-8      	; 0xa6 <.do_clear_bss_loop>
+  ae:	0e 94 a5 00 	call	0x14a	; 0x14a <main>
+  b2:	0c 94 de 04 	jmp	0x9bc	; 0x9bc <_exit>
+
+000000b6 <__bad_interrupt>:
+  b6:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000ba <_Z9chip_initv>:
+// Note - May want to set the CKDIV8 fuse if MCU is only supposed to run
+// at 8MHz so as not to exceed its operating conditions at startup.
+//   CLKPR = ( 1 << CLKPCE );       // Set Clock Prescaler change enable
+//   CLKPR = 0x01;            		// Clock Division Factor of 2
+// Note - CLKPR must be written within 4 clock cycles of setting CLKPCE
+   DDRB = 0xFF;    // PORT B to be outputs for LED monotoring
+  ba:	8f ef       	ldi	r24, 0xFF	; 255
+  bc:	84 b9       	out	0x04, r24	; 4
+   DDRC = 0x00;    // Inputs, not used
+  be:	17 b8       	out	0x07, r1	; 7
+   DDRE = 0x00;    // Inputs, not used
+  c0:	1d b8       	out	0x0d, r1	; 13
+   PORTB = 0xFE;   // ALL LEDs OFF
+  c2:	8e ef       	ldi	r24, 0xFE	; 254
+  c4:	85 b9       	out	0x05, r24	; 5
+   PORTC = 0x00;   // Inputs, not used
+  c6:	18 b8       	out	0x08, r1	; 8
+   PORTD = 0x00;   // Inputs, not used
+  c8:	1b b8       	out	0x0b, r1	; 11
+   PORTE = 0x00;   // Inputs, not used
+  ca:	1e b8       	out	0x0e, r1	; 14
+   PRR   = 0x00;   // Individual peripheral clocks enabled
+  cc:	10 92 64 00 	sts	0x0064, r1
+
+    DDRC |= 0x04;     		// PC 2, TXCAN Output
+  d0:	3a 9a       	sbi	0x07, 2	; 7
+    DDRC &= ~0x08;    		// PC 3, RXCAN Input
+  d2:	3b 98       	cbi	0x07, 3	; 7
+    PORTC &= ~0x08;   		
+  d4:	43 98       	cbi	0x08, 3	; 8
+
+	configure_leds();
+  d6:	0e 94 6d 04 	call	0x8da	; 0x8da <_Z14configure_ledsv>
+	
+	RESET_LED_1
+  da:	58 98       	cbi	0x0b, 0	; 11
+	RESET_LED_2
+  dc:	59 98       	cbi	0x0b, 1	; 11
+	RESET_LED_3
+  de:	5e 98       	cbi	0x0b, 6	; 11
+	RESET_LED_4
+  e0:	5f 98       	cbi	0x0b, 7	; 11
+}
+  e2:	08 95       	ret
+
+000000e4 <_Z14send_test_msgsv>:
+// 		Maybe a sign error somewhere top nibble is taken as signed char.
+//		Or the receiver buffer wasn't getting serviced properly.
+byte a = 0x11;
+void send_test_msgs()
+{
+	a = 0x00;
+  e4:	10 92 00 01 	sts	0x0100, r1
+	while (1) 
+	{
+		a += 0x01;
+  e8:	80 91 00 01 	lds	r24, 0x0100
+  ec:	8f 5f       	subi	r24, 0xFF	; 255
+  ee:	80 93 00 01 	sts	0x0100, r24
+		msg1.data[0] = a;
+  f2:	80 93 3d 01 	sts	0x013D, r24
+		SET_LED_1
+  f6:	58 9a       	sbi	0x0b, 0	; 11
+		RESET_LED_2   RESET_LED_3   RESET_LED_4 
+  f8:	59 98       	cbi	0x0b, 1	; 11
+  fa:	5e 98       	cbi	0x0b, 6	; 11
+  fc:	5f 98       	cbi	0x0b, 7	; 11
+		can_send_msg( 0, &msg1 	);
+  fe:	80 e0       	ldi	r24, 0x00	; 0
+ 100:	6a e3       	ldi	r22, 0x3A	; 58
+ 102:	71 e0       	ldi	r23, 0x01	; 1
+ 104:	0e 94 f6 03 	call	0x7ec	; 0x7ec <_Z12can_send_msghP4sCAN>
+		delay  (one_second/10);
+ 108:	60 e4       	ldi	r22, 0x40	; 64
+ 10a:	7c e9       	ldi	r23, 0x9C	; 156
+ 10c:	80 e0       	ldi	r24, 0x00	; 0
+ 10e:	90 e0       	ldi	r25, 0x00	; 0
+ 110:	0e 94 b0 00 	call	0x160	; 0x160 <_Z5delayl>
+		RESET_LED_1 
+ 114:	58 98       	cbi	0x0b, 0	; 11
+		delay  (one_second/10);
+ 116:	60 e4       	ldi	r22, 0x40	; 64
+ 118:	7c e9       	ldi	r23, 0x9C	; 156
+ 11a:	80 e0       	ldi	r24, 0x00	; 0
+ 11c:	90 e0       	ldi	r25, 0x00	; 0
+ 11e:	0e 94 b0 00 	call	0x160	; 0x160 <_Z5delayl>
+ 122:	e2 cf       	rjmp	.-60     	; 0xe8 <_Z14send_test_msgsv+0x4>
+
+00000124 <_Z16led_test_patternv>:
+	} 
+}
+
+void led_test_pattern()
+{
+	a = 0x00;
+ 124:	10 92 00 01 	sts	0x0100, r1
+	while (1) 
+	{
+		a += 0x11;
+ 128:	80 91 00 01 	lds	r24, 0x0100
+ 12c:	8f 5e       	subi	r24, 0xEF	; 239
+ 12e:	80 93 00 01 	sts	0x0100, r24
+		msg1.data[0] = a;
+ 132:	80 93 3d 01 	sts	0x013D, r24
+		show_byte( a, 0 );
+ 136:	60 e0       	ldi	r22, 0x00	; 0
+ 138:	0e 94 9f 04 	call	0x93e	; 0x93e <_Z9show_bytehh>
+		delay(one_second/2);
+ 13c:	60 e4       	ldi	r22, 0x40	; 64
+ 13e:	7d e0       	ldi	r23, 0x0D	; 13
+ 140:	83 e0       	ldi	r24, 0x03	; 3
+ 142:	90 e0       	ldi	r25, 0x00	; 0
+ 144:	0e 94 b0 00 	call	0x160	; 0x160 <_Z5delayl>
+ 148:	ef cf       	rjmp	.-34     	; 0x128 <_Z16led_test_patternv+0x4>
+
+0000014a <main>:
+//***** main *****************************************************
+int main(void)
+{
+	union uKeyRoster scan;
+	
+    chip_init();    // Chip initialization
+ 14a:	0e 94 5d 00 	call	0xba	; 0xba <_Z9chip_initv>
+	can_init();		/* Enables Mob0 for Reception! */
+ 14e:	0e 94 f5 02 	call	0x5ea	; 0x5ea <_Z8can_initv>
+	can_init_test_msg();
+ 152:	0e 94 27 04 	call	0x84e	; 0x84e <_Z17can_init_test_msgv>
+	byte result = CANSTMOB;
+ 156:	80 91 ee 00 	lds	r24, 0x00EE
+	
+	send_test_msgs();
+ 15a:	0e 94 72 00 	call	0xe4	; 0xe4 <_Z14send_test_msgsv>
+ 15e:	ff cf       	rjmp	.-2      	; 0x15e <main+0x14>
+
+00000160 <_Z5delayl>:
+byte keys2[NUM_ROWS];
+
+// Use volatile so that the compiler wont optimize the delay loop out
+volatile long int time_delay = 0;
+void delay( long int mdelay )
+{
+ 160:	9b 01       	movw	r18, r22
+ 162:	ac 01       	movw	r20, r24
+ 	 for (time_delay=0; time_delay<mdelay; time_delay++) {  };
+ 164:	10 92 32 01 	sts	0x0132, r1
+ 168:	10 92 33 01 	sts	0x0133, r1
+ 16c:	10 92 34 01 	sts	0x0134, r1
+ 170:	10 92 35 01 	sts	0x0135, r1
+ 174:	80 91 32 01 	lds	r24, 0x0132
+ 178:	90 91 33 01 	lds	r25, 0x0133
+ 17c:	a0 91 34 01 	lds	r26, 0x0134
+ 180:	b0 91 35 01 	lds	r27, 0x0135
+ 184:	82 17       	cp	r24, r18
+ 186:	93 07       	cpc	r25, r19
+ 188:	a4 07       	cpc	r26, r20
+ 18a:	b5 07       	cpc	r27, r21
+ 18c:	04 f5       	brge	.+64     	; 0x1ce <_Z5delayl+0x6e>
+ 18e:	80 91 32 01 	lds	r24, 0x0132
+ 192:	90 91 33 01 	lds	r25, 0x0133
+ 196:	a0 91 34 01 	lds	r26, 0x0134
+ 19a:	b0 91 35 01 	lds	r27, 0x0135
+ 19e:	01 96       	adiw	r24, 0x01	; 1
+ 1a0:	a1 1d       	adc	r26, r1
+ 1a2:	b1 1d       	adc	r27, r1
+ 1a4:	80 93 32 01 	sts	0x0132, r24
+ 1a8:	90 93 33 01 	sts	0x0133, r25
+ 1ac:	a0 93 34 01 	sts	0x0134, r26
+ 1b0:	b0 93 35 01 	sts	0x0135, r27
+ 1b4:	80 91 32 01 	lds	r24, 0x0132
+ 1b8:	90 91 33 01 	lds	r25, 0x0133
+ 1bc:	a0 91 34 01 	lds	r26, 0x0134
+ 1c0:	b0 91 35 01 	lds	r27, 0x0135
+ 1c4:	82 17       	cp	r24, r18
+ 1c6:	93 07       	cpc	r25, r19
+ 1c8:	a4 07       	cpc	r26, r20
+ 1ca:	b5 07       	cpc	r27, r21
+ 1cc:	04 f3       	brlt	.-64     	; 0x18e <_Z5delayl+0x2e>
+ 1ce:	08 95       	ret
+
+000001d0 <_Z15set_rows_outputv>:
+}
+
+/******************** ROW DDR (INPUT/OUTPUT) ******************/
+void set_rows_output()
+{
+  ROW_DDR |= ROW_DDR_MASK;
+ 1d0:	84 b1       	in	r24, 0x04	; 4
+ 1d2:	8c 67       	ori	r24, 0x7C	; 124
+ 1d4:	84 b9       	out	0x04, r24	; 4
+}
+ 1d6:	08 95       	ret
+
+000001d8 <_Z14set_rows_inputv>:
+void set_rows_input()
+{
+  ROW_DDR &= (~ROW_DDR_MASK);
+ 1d8:	84 b1       	in	r24, 0x04	; 4
+ 1da:	83 78       	andi	r24, 0x83	; 131
+ 1dc:	84 b9       	out	0x04, r24	; 4
+}
+ 1de:	08 95       	ret
+
+000001e0 <_Z12all_rows_lowv>:
+void all_rows_low()
+{  
+  ROW_PORT &= (~ROW_DDR_MASK);
+ 1e0:	85 b1       	in	r24, 0x05	; 5
+ 1e2:	83 78       	andi	r24, 0x83	; 131
+ 1e4:	85 b9       	out	0x05, r24	; 5
+}
+ 1e6:	08 95       	ret
+
+000001e8 <_Z13all_rows_highv>:
+void all_rows_high()
+{
+  ROW_PORT |= ROW_DDR_MASK;
+ 1e8:	85 b1       	in	r24, 0x05	; 5
+ 1ea:	8c 67       	ori	r24, 0x7C	; 124
+ 1ec:	85 b9       	out	0x05, r24	; 5
+}
+ 1ee:	08 95       	ret
+
+000001f0 <_Z7set_rowhh>:
+/********************************************************
+ Then to isolate the row, put all rows high except for 1 
+ *******************************************************/
+void set_row(byte mRow, byte mHigh)
+{
+  switch (mRow)
+ 1f0:	82 30       	cpi	r24, 0x02	; 2
+ 1f2:	b9 f0       	breq	.+46     	; 0x222 <_Z7set_rowhh+0x32>
+ 1f4:	83 30       	cpi	r24, 0x03	; 3
+ 1f6:	28 f0       	brcs	.+10     	; 0x202 <_Z7set_rowhh+0x12>
+ 1f8:	83 30       	cpi	r24, 0x03	; 3
+ 1fa:	b9 f0       	breq	.+46     	; 0x22a <_Z7set_rowhh+0x3a>
+ 1fc:	84 30       	cpi	r24, 0x04	; 4
+ 1fe:	69 f0       	breq	.+26     	; 0x21a <_Z7set_rowhh+0x2a>
+ 200:	08 95       	ret
+ 202:	88 23       	and	r24, r24
+ 204:	31 f0       	breq	.+12     	; 0x212 <_Z7set_rowhh+0x22>
+ 206:	81 30       	cpi	r24, 0x01	; 1
+ 208:	d9 f7       	brne	.-10     	; 0x200 <_Z7set_rowhh+0x10>
+  {
+    case 0 : if (mHigh) ROW_PORT|= ROW0; else ROW_PORT &= ~ROW0; break;		// Front Row
+    case 1 : if (mHigh) ROW_PORT|= ROW1; else ROW_PORT &= ~ROW1; break;    	// Top   Row
+ 20a:	66 23       	and	r22, r22
+ 20c:	91 f0       	breq	.+36     	; 0x232 <_Z7set_rowhh+0x42>
+ 20e:	2b 9a       	sbi	0x05, 3	; 5
+ 210:	08 95       	ret
+ *******************************************************/
+void set_row(byte mRow, byte mHigh)
+{
+  switch (mRow)
+  {
+    case 0 : if (mHigh) ROW_PORT|= ROW0; else ROW_PORT &= ~ROW0; break;		// Front Row
+ 212:	66 23       	and	r22, r22
+ 214:	81 f0       	breq	.+32     	; 0x236 <_Z7set_rowhh+0x46>
+ 216:	2a 9a       	sbi	0x05, 2	; 5
+ 218:	08 95       	ret
+    case 1 : if (mHigh) ROW_PORT|= ROW1; else ROW_PORT &= ~ROW1; break;    	// Top   Row
+    case 2 : if (mHigh) ROW_PORT|= ROW2; else ROW_PORT &= ~ROW2; break;		// Row	2
+    case 3 : if (mHigh) ROW_PORT|= ROW3; else ROW_PORT &= ~ROW3; break; 	// Row	3
+    case 4 : if (mHigh) ROW_PORT|= ROW4; else ROW_PORT &= ~ROW4; break;		// Row  4
+ 21a:	66 23       	and	r22, r22
+ 21c:	91 f4       	brne	.+36     	; 0x242 <_Z7set_rowhh+0x52>
+ 21e:	2e 98       	cbi	0x05, 6	; 5
+ 220:	08 95       	ret
+{
+  switch (mRow)
+  {
+    case 0 : if (mHigh) ROW_PORT|= ROW0; else ROW_PORT &= ~ROW0; break;		// Front Row
+    case 1 : if (mHigh) ROW_PORT|= ROW1; else ROW_PORT &= ~ROW1; break;    	// Top   Row
+    case 2 : if (mHigh) ROW_PORT|= ROW2; else ROW_PORT &= ~ROW2; break;		// Row	2
+ 222:	66 23       	and	r22, r22
+ 224:	51 f0       	breq	.+20     	; 0x23a <_Z7set_rowhh+0x4a>
+ 226:	2c 9a       	sbi	0x05, 4	; 5
+ 228:	08 95       	ret
+    case 3 : if (mHigh) ROW_PORT|= ROW3; else ROW_PORT &= ~ROW3; break; 	// Row	3
+ 22a:	66 23       	and	r22, r22
+ 22c:	41 f0       	breq	.+16     	; 0x23e <_Z7set_rowhh+0x4e>
+ 22e:	2d 9a       	sbi	0x05, 5	; 5
+ 230:	08 95       	ret
+void set_row(byte mRow, byte mHigh)
+{
+  switch (mRow)
+  {
+    case 0 : if (mHigh) ROW_PORT|= ROW0; else ROW_PORT &= ~ROW0; break;		// Front Row
+    case 1 : if (mHigh) ROW_PORT|= ROW1; else ROW_PORT &= ~ROW1; break;    	// Top   Row
+ 232:	2b 98       	cbi	0x05, 3	; 5
+ 234:	08 95       	ret
+ *******************************************************/
+void set_row(byte mRow, byte mHigh)
+{
+  switch (mRow)
+  {
+    case 0 : if (mHigh) ROW_PORT|= ROW0; else ROW_PORT &= ~ROW0; break;		// Front Row
+ 236:	2a 98       	cbi	0x05, 2	; 5
+ 238:	08 95       	ret
+    case 1 : if (mHigh) ROW_PORT|= ROW1; else ROW_PORT &= ~ROW1; break;    	// Top   Row
+    case 2 : if (mHigh) ROW_PORT|= ROW2; else ROW_PORT &= ~ROW2; break;		// Row	2
+ 23a:	2c 98       	cbi	0x05, 4	; 5
+ 23c:	08 95       	ret
+    case 3 : if (mHigh) ROW_PORT|= ROW3; else ROW_PORT &= ~ROW3; break; 	// Row	3
+ 23e:	2d 98       	cbi	0x05, 5	; 5
+ 240:	08 95       	ret
+    case 4 : if (mHigh) ROW_PORT|= ROW4; else ROW_PORT &= ~ROW4; break;		// Row  4
+ 242:	2e 9a       	sbi	0x05, 6	; 5
+ 244:	08 95       	ret
+
+00000246 <_Z18set_switches_inputv>:
+}
+
+/******************** SWITCHES ******************/
+void set_switches_input()
+{
+	SWITCH_DDR &= (~SWITCH_DDR_MASK);
+ 246:	87 b1       	in	r24, 0x07	; 7
+ 248:	8f 70       	andi	r24, 0x0F	; 15
+ 24a:	87 b9       	out	0x07, r24	; 7
+}
+ 24c:	08 95       	ret
+
+0000024e <_Z19set_switches_outputv>:
+void set_switches_output()
+{
+	SWITCH_DDR |= SWITCH_DDR_MASK;
+ 24e:	87 b1       	in	r24, 0x07	; 7
+ 250:	80 6f       	ori	r24, 0xF0	; 240
+ 252:	87 b9       	out	0x07, r24	; 7
+}
+ 254:	08 95       	ret
+
+00000256 <_Z13read_switchesv>:
+	0xDF => 1101 a button in both col 5 is pushed
+********************************************************/
+byte read_switches()
+{
+  byte combined;
+  combined = (SWITCH_IN_PORT & SWITCH_DDR_MASK);
+ 256:	86 b1       	in	r24, 0x06	; 6
+  return combined;
+}
+ 258:	80 7f       	andi	r24, 0xF0	; 240
+ 25a:	08 95       	ret
+
+0000025c <_Z10pack_arrayPh>:
+
+ //static union uKeyRoster retval;
+union uKeyRoster pack_array( byte* mKeyArray )
+{
+	static union uKeyRoster retval;
+	byte index = 0;
+ 25c:	e8 2f       	mov	r30, r24
+ 25e:	f9 2f       	mov	r31, r25
+
+	// combine odd rows into lower nibble.
+	// all keys should only take 2.5 bytes
+	// extra .5 byte stores count of keys pressed.
+	for (int i=0; i<NUM_ROWS; i++)
+ 260:	80 e0       	ldi	r24, 0x00	; 0
+ 262:	90 e0       	ldi	r25, 0x00	; 0
+
+ //static union uKeyRoster retval;
+union uKeyRoster pack_array( byte* mKeyArray )
+{
+	static union uKeyRoster retval;
+	byte index = 0;
+ 264:	20 e0       	ldi	r18, 0x00	; 0
+	// combine odd rows into lower nibble.
+	// all keys should only take 2.5 bytes
+	// extra .5 byte stores count of keys pressed.
+	for (int i=0; i<NUM_ROWS; i++)
+	{
+		if ((i%2)==0)
+ 266:	80 fd       	sbrc	r24, 0
+ 268:	14 c0       	rjmp	.+40     	; 0x292 <_Z10pack_arrayPh+0x36>
+			retval.array[index] = mKeyArray[i];							// upper nibble
+ 26a:	a2 2f       	mov	r26, r18
+ 26c:	b0 e0       	ldi	r27, 0x00	; 0
+ 26e:	aa 5c       	subi	r26, 0xCA	; 202
+ 270:	be 4f       	sbci	r27, 0xFE	; 254
+ 272:	30 81       	ld	r19, Z
+ 274:	3c 93       	st	X, r19
+	byte index = 0;
+
+	// combine odd rows into lower nibble.
+	// all keys should only take 2.5 bytes
+	// extra .5 byte stores count of keys pressed.
+	for (int i=0; i<NUM_ROWS; i++)
+ 276:	01 96       	adiw	r24, 0x01	; 1
+ 278:	31 96       	adiw	r30, 0x01	; 1
+ 27a:	85 30       	cpi	r24, 0x05	; 5
+ 27c:	91 05       	cpc	r25, r1
+ 27e:	99 f7       	brne	.-26     	; 0x266 <_Z10pack_arrayPh+0xa>
+		else {
+			retval.array[index] |= ((mKeyArray[i] & 0xF0) >> 4);		// lower nibble
+			index++;
+		}
+	}
+	return retval;
+ 280:	60 91 36 01 	lds	r22, 0x0136
+ 284:	70 91 37 01 	lds	r23, 0x0137
+}
+ 288:	80 91 38 01 	lds	r24, 0x0138
+ 28c:	90 91 39 01 	lds	r25, 0x0139
+ 290:	08 95       	ret
+	for (int i=0; i<NUM_ROWS; i++)
+	{
+		if ((i%2)==0)
+			retval.array[index] = mKeyArray[i];							// upper nibble
+		else {
+			retval.array[index] |= ((mKeyArray[i] & 0xF0) >> 4);		// lower nibble
+ 292:	a2 2f       	mov	r26, r18
+ 294:	b0 e0       	ldi	r27, 0x00	; 0
+ 296:	aa 5c       	subi	r26, 0xCA	; 202
+ 298:	be 4f       	sbci	r27, 0xFE	; 254
+ 29a:	40 81       	ld	r20, Z
+ 29c:	42 95       	swap	r20
+ 29e:	4f 70       	andi	r20, 0x0F	; 15
+ 2a0:	3c 91       	ld	r19, X
+ 2a2:	34 2b       	or	r19, r20
+ 2a4:	3c 93       	st	X, r19
+			index++;
+ 2a6:	2f 5f       	subi	r18, 0xFF	; 255
+ 2a8:	e6 cf       	rjmp	.-52     	; 0x276 <_Z10pack_arrayPh+0x1a>
+
+000002aa <_Z9scan_keysPh>:
+array[2] 	 	 Row (4)
+array[3] 	  	 Row (3)
+array[4]   		 Row (2)
+************************************************/
+void scan_keys( byte* mkeys )
+{
+ 2aa:	ff 92       	push	r15
+ 2ac:	0f 93       	push	r16
+ 2ae:	1f 93       	push	r17
+ 2b0:	cf 93       	push	r28
+ 2b2:	df 93       	push	r29
+{  
+  ROW_PORT &= (~ROW_DDR_MASK);
+}
+void all_rows_high()
+{
+  ROW_PORT |= ROW_DDR_MASK;
+ 2b4:	25 b1       	in	r18, 0x05	; 5
+ 2b6:	2c 67       	ori	r18, 0x7C	; 124
+ 2b8:	25 b9       	out	0x05, r18	; 5
+ 2ba:	08 2f       	mov	r16, r24
+ 2bc:	19 2f       	mov	r17, r25
+array[4]   		 Row (2)
+************************************************/
+void scan_keys( byte* mkeys )
+{
+  all_rows_high();
+  for (int i=0; i<NUM_ROWS; i++)
+ 2be:	c0 e0       	ldi	r28, 0x00	; 0
+ 2c0:	d0 e0       	ldi	r29, 0x00	; 0
+{  
+  ROW_PORT &= (~ROW_DDR_MASK);
+}
+void all_rows_high()
+{
+  ROW_PORT |= ROW_DDR_MASK;
+ 2c2:	fc 2e       	mov	r15, r28
+void scan_keys( byte* mkeys )
+{
+  all_rows_high();
+  for (int i=0; i<NUM_ROWS; i++)
+  {
+     set_row( i, 0 );
+ 2c4:	8c 2f       	mov	r24, r28
+ 2c6:	60 e0       	ldi	r22, 0x00	; 0
+ 2c8:	0e 94 f8 00 	call	0x1f0	; 0x1f0 <_Z7set_rowhh>
+
+// Use volatile so that the compiler wont optimize the delay loop out
+volatile long int time_delay = 0;
+void delay( long int mdelay )
+{
+ 	 for (time_delay=0; time_delay<mdelay; time_delay++) {  };
+ 2cc:	10 92 32 01 	sts	0x0132, r1
+ 2d0:	10 92 33 01 	sts	0x0133, r1
+ 2d4:	10 92 34 01 	sts	0x0134, r1
+ 2d8:	10 92 35 01 	sts	0x0135, r1
+ 2dc:	20 91 32 01 	lds	r18, 0x0132
+ 2e0:	30 91 33 01 	lds	r19, 0x0133
+ 2e4:	40 91 34 01 	lds	r20, 0x0134
+ 2e8:	50 91 35 01 	lds	r21, 0x0135
+ 2ec:	20 3a       	cpi	r18, 0xA0	; 160
+ 2ee:	31 05       	cpc	r19, r1
+ 2f0:	41 05       	cpc	r20, r1
+ 2f2:	51 05       	cpc	r21, r1
+ 2f4:	0c f5       	brge	.+66     	; 0x338 <_Z9scan_keysPh+0x8e>
+ 2f6:	20 91 32 01 	lds	r18, 0x0132
+ 2fa:	30 91 33 01 	lds	r19, 0x0133
+ 2fe:	40 91 34 01 	lds	r20, 0x0134
+ 302:	50 91 35 01 	lds	r21, 0x0135
+ 306:	2f 5f       	subi	r18, 0xFF	; 255
+ 308:	3f 4f       	sbci	r19, 0xFF	; 255
+ 30a:	4f 4f       	sbci	r20, 0xFF	; 255
+ 30c:	5f 4f       	sbci	r21, 0xFF	; 255
+ 30e:	20 93 32 01 	sts	0x0132, r18
+ 312:	30 93 33 01 	sts	0x0133, r19
+ 316:	40 93 34 01 	sts	0x0134, r20
+ 31a:	50 93 35 01 	sts	0x0135, r21
+ 31e:	20 91 32 01 	lds	r18, 0x0132
+ 322:	30 91 33 01 	lds	r19, 0x0133
+ 326:	40 91 34 01 	lds	r20, 0x0134
+ 32a:	50 91 35 01 	lds	r21, 0x0135
+ 32e:	20 3a       	cpi	r18, 0xA0	; 160
+ 330:	31 05       	cpc	r19, r1
+ 332:	41 05       	cpc	r20, r1
+ 334:	51 05       	cpc	r21, r1
+ 336:	fc f2       	brlt	.-66     	; 0x2f6 <_Z9scan_keysPh+0x4c>
+	0xDF => 1101 a button in both col 5 is pushed
+********************************************************/
+byte read_switches()
+{
+  byte combined;
+  combined = (SWITCH_IN_PORT & SWITCH_DDR_MASK);
+ 338:	86 b1       	in	r24, 0x06	; 6
+ 33a:	80 7f       	andi	r24, 0xF0	; 240
+  all_rows_high();
+  for (int i=0; i<NUM_ROWS; i++)
+  {
+     set_row( i, 0 );
+	 delay(CHARGE_TIME);
+	 mkeys[i] = read_switches();		// upper nibble
+ 33c:	f8 01       	movw	r30, r16
+ 33e:	81 93       	st	Z+, r24
+ 340:	8f 01       	movw	r16, r30
+     set_row( i, 1 );				// restore so not to affect the next row
+ 342:	8f 2d       	mov	r24, r15
+ 344:	61 e0       	ldi	r22, 0x01	; 1
+ 346:	0e 94 f8 00 	call	0x1f0	; 0x1f0 <_Z7set_rowhh>
+array[4]   		 Row (2)
+************************************************/
+void scan_keys( byte* mkeys )
+{
+  all_rows_high();
+  for (int i=0; i<NUM_ROWS; i++)
+ 34a:	21 96       	adiw	r28, 0x01	; 1
+ 34c:	c5 30       	cpi	r28, 0x05	; 5
+ 34e:	d1 05       	cpc	r29, r1
+ 350:	09 f0       	breq	.+2      	; 0x354 <_Z9scan_keysPh+0xaa>
+ 352:	b7 cf       	rjmp	.-146    	; 0x2c2 <_Z9scan_keysPh+0x18>
+     set_row( i, 0 );
+	 delay(CHARGE_TIME);
+	 mkeys[i] = read_switches();		// upper nibble
+     set_row( i, 1 );				// restore so not to affect the next row
+  }
+}
+ 354:	df 91       	pop	r29
+ 356:	cf 91       	pop	r28
+ 358:	1f 91       	pop	r17
+ 35a:	0f 91       	pop	r16
+ 35c:	ff 90       	pop	r15
+ 35e:	08 95       	ret
+
+00000360 <_Z16check_for_changePhS_>:
+  for (int i=0; i<NUM_ROWS; i++)
+  {
+	 if (mSrc1[i] != mSrc2[i])
+	    return 1;
+  }
+  return 0;
+ 360:	a8 2f       	mov	r26, r24
+ 362:	b9 2f       	mov	r27, r25
+ 364:	e6 2f       	mov	r30, r22
+ 366:	f7 2f       	mov	r31, r23
+Return:	TRUE - Difference found
+		FALSE - No Change
+*/
+BOOL check_for_change( byte* mSrc1, byte* mSrc2 )
+{  
+  for (int i=0; i<NUM_ROWS; i++)
+ 368:	80 e0       	ldi	r24, 0x00	; 0
+ 36a:	90 e0       	ldi	r25, 0x00	; 0
+  {
+	 if (mSrc1[i] != mSrc2[i])
+ 36c:	3d 91       	ld	r19, X+
+ 36e:	21 91       	ld	r18, Z+
+ 370:	32 17       	cp	r19, r18
+ 372:	31 f4       	brne	.+12     	; 0x380 <_Z16check_for_changePhS_+0x20>
+Return:	TRUE - Difference found
+		FALSE - No Change
+*/
+BOOL check_for_change( byte* mSrc1, byte* mSrc2 )
+{  
+  for (int i=0; i<NUM_ROWS; i++)
+ 374:	01 96       	adiw	r24, 0x01	; 1
+ 376:	85 30       	cpi	r24, 0x05	; 5
+ 378:	91 05       	cpc	r25, r1
+ 37a:	c1 f7       	brne	.-16     	; 0x36c <_Z16check_for_changePhS_+0xc>
+  {
+	 if (mSrc1[i] != mSrc2[i])
+	    return 1;
+  }
+  return 0;
+ 37c:	80 e0       	ldi	r24, 0x00	; 0
+ 37e:	08 95       	ret
+BOOL check_for_change( byte* mSrc1, byte* mSrc2 )
+{  
+  for (int i=0; i<NUM_ROWS; i++)
+  {
+	 if (mSrc1[i] != mSrc2[i])
+	    return 1;
+ 380:	81 e0       	ldi	r24, 0x01	; 1
+  }
+  return 0;
+}
+ 382:	08 95       	ret
+
+00000384 <_Z16update_prev_keysv>:
+
+void update_prev_keys()
+{  
+  for (int i=0; i<NUM_ROWS; i++)
+	 prev_keys[i] = keys[i];
+ 384:	80 91 28 01 	lds	r24, 0x0128
+ 388:	80 93 23 01 	sts	0x0123, r24
+ 38c:	80 91 29 01 	lds	r24, 0x0129
+ 390:	80 93 24 01 	sts	0x0124, r24
+ 394:	80 91 2a 01 	lds	r24, 0x012A
+ 398:	80 93 25 01 	sts	0x0125, r24
+ 39c:	80 91 2b 01 	lds	r24, 0x012B
+ 3a0:	80 93 26 01 	sts	0x0126, r24
+ 3a4:	80 91 2c 01 	lds	r24, 0x012C
+ 3a8:	80 93 27 01 	sts	0x0127, r24
+}
+ 3ac:	08 95       	ret
+
+000003ae <_Z14wait_for_pressv>:
+Return :  The column(s) affected are the 0 bits.
+ie.  0xEF  means a button on SW4 column is pushed.
+ie.  0x7F  means a button on SW4 & SW3 columns are pushed.
+***********************************************************/
+void wait_for_press()
+{
+ 3ae:	cf 93       	push	r28
+ 3b0:	df 93       	push	r29
+}
+
+/******************** ROW DDR (INPUT/OUTPUT) ******************/
+void set_rows_output()
+{
+  ROW_DDR |= ROW_DDR_MASK;
+ 3b2:	84 b1       	in	r24, 0x04	; 4
+ 3b4:	8c 67       	ori	r24, 0x7C	; 124
+ 3b6:	84 b9       	out	0x04, r24	; 4
+{
+  ROW_DDR &= (~ROW_DDR_MASK);
+}
+void all_rows_low()
+{  
+  ROW_PORT &= (~ROW_DDR_MASK);
+ 3b8:	85 b1       	in	r24, 0x05	; 5
+ 3ba:	83 78       	andi	r24, 0x83	; 131
+ 3bc:	85 b9       	out	0x05, r24	; 5
+}
+
+/******************** SWITCHES ******************/
+void set_switches_input()
+{
+	SWITCH_DDR &= (~SWITCH_DDR_MASK);
+ 3be:	87 b1       	in	r24, 0x07	; 7
+ 3c0:	8f 70       	andi	r24, 0x0F	; 15
+ 3c2:	87 b9       	out	0x07, r24	; 7
+	// If there are no glitches _slower_ than 5ms.  This will work.
+
+	// repeat until first sign of change:
+	do {
+		do { 
+			scan_keys(keys);
+ 3c4:	88 e2       	ldi	r24, 0x28	; 40
+ 3c6:	91 e0       	ldi	r25, 0x01	; 1
+ 3c8:	0e 94 55 01 	call	0x2aa	; 0x2aa <_Z9scan_keysPh>
+ 3cc:	c3 e2       	ldi	r28, 0x23	; 35
+ 3ce:	d1 e0       	ldi	r29, 0x01	; 1
+ 3d0:	a8 e2       	ldi	r26, 0x28	; 40
+ 3d2:	b1 e0       	ldi	r27, 0x01	; 1
+/***********************************************************
+Return :  The column(s) affected are the 0 bits.
+ie.  0xEF  means a button on SW4 column is pushed.
+ie.  0x7F  means a button on SW4 & SW3 columns are pushed.
+***********************************************************/
+void wait_for_press()
+ 3d4:	fe 01       	movw	r30, r28
+*/
+BOOL check_for_change( byte* mSrc1, byte* mSrc2 )
+{  
+  for (int i=0; i<NUM_ROWS; i++)
+  {
+	 if (mSrc1[i] != mSrc2[i])
+ 3d6:	91 91       	ld	r25, Z+
+ 3d8:	8d 91       	ld	r24, X+
+ 3da:	98 17       	cp	r25, r24
+ 3dc:	41 f4       	brne	.+16     	; 0x3ee <_Z14wait_for_pressv+0x40>
+Return:	TRUE - Difference found
+		FALSE - No Change
+*/
+BOOL check_for_change( byte* mSrc1, byte* mSrc2 )
+{  
+  for (int i=0; i<NUM_ROWS; i++)
+ 3de:	81 e0       	ldi	r24, 0x01	; 1
+ 3e0:	e8 32       	cpi	r30, 0x28	; 40
+ 3e2:	f8 07       	cpc	r31, r24
+ 3e4:	79 f3       	breq	.-34     	; 0x3c4 <_Z14wait_for_pressv+0x16>
+  {
+	 if (mSrc1[i] != mSrc2[i])
+ 3e6:	91 91       	ld	r25, Z+
+ 3e8:	8d 91       	ld	r24, X+
+ 3ea:	98 17       	cp	r25, r24
+ 3ec:	c1 f3       	breq	.-16     	; 0x3de <_Z14wait_for_pressv+0x30>
+
+// Use volatile so that the compiler wont optimize the delay loop out
+volatile long int time_delay = 0;
+void delay( long int mdelay )
+{
+ 	 for (time_delay=0; time_delay<mdelay; time_delay++) {  };
+ 3ee:	10 92 32 01 	sts	0x0132, r1
+ 3f2:	10 92 33 01 	sts	0x0133, r1
+ 3f6:	10 92 34 01 	sts	0x0134, r1
+ 3fa:	10 92 35 01 	sts	0x0135, r1
+ 3fe:	80 91 32 01 	lds	r24, 0x0132
+ 402:	90 91 33 01 	lds	r25, 0x0133
+ 406:	a0 91 34 01 	lds	r26, 0x0134
+ 40a:	b0 91 35 01 	lds	r27, 0x0135
+ 40e:	85 30       	cpi	r24, 0x05	; 5
+ 410:	91 05       	cpc	r25, r1
+ 412:	a1 05       	cpc	r26, r1
+ 414:	b1 05       	cpc	r27, r1
+ 416:	04 f5       	brge	.+64     	; 0x458 <_Z14wait_for_pressv+0xaa>
+ 418:	80 91 32 01 	lds	r24, 0x0132
+ 41c:	90 91 33 01 	lds	r25, 0x0133
+ 420:	a0 91 34 01 	lds	r26, 0x0134
+ 424:	b0 91 35 01 	lds	r27, 0x0135
+ 428:	01 96       	adiw	r24, 0x01	; 1
+ 42a:	a1 1d       	adc	r26, r1
+ 42c:	b1 1d       	adc	r27, r1
+ 42e:	80 93 32 01 	sts	0x0132, r24
+ 432:	90 93 33 01 	sts	0x0133, r25
+ 436:	a0 93 34 01 	sts	0x0134, r26
+ 43a:	b0 93 35 01 	sts	0x0135, r27
+ 43e:	80 91 32 01 	lds	r24, 0x0132
+ 442:	90 91 33 01 	lds	r25, 0x0133
+ 446:	a0 91 34 01 	lds	r26, 0x0134
+ 44a:	b0 91 35 01 	lds	r27, 0x0135
+ 44e:	85 30       	cpi	r24, 0x05	; 5
+ 450:	91 05       	cpc	r25, r1
+ 452:	a1 05       	cpc	r26, r1
+ 454:	b1 05       	cpc	r27, r1
+ 456:	04 f3       	brlt	.-64     	; 0x418 <_Z14wait_for_pressv+0x6a>
+		/* Reread : 
+			if still different from previous, 
+				then real debounce event
+			if return to previous,
+				then ignore the event		*/
+			scan_keys( keys2 );
+ 458:	8d e2       	ldi	r24, 0x2D	; 45
+ 45a:	91 e0       	ldi	r25, 0x01	; 1
+ 45c:	0e 94 55 01 	call	0x2aa	; 0x2aa <_Z9scan_keysPh>
+ 460:	ed e2       	ldi	r30, 0x2D	; 45
+ 462:	f1 e0       	ldi	r31, 0x01	; 1
+*/
+BOOL check_for_change( byte* mSrc1, byte* mSrc2 )
+{  
+  for (int i=0; i<NUM_ROWS; i++)
+  {
+	 if (mSrc1[i] != mSrc2[i])
+ 464:	99 91       	ld	r25, Y+
+ 466:	81 91       	ld	r24, Z+
+ 468:	98 17       	cp	r25, r24
+ 46a:	49 f4       	brne	.+18     	; 0x47e <_Z14wait_for_pressv+0xd0>
+Return:	TRUE - Difference found
+		FALSE - No Change
+*/
+BOOL check_for_change( byte* mSrc1, byte* mSrc2 )
+{  
+  for (int i=0; i<NUM_ROWS; i++)
+ 46c:	81 e0       	ldi	r24, 0x01	; 1
+ 46e:	c8 32       	cpi	r28, 0x28	; 40
+ 470:	d8 07       	cpc	r29, r24
+ 472:	09 f4       	brne	.+2      	; 0x476 <_Z14wait_for_pressv+0xc8>
+ 474:	a7 cf       	rjmp	.-178    	; 0x3c4 <_Z14wait_for_pressv+0x16>
+  {
+	 if (mSrc1[i] != mSrc2[i])
+ 476:	99 91       	ld	r25, Y+
+ 478:	81 91       	ld	r24, Z+
+ 47a:	98 17       	cp	r25, r24
+ 47c:	b9 f3       	breq	.-18     	; 0x46c <_Z14wait_for_pressv+0xbe>
+}
+
+void update_prev_keys()
+{  
+  for (int i=0; i<NUM_ROWS; i++)
+	 prev_keys[i] = keys[i];
+ 47e:	80 91 28 01 	lds	r24, 0x0128
+ 482:	80 93 23 01 	sts	0x0123, r24
+ 486:	80 91 29 01 	lds	r24, 0x0129
+ 48a:	80 93 24 01 	sts	0x0124, r24
+ 48e:	80 91 2a 01 	lds	r24, 0x012A
+ 492:	80 93 25 01 	sts	0x0125, r24
+ 496:	80 91 2b 01 	lds	r24, 0x012B
+ 49a:	80 93 26 01 	sts	0x0126, r24
+ 49e:	80 91 2c 01 	lds	r24, 0x012C
+ 4a2:	80 93 27 01 	sts	0x0127, r24
+			change = check_for_change( prev_keys, keys2 );
+	} while	( change==0 );
+
+	// Real event!
+	update_prev_keys();
+}
+ 4a6:	df 91       	pop	r29
+ 4a8:	cf 91       	pop	r28
+ 4aa:	08 95       	ret
+
+000004ac <_Z10get_columnh>:
+{
+	//mColByte = ~mColByte;		// pushed will be a 1.  all others zero
+	for (int i=4; i<8; i++)
+		if ((mColByte & (1<<i))==0)
+			return	i-4;
+    return -1;
+ 4ac:	90 e0       	ldi	r25, 0x00	; 0
+Converts the upper nibble of the column into an actual index
+*************************************************************/
+byte get_column(byte mColByte)
+{
+	//mColByte = ~mColByte;		// pushed will be a 1.  all others zero
+	for (int i=4; i<8; i++)
+ 4ae:	24 e0       	ldi	r18, 0x04	; 4
+ 4b0:	30 e0       	ldi	r19, 0x00	; 0
+		if ((mColByte & (1<<i))==0)
+ 4b2:	ac 01       	movw	r20, r24
+ 4b4:	02 2e       	mov	r0, r18
+ 4b6:	02 c0       	rjmp	.+4      	; 0x4bc <_Z10get_columnh+0x10>
+ 4b8:	55 95       	asr	r21
+ 4ba:	47 95       	ror	r20
+ 4bc:	0a 94       	dec	r0
+ 4be:	e2 f7       	brpl	.-8      	; 0x4b8 <_Z10get_columnh+0xc>
+ 4c0:	40 ff       	sbrs	r20, 0
+ 4c2:	07 c0       	rjmp	.+14     	; 0x4d2 <_Z10get_columnh+0x26>
+Converts the upper nibble of the column into an actual index
+*************************************************************/
+byte get_column(byte mColByte)
+{
+	//mColByte = ~mColByte;		// pushed will be a 1.  all others zero
+	for (int i=4; i<8; i++)
+ 4c4:	2f 5f       	subi	r18, 0xFF	; 255
+ 4c6:	3f 4f       	sbci	r19, 0xFF	; 255
+ 4c8:	28 30       	cpi	r18, 0x08	; 8
+ 4ca:	31 05       	cpc	r19, r1
+ 4cc:	91 f7       	brne	.-28     	; 0x4b2 <_Z10get_columnh+0x6>
+		if ((mColByte & (1<<i))==0)
+			return	i-4;
+    return -1;
+ 4ce:	8f ef       	ldi	r24, 0xFF	; 255
+}
+ 4d0:	08 95       	ret
+byte get_column(byte mColByte)
+{
+	//mColByte = ~mColByte;		// pushed will be a 1.  all others zero
+	for (int i=4; i<8; i++)
+		if ((mColByte & (1<<i))==0)
+			return	i-4;
+ 4d2:	82 2f       	mov	r24, r18
+ 4d4:	84 50       	subi	r24, 0x04	; 4
+ 4d6:	08 95       	ret
+
+000004d8 <_Z11lookup_charhh>:
+mRow - zero indexed ROW_DDR
+mCol - zero indexed COL
+************************************/
+char lookup_char( byte mRow, byte mCol )
+{
+	byte index = (mRow * MAX_COL) + mCol;
+ 4d8:	88 0f       	add	r24, r24
+ 4da:	88 0f       	add	r24, r24
+ 4dc:	68 0f       	add	r22, r24
+	return assigned_characters[index];
+ 4de:	e1 e0       	ldi	r30, 0x01	; 1
+ 4e0:	f1 e0       	ldi	r31, 0x01	; 1
+ 4e2:	e6 0f       	add	r30, r22
+ 4e4:	f1 1d       	adc	r31, r1
+}
+ 4e6:	80 81       	ld	r24, Z
+ 4e8:	08 95       	ret
+
+000004ea <__vector_18>:
+#define ANY_ERROR_FLAG (CANSTMOB & ANY_ERROR)
+volatile int8_t data[8];
+
+//***** Reception ISR **********************************
+ISR ( CAN_INT_vect )
+{
+ 4ea:	1f 92       	push	r1
+ 4ec:	0f 92       	push	r0
+ 4ee:	0f b6       	in	r0, 0x3f	; 63
+ 4f0:	0f 92       	push	r0
+ 4f2:	11 24       	eor	r1, r1
+ 4f4:	2f 93       	push	r18
+ 4f6:	3f 93       	push	r19
+ 4f8:	4f 93       	push	r20
+ 4fa:	5f 93       	push	r21
+ 4fc:	6f 93       	push	r22
+ 4fe:	7f 93       	push	r23
+ 500:	8f 93       	push	r24
+ 502:	9f 93       	push	r25
+ 504:	af 93       	push	r26
+ 506:	bf 93       	push	r27
+ 508:	cf 93       	push	r28
+ 50a:	ef 93       	push	r30
+ 50c:	ff 93       	push	r31
+   int8_t savecanpage;
+   savecanpage = CANPAGE;         // Save current MOB
+ 50e:	c0 91 ed 00 	lds	r28, 0x00ED
+   CANPAGE = CANHPMOB & 0xF0;      // Selects MOB with highest priority interrupt
+ 512:	80 91 ec 00 	lds	r24, 0x00EC
+ 516:	80 7f       	andi	r24, 0xF0	; 240
+ 518:	80 93 ed 00 	sts	0x00ED, r24
+	//if (Hi) { 	PORTD &=  ~0x80;  Hi = 0; }
+	//else    { 
+	//PORTD |=  0x80;   
+	//Hi = 1; }
+
+   if ( RXOK_FLAG )
+ 51c:	80 91 ee 00 	lds	r24, 0x00EE
+ 520:	85 ff       	sbrs	r24, 5
+ 522:	37 c0       	rjmp	.+110    	; 0x592 <__stack+0x93>
+   {  
+        byte length = ( CANCDMOB & 0x0F );   // DLC, number of bytes to be received
+ 524:	40 91 ef 00 	lds	r20, 0x00EF
+ 528:	4f 70       	andi	r20, 0x0F	; 15
+        for ( int8_t i = 0; i < length; i++ )
+ 52a:	50 e0       	ldi	r21, 0x00	; 0
+ 52c:	41 15       	cp	r20, r1
+ 52e:	51 05       	cpc	r21, r1
+ 530:	79 f0       	breq	.+30     	; 0x550 <__stack+0x51>
+ 532:	80 e0       	ldi	r24, 0x00	; 0
+ 534:	90 e0       	ldi	r25, 0x00	; 0
+ 536:	20 e0       	ldi	r18, 0x00	; 0
+ 538:	30 e0       	ldi	r19, 0x00	; 0
+        {  data[i] = CANMSG;  } 		     // Get data, INDX auto increments CANMSG
+ 53a:	60 91 fa 00 	lds	r22, 0x00FA
+ 53e:	2c 5a       	subi	r18, 0xAC	; 172
+ 540:	3e 4f       	sbci	r19, 0xFE	; 254
+ 542:	f9 01       	movw	r30, r18
+ 544:	60 83       	st	Z, r22
+#define TXOK_FLAG (CANSTMOB & ( 1 << TXOK))
+#define ANY_ERROR_FLAG (CANSTMOB & ANY_ERROR)
+volatile int8_t data[8];
+
+//***** Reception ISR **********************************
+ISR ( CAN_INT_vect )
+ 546:	01 96       	adiw	r24, 0x01	; 1
+ 548:	9c 01       	movw	r18, r24
+	//Hi = 1; }
+
+   if ( RXOK_FLAG )
+   {  
+        byte length = ( CANCDMOB & 0x0F );   // DLC, number of bytes to be received
+        for ( int8_t i = 0; i < length; i++ )
+ 54a:	84 17       	cp	r24, r20
+ 54c:	95 07       	cpc	r25, r21
+ 54e:	ac f3       	brlt	.-22     	; 0x53a <__stack+0x3b>
+        {  data[i] = CANMSG;  } 		     // Get data, INDX auto increments CANMSG
+        show_byte( data[0], 0);
+ 550:	80 91 54 01 	lds	r24, 0x0154
+ 554:	61 e0       	ldi	r22, 0x01	; 1
+ 556:	0e 94 9f 04 	call	0x93e	; 0x93e <_Z9show_bytehh>
+
+      CANCDMOB = (( 1 << CONMOB1 ) | ( 1 << IDE ) | ( 8 << DLC0));  // Enable Reception 29 bit IDE DLC8      
+ 55a:	88 e9       	ldi	r24, 0x98	; 152
+ 55c:	80 93 ef 00 	sts	0x00EF, r24
+      // Note - the DLC field of the CANCDMO register is updated by the received MOb. If the value differs from expected DLC, an error is set
+	  CANSTMOB &= ~(1<<RXOK);      // Reset reason on selected channel
+ 560:	80 91 ee 00 	lds	r24, 0x00EE
+ 564:	8f 7d       	andi	r24, 0xDF	; 223
+ 566:	80 93 ee 00 	sts	0x00EE, r24
+   		// 		even though ENTX is enabled.  IE2 for MOB0 needs to be enabled.
+   		//CANCDMOB = 0x00;   	  // Disable Transmission
+   		CANSTMOB &= ~(1<<TXOK);   // Clear TXOK flag
+   }
+
+   CANPAGE = savecanpage;      // Restore original MOB
+ 56a:	c0 93 ed 00 	sts	0x00ED, r28
+}
+ 56e:	ff 91       	pop	r31
+ 570:	ef 91       	pop	r30
+ 572:	cf 91       	pop	r28
+ 574:	bf 91       	pop	r27
+ 576:	af 91       	pop	r26
+ 578:	9f 91       	pop	r25
+ 57a:	8f 91       	pop	r24
+ 57c:	7f 91       	pop	r23
+ 57e:	6f 91       	pop	r22
+ 580:	5f 91       	pop	r21
+ 582:	4f 91       	pop	r20
+ 584:	3f 91       	pop	r19
+ 586:	2f 91       	pop	r18
+ 588:	0f 90       	pop	r0
+ 58a:	0f be       	out	0x3f, r0	; 63
+ 58c:	0f 90       	pop	r0
+ 58e:	1f 90       	pop	r1
+ 590:	18 95       	reti
+
+      CANCDMOB = (( 1 << CONMOB1 ) | ( 1 << IDE ) | ( 8 << DLC0));  // Enable Reception 29 bit IDE DLC8      
+      // Note - the DLC field of the CANCDMO register is updated by the received MOb. If the value differs from expected DLC, an error is set
+	  CANSTMOB &= ~(1<<RXOK);      // Reset reason on selected channel
+   } 
+   else if (TXOK_FLAG)
+ 592:	80 91 ee 00 	lds	r24, 0x00EE
+ 596:	86 ff       	sbrs	r24, 6
+ 598:	e8 cf       	rjmp	.-48     	; 0x56a <__stack+0x6b>
+   {   
+   		// We wont get these (as is observed)
+   		// 		even though ENTX is enabled.  IE2 for MOB0 needs to be enabled.
+   		//CANCDMOB = 0x00;   	  // Disable Transmission
+   		CANSTMOB &= ~(1<<TXOK);   // Clear TXOK flag
+ 59a:	80 91 ee 00 	lds	r24, 0x00EE
+ 59e:	8f 7b       	andi	r24, 0xBF	; 191
+ 5a0:	80 93 ee 00 	sts	0x00EE, r24
+ 5a4:	e2 cf       	rjmp	.-60     	; 0x56a <__stack+0x6b>
+
+000005a6 <_Z11can_receivehssh>:
+	mDLC		: Data Length Check (0..8)
+******************************************************/
+void can_receive( byte mMobNumber, short mMaskLow, short mMaskHigh, byte mDLC )
+{
+   // SETUP MOB1 for RECEPTION:
+   CANPAGE= ( mMobNumber << MOBNB0 );    	// Select MOB n
+ 5a6:	98 2f       	mov	r25, r24
+ 5a8:	92 95       	swap	r25
+ 5aa:	90 7f       	andi	r25, 0xF0	; 240
+ 5ac:	90 93 ed 00 	sts	0x00ED, r25
+   CANIE2 = ( 1 << mMobNumber );     		// Enable interrupts on mob1 for reception and transmission
+ 5b0:	21 e0       	ldi	r18, 0x01	; 1
+ 5b2:	30 e0       	ldi	r19, 0x00	; 0
+ 5b4:	02 c0       	rjmp	.+4      	; 0x5ba <_Z11can_receivehssh+0x14>
+ 5b6:	22 0f       	add	r18, r18
+ 5b8:	33 1f       	adc	r19, r19
+ 5ba:	8a 95       	dec	r24
+ 5bc:	e2 f7       	brpl	.-8      	; 0x5b6 <_Z11can_receivehssh+0x10>
+ 5be:	20 93 de 00 	sts	0x00DE, r18
+   CANGIE = ( 1 << ENIT ) | ( 1 << ENRX ) /*| ( 1 << ENTX )*/;   // Enable interrupts on receive
+ 5c2:	80 ea       	ldi	r24, 0xA0	; 160
+ 5c4:	80 93 db 00 	sts	0x00DB, r24
+
+   CANIDM1 = ((mMaskLow & 0x00FF)>>0);    	// 
+ 5c8:	60 93 f7 00 	sts	0x00F7, r22
+   CANIDM2 = ((mMaskLow & 0xFF00)>>8);    	//
+ 5cc:	70 93 f6 00 	sts	0x00F6, r23
+   CANIDM3 = ((mMaskHigh & 0x00FF)>>0);    	// 
+ 5d0:	40 93 f5 00 	sts	0x00F5, r20
+   CANIDM4 = ((mMaskHigh & 0xFF00)>>8);    	// 
+ 5d4:	50 93 f4 00 	sts	0x00F4, r21
+   CANCDMOB = ( 1 << CONMOB1) | ( 1 << IDE ) | ( 8 << DLC0);  // Enable Reception 29 bit IDE DLC8
+ 5d8:	88 e9       	ldi	r24, 0x98	; 152
+ 5da:	80 93 ef 00 	sts	0x00EF, r24
+   CANGCON |= ( 1 << ENASTB );         // Enable mode. CAN channel enters in enable mode once 11 recessive bits have been read
+ 5de:	e8 ed       	ldi	r30, 0xD8	; 216
+ 5e0:	f0 e0       	ldi	r31, 0x00	; 0
+ 5e2:	80 81       	ld	r24, Z
+ 5e4:	82 60       	ori	r24, 0x02	; 2
+ 5e6:	80 83       	st	Z, r24
+}
+ 5e8:	08 95       	ret
+
+000005ea <_Z8can_initv>:
+
+/* Enables Mob0 for Reception! */
+void can_init(void)
+{
+   CANGCON = ( 1 << SWRES );	// Software reset
+ 5ea:	81 e0       	ldi	r24, 0x01	; 1
+ 5ec:	80 93 d8 00 	sts	0x00D8, r24
+   CANTCON = 0x00;        		// CAN timing prescaler set to 0;               
+ 5f0:	10 92 e5 00 	sts	0x00E5, r1
+   CANBT1 = 0x0E;         // Set baud rate to 1000kb (assuming 8Mhz IOclk)
+ 5f4:	8e e0       	ldi	r24, 0x0E	; 14
+ 5f6:	80 93 e2 00 	sts	0x00E2, r24
+   CANBT2 = 0x04;         // ""
+ 5fa:	84 e0       	ldi	r24, 0x04	; 4
+ 5fc:	80 93 e3 00 	sts	0x00E3, r24
+   CANBT3 = 0x13;         // ""
+ 600:	83 e1       	ldi	r24, 0x13	; 19
+ 602:	80 93 e4 00 	sts	0x00E4, r24
+
+   // DISABLE ALL MOBs
+   for ( int8_t mob=0; mob<6; mob++ ) { 
+ 606:	80 e0       	ldi	r24, 0x00	; 0
+      CANPAGE = ( mob << 4 );    // Selects Message Object 0-5
+ 608:	98 2f       	mov	r25, r24
+ 60a:	92 95       	swap	r25
+ 60c:	90 7f       	andi	r25, 0xF0	; 240
+ 60e:	90 93 ed 00 	sts	0x00ED, r25
+      CANCDMOB = 0x00;           // Disable mob
+ 612:	10 92 ef 00 	sts	0x00EF, r1
+      CANSTMOB = 0x00;           // Clear mob status register;
+ 616:	10 92 ee 00 	sts	0x00EE, r1
+   CANBT1 = 0x0E;         // Set baud rate to 1000kb (assuming 8Mhz IOclk)
+   CANBT2 = 0x04;         // ""
+   CANBT3 = 0x13;         // ""
+
+   // DISABLE ALL MOBs
+   for ( int8_t mob=0; mob<6; mob++ ) { 
+ 61a:	8f 5f       	subi	r24, 0xFF	; 255
+ 61c:	86 30       	cpi	r24, 0x06	; 6
+ 61e:	a1 f7       	brne	.-24     	; 0x608 <_Z8can_initv+0x1e>
+      CANCDMOB = 0x00;           // Disable mob
+      CANSTMOB = 0x00;           // Clear mob status register;
+   }
+
+   // SETUP MOB1 for RECEPTION:
+   CANPAGE= ( 1 << MOBNB0 );     // Select _MOB1_ (yes Mob "1" - b/c 1 shifted into position)
+ 620:	80 e1       	ldi	r24, 0x10	; 16
+ 622:	80 93 ed 00 	sts	0x00ED, r24
+   CANIE2 = ( 1 << IEMOB1 );     // Enable interrupts on mob1 for reception and transmission
+ 626:	82 e0       	ldi	r24, 0x02	; 2
+ 628:	80 93 de 00 	sts	0x00DE, r24
+   CANGIE = ( 1 << ENIT ) | ( 1 << ENRX ) | ( 1 << ENTX );   // Enable interrupts on receive
+ 62c:	80 eb       	ldi	r24, 0xB0	; 176
+ 62e:	80 93 db 00 	sts	0x00DB, r24
+   CANIDM1 = 0x00;				// Clear Mask, let all IDs pass
+ 632:	10 92 f7 00 	sts	0x00F7, r1
+   CANIDM2 = 0x00;				// ""
+ 636:	10 92 f6 00 	sts	0x00F6, r1
+   CANIDM3 = 0x00;				// ""
+ 63a:	10 92 f5 00 	sts	0x00F5, r1
+   CANIDM4 = 0x00;				// "" 
+ 63e:	10 92 f4 00 	sts	0x00F4, r1
+   CANCDMOB = ( 1<<CONMOB1) | ( 1<<IDE ) | ( 8<<DLC0);  // Enable Reception 29 bit IDE DLC8
+ 642:	88 e9       	ldi	r24, 0x98	; 152
+ 644:	80 93 ef 00 	sts	0x00EF, r24
+   CANGCON |= ( 1<<ENASTB );         // Enable mode. CAN channel enters in enable mode once 11 recessive bits have been read
+ 648:	80 91 d8 00 	lds	r24, 0x00D8
+ 64c:	82 60       	ori	r24, 0x02	; 2
+ 64e:	80 93 d8 00 	sts	0x00D8, r24
+
+   while (1) { 
+     if ((CANGSTA & (1<<ENFG)))  break;  // 1 - CAN controller enable.
+ 652:	80 91 d9 00 	lds	r24, 0x00D9
+ 656:	82 ff       	sbrs	r24, 2
+ 658:	fc cf       	rjmp	.-8      	; 0x652 <_Z8can_initv+0x68>
+   }
+   sei();
+ 65a:	78 94       	sei
+}
+ 65c:	08 95       	ret
+
+0000065e <_Z15can_set_baud_1Mv>:
+/*********************************************************************/
+/** These adjust the PRS and the SJW bits in the BT2 register       **/
+/*********************************************************************/
+void can_set_baud_1M()
+{
+   CANBT1 = BT1_1Mbps;
+ 65e:	10 92 e2 00 	sts	0x00E2, r1
+   CANBT2 = BT2_1Mbps;
+ 662:	8c e0       	ldi	r24, 0x0C	; 12
+ 664:	80 93 e3 00 	sts	0x00E3, r24
+   CANBT3 = BT3_1Mbps;
+ 668:	86 e3       	ldi	r24, 0x36	; 54
+ 66a:	80 93 e4 00 	sts	0x00E4, r24
+}
+ 66e:	08 95       	ret
+
+00000670 <_Z17can_set_baud_500Kv>:
+void can_set_baud_500K()
+{
+   CANBT1 = BT1_500Kbps;
+ 670:	82 e0       	ldi	r24, 0x02	; 2
+ 672:	80 93 e2 00 	sts	0x00E2, r24
+   CANBT2 = BT2_500Kbps;
+ 676:	8c e0       	ldi	r24, 0x0C	; 12
+ 678:	80 93 e3 00 	sts	0x00E3, r24
+   CANBT3 = BT3_500Kbps;
+ 67c:	87 e3       	ldi	r24, 0x37	; 55
+ 67e:	80 93 e4 00 	sts	0x00E4, r24
+}
+ 682:	08 95       	ret
+
+00000684 <_Z17can_set_baud_250Kv>:
+void can_set_baud_250K()
+{
+   CANBT1 = BT1_250Kbps;
+ 684:	86 e0       	ldi	r24, 0x06	; 6
+ 686:	80 93 e2 00 	sts	0x00E2, r24
+   CANBT2 = BT2_250Kbps;
+ 68a:	8c e0       	ldi	r24, 0x0C	; 12
+ 68c:	80 93 e3 00 	sts	0x00E3, r24
+   CANBT3 = BT3_250Kbps;
+ 690:	87 e3       	ldi	r24, 0x37	; 55
+ 692:	80 93 e4 00 	sts	0x00E4, r24
+}
+ 696:	08 95       	ret
+
+00000698 <_Z17can_set_baud_200Kv>:
+void can_set_baud_200K()
+{
+   CANBT1 = BT1_200Kbps;
+ 698:	88 e0       	ldi	r24, 0x08	; 8
+ 69a:	80 93 e2 00 	sts	0x00E2, r24
+   CANBT2 = BT2_200Kbps;
+ 69e:	8c e0       	ldi	r24, 0x0C	; 12
+ 6a0:	80 93 e3 00 	sts	0x00E3, r24
+   CANBT3 = BT3_200Kbps;
+ 6a4:	87 e3       	ldi	r24, 0x37	; 55
+ 6a6:	80 93 e4 00 	sts	0x00E4, r24
+}
+ 6aa:	08 95       	ret
+
+000006ac <_Z17can_set_baud_125Kv>:
+void can_set_baud_125K()
+{
+   CANBT1 = BT1_125Kbps;
+ 6ac:	8e e0       	ldi	r24, 0x0E	; 14
+ 6ae:	80 93 e2 00 	sts	0x00E2, r24
+   CANBT2 = BT2_125Kbps;
+ 6b2:	8c e0       	ldi	r24, 0x0C	; 12
+ 6b4:	80 93 e3 00 	sts	0x00E3, r24
+   CANBT3 = BT3_125Kbps;
+ 6b8:	87 e3       	ldi	r24, 0x37	; 55
+ 6ba:	80 93 e4 00 	sts	0x00E4, r24
+}
+ 6be:	08 95       	ret
+
+000006c0 <_Z17can_set_baud_100Kv>:
+void can_set_baud_100K()
+{
+   CANBT1 = BT1_100Kbps;
+ 6c0:	82 e1       	ldi	r24, 0x12	; 18
+ 6c2:	80 93 e2 00 	sts	0x00E2, r24
+   CANBT2 = BT2_100Kbps;
+ 6c6:	8c e0       	ldi	r24, 0x0C	; 12
+ 6c8:	80 93 e3 00 	sts	0x00E3, r24
+   CANBT3 = BT3_100Kbps;
+ 6cc:	87 e3       	ldi	r24, 0x37	; 55
+ 6ce:	80 93 e4 00 	sts	0x00E4, r24
+}
+ 6d2:	08 95       	ret
+
+000006d4 <_Z6can_txv>:
+
+/* MOB1 for reception    */
+/* MOB0 for transmission */
+void can_tx(void) 
+{
+   CANPAGE = 0x00;      		    		// Select MOb0 for transmission   
+ 6d4:	10 92 ed 00 	sts	0x00ED, r1
+   while ((CANEN2 & (1<<ENMOB0))>0) {};		// Wait for ENMOb0=0 to be free
+ 6d8:	80 91 dc 00 	lds	r24, 0x00DC
+ 6dc:	80 fd       	sbrc	r24, 0
+ 6de:	fc cf       	rjmp	.-8      	; 0x6d8 <_Z6can_txv+0x4>
+
+   CANSTMOB = 0x00;     // Clear mob status register
+ 6e0:	10 92 ee 00 	sts	0x00EE, r1
+   CANIDT4 = 0x00;      // Set can id to 0
+ 6e4:	10 92 f0 00 	sts	0x00F0, r1
+   CANIDT3 = 0x00;      // ""
+ 6e8:	10 92 f1 00 	sts	0x00F1, r1
+   CANIDT2 = 0x00;      // ""
+ 6ec:	10 92 f2 00 	sts	0x00F2, r1
+   CANIDT1 = 0x00;      // ""
+ 6f0:	10 92 f3 00 	sts	0x00F3, r1
+   
+   for ( int8_t i = 0; i < 8; ++i ) {
+        CANMSG = 0x55+i;  // set message data for all 8 bytes to 55 (alternating 1s and 0s
+ 6f4:	85 e5       	ldi	r24, 0x55	; 85
+ 6f6:	80 93 fa 00 	sts	0x00FA, r24
+ 6fa:	86 e5       	ldi	r24, 0x56	; 86
+ 6fc:	80 93 fa 00 	sts	0x00FA, r24
+ 700:	87 e5       	ldi	r24, 0x57	; 87
+ 702:	80 93 fa 00 	sts	0x00FA, r24
+ 706:	98 e5       	ldi	r25, 0x58	; 88
+ 708:	90 93 fa 00 	sts	0x00FA, r25
+ 70c:	89 e5       	ldi	r24, 0x59	; 89
+ 70e:	80 93 fa 00 	sts	0x00FA, r24
+ 712:	8a e5       	ldi	r24, 0x5A	; 90
+ 714:	80 93 fa 00 	sts	0x00FA, r24
+ 718:	8b e5       	ldi	r24, 0x5B	; 91
+ 71a:	80 93 fa 00 	sts	0x00FA, r24
+ 71e:	8c e5       	ldi	r24, 0x5C	; 92
+ 720:	80 93 fa 00 	sts	0x00FA, r24
+   }
+
+	Can_clear_rtr();
+ 724:	80 91 f0 00 	lds	r24, 0x00F0
+ 728:	8b 7f       	andi	r24, 0xFB	; 251
+ 72a:	80 93 f0 00 	sts	0x00F0, r24
+   CANCDMOB = ( 1 << CONMOB0 ) | ( 1 << IDE ) | ( 8 << DLC0 );    // Enable transmission, data length=1 (CAN Standard rev 2.0B(29 bit identifiers))
+ 72e:	90 93 ef 00 	sts	0x00EF, r25
+   //while ( (CANSTMOB & (1<<TXOK))==0 );   // wait for TXOK flag set
+
+   // todo: have this use interrupts
+   //CANCDMOB = 0x00;   // Disable Transmission
+   //CANSTMOB = 0x00;   // Clear TXOK flag
+}
+ 732:	08 95       	ret
+
+00000734 <_Z16can_fill_tx_datahtPhh>:
+
+void can_fill_tx_data( byte mMOb_Number, word mId, byte* mData, byte mDLC )
+{
+   byte page = 0;
+   page |= (mMOb_Number << 4);
+ 734:	90 e0       	ldi	r25, 0x00	; 0
+ 736:	82 95       	swap	r24
+ 738:	92 95       	swap	r25
+ 73a:	90 7f       	andi	r25, 0xF0	; 240
+ 73c:	98 27       	eor	r25, r24
+ 73e:	80 7f       	andi	r24, 0xF0	; 240
+ 740:	98 27       	eor	r25, r24
+   CANPAGE = page;
+ 742:	80 93 ed 00 	sts	0x00ED, r24
+//   while ((CANEN2 & (_BV(mMOb_Number))) >0) {};  // Wait for MOb 0 to be free
+
+   CANSTMOB = 0x00;     // Clear mob status register
+ 746:	10 92 ee 00 	sts	0x00EE, r1
+   CANIDT4 = 0x00;      // Set can id to 0
+ 74a:	10 92 f0 00 	sts	0x00F0, r1
+   CANIDT3 = 0x00;      // ""
+ 74e:	10 92 f1 00 	sts	0x00F1, r1
+   CANIDT2 = (mId & 0x07) << 5;      // ""
+ 752:	86 2f       	mov	r24, r22
+ 754:	82 95       	swap	r24
+ 756:	88 0f       	add	r24, r24
+ 758:	80 7e       	andi	r24, 0xE0	; 224
+ 75a:	80 93 f2 00 	sts	0x00F2, r24
+   CANIDT1 = ((mId>>3) & 0x0F);      // "" 
+ 75e:	76 95       	lsr	r23
+ 760:	67 95       	ror	r22
+ 762:	76 95       	lsr	r23
+ 764:	67 95       	ror	r22
+ 766:	76 95       	lsr	r23
+ 768:	67 95       	ror	r22
+ 76a:	6f 70       	andi	r22, 0x0F	; 15
+ 76c:	60 93 f3 00 	sts	0x00F3, r22
+   
+   for (int i=0; i<mDLC; i++)
+ 770:	62 2f       	mov	r22, r18
+ 772:	70 e0       	ldi	r23, 0x00	; 0
+ 774:	61 15       	cp	r22, r1
+ 776:	71 05       	cpc	r23, r1
+ 778:	59 f0       	breq	.+22     	; 0x790 <_Z16can_fill_tx_datahtPhh+0x5c>
+ 77a:	e4 2f       	mov	r30, r20
+ 77c:	f5 2f       	mov	r31, r21
+ 77e:	80 e0       	ldi	r24, 0x00	; 0
+ 780:	90 e0       	ldi	r25, 0x00	; 0
+   {
+      CANMSG = mData[i];
+ 782:	31 91       	ld	r19, Z+
+ 784:	30 93 fa 00 	sts	0x00FA, r19
+   CANIDT4 = 0x00;      // Set can id to 0
+   CANIDT3 = 0x00;      // ""
+   CANIDT2 = (mId & 0x07) << 5;      // ""
+   CANIDT1 = ((mId>>3) & 0x0F);      // "" 
+   
+   for (int i=0; i<mDLC; i++)
+ 788:	01 96       	adiw	r24, 0x01	; 1
+ 78a:	86 17       	cp	r24, r22
+ 78c:	97 07       	cpc	r25, r23
+ 78e:	cc f3       	brlt	.-14     	; 0x782 <_Z16can_fill_tx_datahtPhh+0x4e>
+   {
+      CANMSG = mData[i];
+   }
+   Can_clear_rtr();   
+ 790:	80 91 f0 00 	lds	r24, 0x00F0
+ 794:	8b 7f       	andi	r24, 0xFB	; 251
+ 796:	80 93 f0 00 	sts	0x00F0, r24
+   CANCDMOB = TRANSMIT | ( 1 << IDE ) | ( mDLC );    // Enable transmission, data length=1 (CAN Standard rev 2.0B(29 bit identifiers))
+ 79a:	20 65       	ori	r18, 0x50	; 80
+ 79c:	20 93 ef 00 	sts	0x00EF, r18
+   
+   while ( (CANSTMOB & (1<<TXOK))==0 )	// wait for TXOK flag set
+ 7a0:	80 91 ee 00 	lds	r24, 0x00EE
+ 7a4:	86 ff       	sbrs	r24, 6
+ 7a6:	fc cf       	rjmp	.-8      	; 0x7a0 <_Z16can_fill_tx_datahtPhh+0x6c>
+   };   
+
+   // todo: have this use interrupts
+   //CANCDMOB = 0x00;   // Disable Transmission
+   //CANSTMOB = 0x00;   // Clear TXOK flag
+}
+ 7a8:	08 95       	ret
+
+000007aa <_Z17can_retrieve_datahPh>:
+
+/* returns the length of data bytes */
+byte can_retrieve_data( byte mMOb_Number, byte* mData )
+{
+   byte page = 0;
+   page |= (mMOb_Number << 4);
+ 7aa:	90 e0       	ldi	r25, 0x00	; 0
+ 7ac:	82 95       	swap	r24
+ 7ae:	92 95       	swap	r25
+ 7b0:	90 7f       	andi	r25, 0xF0	; 240
+ 7b2:	98 27       	eor	r25, r24
+ 7b4:	80 7f       	andi	r24, 0xF0	; 240
+ 7b6:	98 27       	eor	r25, r24
+  // page |= AINC;        // Auto Increment register addresses (after a write)
+   CANPAGE = page;
+ 7b8:	80 93 ed 00 	sts	0x00ED, r24
+ 7bc:	e6 2f       	mov	r30, r22
+ 7be:	f7 2f       	mov	r31, r23
+       // Should Read length out of reg
+   for (int i=0; i<8; i++)
+ 7c0:	80 e0       	ldi	r24, 0x00	; 0
+ 7c2:	90 e0       	ldi	r25, 0x00	; 0
+   {
+      mData[i] = CANMSG;
+ 7c4:	20 91 fa 00 	lds	r18, 0x00FA
+ 7c8:	21 93       	st	Z+, r18
+   byte page = 0;
+   page |= (mMOb_Number << 4);
+  // page |= AINC;        // Auto Increment register addresses (after a write)
+   CANPAGE = page;
+       // Should Read length out of reg
+   for (int i=0; i<8; i++)
+ 7ca:	01 96       	adiw	r24, 0x01	; 1
+ 7cc:	88 30       	cpi	r24, 0x08	; 8
+ 7ce:	91 05       	cpc	r25, r1
+ 7d0:	c9 f7       	brne	.-14     	; 0x7c4 <_Z17can_retrieve_datahPh+0x1a>
+   {
+      mData[i] = CANMSG;
+   }
+   return 8;
+}
+ 7d2:	88 e0       	ldi	r24, 0x08	; 8
+ 7d4:	08 95       	ret
+
+000007d6 <_Z17can_get_timestampv>:
+
+word can_get_timestamp()
+{
+  word retval = 0;
+  retval = CANSTML;
+ 7d6:	20 91 f8 00 	lds	r18, 0x00F8
+ 7da:	30 e0       	ldi	r19, 0x00	; 0
+  retval |= (CANSTMH<<8);
+ 7dc:	40 91 f9 00 	lds	r20, 0x00F9
+ 7e0:	94 2f       	mov	r25, r20
+ 7e2:	80 e0       	ldi	r24, 0x00	; 0
+ 7e4:	28 2b       	or	r18, r24
+ 7e6:	39 2b       	or	r19, r25
+  return retval;
+}
+ 7e8:	c9 01       	movw	r24, r18
+ 7ea:	08 95       	ret
+
+000007ec <_Z12can_send_msghP4sCAN>:
+
+void can_send_msg( byte mMOb_Number, struct sCAN* mMsg )
+{
+ 7ec:	fb 01       	movw	r30, r22
+  can_fill_tx_data( mMOb_Number, mMsg->id, mMsg->data, mMsg->header.Length );
+ 7ee:	60 81       	ld	r22, Z
+ 7f0:	71 81       	ldd	r23, Z+1	; 0x01
+ 7f2:	af 01       	movw	r20, r30
+ 7f4:	4d 5f       	subi	r20, 0xFD	; 253
+ 7f6:	5f 4f       	sbci	r21, 0xFF	; 255
+ 7f8:	22 81       	ldd	r18, Z+2	; 0x02
+ 7fa:	26 95       	lsr	r18
+ 7fc:	2f 70       	andi	r18, 0x0F	; 15
+ 7fe:	0e 94 9a 03 	call	0x734	; 0x734 <_Z16can_fill_tx_datahtPhh>
+}
+ 802:	08 95       	ret
+
+00000804 <_Z11can_get_msghP4sCAN>:
+
+void can_get_msg( byte mMOb_Number, struct sCAN* mMsg )
+{
+ 804:	fb 01       	movw	r30, r22
+
+/* returns the length of data bytes */
+byte can_retrieve_data( byte mMOb_Number, byte* mData )
+{
+   byte page = 0;
+   page |= (mMOb_Number << 4);
+ 806:	90 e0       	ldi	r25, 0x00	; 0
+ 808:	82 95       	swap	r24
+ 80a:	92 95       	swap	r25
+ 80c:	90 7f       	andi	r25, 0xF0	; 240
+ 80e:	98 27       	eor	r25, r24
+ 810:	80 7f       	andi	r24, 0xF0	; 240
+ 812:	98 27       	eor	r25, r24
+  // page |= AINC;        // Auto Increment register addresses (after a write)
+   CANPAGE = page;
+ 814:	80 93 ed 00 	sts	0x00ED, r24
+void can_send_msg( byte mMOb_Number, struct sCAN* mMsg )
+{
+  can_fill_tx_data( mMOb_Number, mMsg->id, mMsg->data, mMsg->header.Length );
+}
+
+void can_get_msg( byte mMOb_Number, struct sCAN* mMsg )
+ 818:	db 01       	movw	r26, r22
+ 81a:	13 96       	adiw	r26, 0x03	; 3
+   byte page = 0;
+   page |= (mMOb_Number << 4);
+  // page |= AINC;        // Auto Increment register addresses (after a write)
+   CANPAGE = page;
+       // Should Read length out of reg
+   for (int i=0; i<8; i++)
+ 81c:	80 e0       	ldi	r24, 0x00	; 0
+ 81e:	90 e0       	ldi	r25, 0x00	; 0
+   {
+      mData[i] = CANMSG;
+ 820:	20 91 fa 00 	lds	r18, 0x00FA
+ 824:	2d 93       	st	X+, r18
+   byte page = 0;
+   page |= (mMOb_Number << 4);
+  // page |= AINC;        // Auto Increment register addresses (after a write)
+   CANPAGE = page;
+       // Should Read length out of reg
+   for (int i=0; i<8; i++)
+ 826:	01 96       	adiw	r24, 0x01	; 1
+ 828:	88 30       	cpi	r24, 0x08	; 8
+ 82a:	91 05       	cpc	r25, r1
+ 82c:	c9 f7       	brne	.-14     	; 0x820 <_Z11can_get_msghP4sCAN+0x1c>
+  can_fill_tx_data( mMOb_Number, mMsg->id, mMsg->data, mMsg->header.Length );
+}
+
+void can_get_msg( byte mMOb_Number, struct sCAN* mMsg )
+{
+  mMsg->header.Length = can_retrieve_data( mMOb_Number, mMsg->data );
+ 82e:	82 81       	ldd	r24, Z+2	; 0x02
+ 830:	81 7e       	andi	r24, 0xE1	; 225
+ 832:	80 61       	ori	r24, 0x10	; 16
+ 834:	82 83       	std	Z+2, r24	; 0x02
+}
+
+word can_get_timestamp()
+{
+  word retval = 0;
+  retval = CANSTML;
+ 836:	80 91 f8 00 	lds	r24, 0x00F8
+ 83a:	90 e0       	ldi	r25, 0x00	; 0
+  retval |= (CANSTMH<<8);
+ 83c:	40 91 f9 00 	lds	r20, 0x00F9
+ 840:	34 2f       	mov	r19, r20
+ 842:	20 e0       	ldi	r18, 0x00	; 0
+ 844:	82 2b       	or	r24, r18
+ 846:	93 2b       	or	r25, r19
+}
+
+void can_get_msg( byte mMOb_Number, struct sCAN* mMsg )
+{
+  mMsg->header.Length = can_retrieve_data( mMOb_Number, mMsg->data );
+  mMsg->time_stamp    = can_get_timestamp();
+ 848:	94 87       	std	Z+12, r25	; 0x0c
+ 84a:	83 87       	std	Z+11, r24	; 0x0b
+}
+ 84c:	08 95       	ret
+
+0000084e <_Z17can_init_test_msgv>:
+
+void can_init_test_msg()
+{
+    msg1.id 	 = 0x0004;
+ 84e:	84 e0       	ldi	r24, 0x04	; 4
+ 850:	90 e0       	ldi	r25, 0x00	; 0
+ 852:	90 93 3b 01 	sts	0x013B, r25
+ 856:	80 93 3a 01 	sts	0x013A, r24
+    msg1.data[0] = 0xA0;
+ 85a:	80 ea       	ldi	r24, 0xA0	; 160
+ 85c:	80 93 3d 01 	sts	0x013D, r24
+    msg1.data[1] = 0x55;    
+ 860:	85 e5       	ldi	r24, 0x55	; 85
+ 862:	80 93 3e 01 	sts	0x013E, r24
+    msg1.data[2] = 0xA1;
+ 866:	91 ea       	ldi	r25, 0xA1	; 161
+ 868:	90 93 3f 01 	sts	0x013F, r25
+    msg1.data[3] = 0x55;
+ 86c:	80 93 40 01 	sts	0x0140, r24
+    msg1.header.Length = 8;
+ 870:	80 91 3c 01 	lds	r24, 0x013C
+ 874:	80 7e       	andi	r24, 0xE0	; 224
+    msg1.header.rtr = 0;
+ 876:	80 61       	ori	r24, 0x10	; 16
+ 878:	80 93 3c 01 	sts	0x013C, r24
+}
+ 87c:	08 95       	ret
+
+0000087e <_Z21can_prep_board_id_msgP4sCAN>:
+#define MANUFACTURER 0x0001				// Beyond Kinetics is Manufacturer #1 !
+
+
+
+void can_prep_board_id_msg( sCAN* mMsg )
+{
+ 87e:	fc 01       	movw	r30, r24
+	mMsg->id = 0x0003;
+ 880:	83 e0       	ldi	r24, 0x03	; 3
+ 882:	90 e0       	ldi	r25, 0x00	; 0
+ 884:	91 83       	std	Z+1, r25	; 0x01
+ 886:	80 83       	st	Z, r24
+    mMsg->data[0] = (DEVICE_ID & 0xFF000000) >> 24;	// MSB first
+ 888:	81 e0       	ldi	r24, 0x01	; 1
+ 88a:	83 83       	std	Z+3, r24	; 0x03
+    mMsg->data[1] = (DEVICE_ID & 0x00FF0000) >> 16;
+ 88c:	14 82       	std	Z+4, r1	; 0x04
+    mMsg->data[2] = (DEVICE_ID & 0x0000FF00) >>  8;
+ 88e:	15 82       	std	Z+5, r1	; 0x05
+    mMsg->data[3] = (DEVICE_ID & 0x000000FF) >>  0;	// LSB 
+ 890:	16 82       	std	Z+6, r1	; 0x06
+    
+    mMsg->data[4] = MAJOR;
+ 892:	87 83       	std	Z+7, r24	; 0x07
+    mMsg->data[5] = MINOR;
+ 894:	10 86       	std	Z+8, r1	; 0x08
+    mMsg->data[6] = lo(MANUFACTURER);
+ 896:	81 87       	std	Z+9, r24	; 0x09
+    mMsg->data[7] = hi(MANUFACTURER);
+ 898:	12 86       	std	Z+10, r1	; 0x0a
+    mMsg->header.Length = 8;
+ 89a:	82 81       	ldd	r24, Z+2	; 0x02
+ 89c:	80 7e       	andi	r24, 0xE0	; 224
+    mMsg->header.rtr    = 0;
+ 89e:	80 61       	ori	r24, 0x10	; 16
+ 8a0:	82 83       	std	Z+2, r24	; 0x02
+}
+ 8a2:	08 95       	ret
+
+000008a4 <_Z27can_prep_button_pressed_msgP4sCANchh>:
+
+void can_prep_button_pressed_msg( sCAN* mMsg, char mKeyCharacter, byte mRow, byte mColumn )
+{
+ 8a4:	fc 01       	movw	r30, r24
+    mMsg->id 	  = 0x0004;
+ 8a6:	84 e0       	ldi	r24, 0x04	; 4
+ 8a8:	90 e0       	ldi	r25, 0x00	; 0
+ 8aa:	91 83       	std	Z+1, r25	; 0x01
+ 8ac:	80 83       	st	Z, r24
+    mMsg->data[0] = mKeyCharacter;
+ 8ae:	63 83       	std	Z+3, r22	; 0x03
+    mMsg->data[1] = mRow;    
+ 8b0:	44 83       	std	Z+4, r20	; 0x04
+    mMsg->data[2] = mColumn;
+ 8b2:	25 83       	std	Z+5, r18	; 0x05
+    mMsg->header.Length = 3;
+ 8b4:	82 81       	ldd	r24, Z+2	; 0x02
+ 8b6:	80 7e       	andi	r24, 0xE0	; 224
+    mMsg->header.rtr = 0;
+ 8b8:	86 60       	ori	r24, 0x06	; 6
+ 8ba:	82 83       	std	Z+2, r24	; 0x02
+}
+ 8bc:	08 95       	ret
+
+000008be <_Z26can_prep_button_roster_msgP4sCAN10uKeyRoster>:
+
+/* Encoding is :
+
+*/
+void can_prep_button_roster_msg( sCAN* mMsg, union uKeyRoster mkeypad )
+{
+ 8be:	fc 01       	movw	r30, r24
+    mMsg->id 	  = 0x0005;
+ 8c0:	85 e0       	ldi	r24, 0x05	; 5
+ 8c2:	90 e0       	ldi	r25, 0x00	; 0
+ 8c4:	91 83       	std	Z+1, r25	; 0x01
+ 8c6:	80 83       	st	Z, r24
+    mMsg->data[0] = mkeypad.array[0];	 // Upper Nibble is count of pressed buttons.  Lower nibble is the front edge buttons.
+ 8c8:	43 83       	std	Z+3, r20	; 0x03
+    mMsg->data[1] = mkeypad.array[1]; 	 // 
+ 8ca:	54 83       	std	Z+4, r21	; 0x04
+    mMsg->data[2] = mkeypad.array[2];    // 
+ 8cc:	65 83       	std	Z+5, r22	; 0x05
+    mMsg->data[3] = mkeypad.array[3];	 //
+ 8ce:	76 83       	std	Z+6, r23	; 0x06
+    mMsg->header.Length = 4;
+ 8d0:	82 81       	ldd	r24, Z+2	; 0x02
+ 8d2:	80 7e       	andi	r24, 0xE0	; 224
+    mMsg->header.rtr = 0;
+ 8d4:	88 60       	ori	r24, 0x08	; 8
+ 8d6:	82 83       	std	Z+2, r24	; 0x02
+}
+ 8d8:	08 95       	ret
+
+000008da <_Z14configure_ledsv>:
+
+#define SHOW_DELAY 400000
+
+void configure_leds()
+{ // OUTPUTS:
+  LED_DDR |= LED_DDR_MASK;
+ 8da:	8a b1       	in	r24, 0x0a	; 10
+ 8dc:	83 6c       	ori	r24, 0xC3	; 195
+ 8de:	8a b9       	out	0x0a, r24	; 10
+}
+ 8e0:	08 95       	ret
+
+000008e2 <_Z6led_onh>:
+
+void led_on(byte mindex)
+{
+  switch(mindex)
+ 8e2:	82 30       	cpi	r24, 0x02	; 2
+ 8e4:	69 f0       	breq	.+26     	; 0x900 <_Z6led_onh+0x1e>
+ 8e6:	83 30       	cpi	r24, 0x03	; 3
+ 8e8:	28 f0       	brcs	.+10     	; 0x8f4 <_Z6led_onh+0x12>
+ 8ea:	83 30       	cpi	r24, 0x03	; 3
+ 8ec:	59 f0       	breq	.+22     	; 0x904 <_Z6led_onh+0x22>
+ 8ee:	84 30       	cpi	r24, 0x04	; 4
+ 8f0:	29 f0       	breq	.+10     	; 0x8fc <_Z6led_onh+0x1a>
+ 8f2:	08 95       	ret
+ 8f4:	81 30       	cpi	r24, 0x01	; 1
+ 8f6:	e9 f7       	brne	.-6      	; 0x8f2 <_Z6led_onh+0x10>
+  {
+   case 1:  SET_LED_1;  break;
+ 8f8:	58 9a       	sbi	0x0b, 0	; 11
+ 8fa:	08 95       	ret
+   case 2:  SET_LED_2;  break;
+   case 3:  SET_LED_3;  break;
+   case 4:  SET_LED_4;  break;
+ 8fc:	5f 9a       	sbi	0x0b, 7	; 11
+ 8fe:	08 95       	ret
+void led_on(byte mindex)
+{
+  switch(mindex)
+  {
+   case 1:  SET_LED_1;  break;
+   case 2:  SET_LED_2;  break;
+ 900:	59 9a       	sbi	0x0b, 1	; 11
+ 902:	08 95       	ret
+   case 3:  SET_LED_3;  break;
+ 904:	5e 9a       	sbi	0x0b, 6	; 11
+ 906:	08 95       	ret
+
+00000908 <_Z7led_offh>:
+  }
+}
+
+void led_off(byte mindex)
+{
+  switch(mindex)
+ 908:	82 30       	cpi	r24, 0x02	; 2
+ 90a:	69 f0       	breq	.+26     	; 0x926 <_Z7led_offh+0x1e>
+ 90c:	83 30       	cpi	r24, 0x03	; 3
+ 90e:	28 f0       	brcs	.+10     	; 0x91a <_Z7led_offh+0x12>
+ 910:	83 30       	cpi	r24, 0x03	; 3
+ 912:	59 f0       	breq	.+22     	; 0x92a <_Z7led_offh+0x22>
+ 914:	84 30       	cpi	r24, 0x04	; 4
+ 916:	29 f0       	breq	.+10     	; 0x922 <_Z7led_offh+0x1a>
+ 918:	08 95       	ret
+ 91a:	81 30       	cpi	r24, 0x01	; 1
+ 91c:	e9 f7       	brne	.-6      	; 0x918 <_Z7led_offh+0x10>
+  {
+   case 1:  RESET_LED_1;  break;
+ 91e:	58 98       	cbi	0x0b, 0	; 11
+ 920:	08 95       	ret
+   case 2:  RESET_LED_2;  break;
+   case 3:  RESET_LED_3;  break;
+   case 4:  RESET_LED_4;  break;
+ 922:	5f 98       	cbi	0x0b, 7	; 11
+ 924:	08 95       	ret
+void led_off(byte mindex)
+{
+  switch(mindex)
+  {
+   case 1:  RESET_LED_1;  break;
+   case 2:  RESET_LED_2;  break;
+ 926:	59 98       	cbi	0x0b, 1	; 11
+ 928:	08 95       	ret
+   case 3:  RESET_LED_3;  break;
+ 92a:	5e 98       	cbi	0x0b, 6	; 11
+ 92c:	08 95       	ret
+
+0000092e <_Z7set_ledhh>:
+  }
+}
+
+void set_led(byte mindex, byte value)
+{
+	if (value)
+ 92e:	66 23       	and	r22, r22
+ 930:	19 f4       	brne	.+6      	; 0x938 <_Z7set_ledhh+0xa>
+		led_on(mindex);
+	else
+		led_off(mindex);
+ 932:	0e 94 84 04 	call	0x908	; 0x908 <_Z7led_offh>
+ 936:	08 95       	ret
+}
+
+void set_led(byte mindex, byte value)
+{
+	if (value)
+		led_on(mindex);
+ 938:	0e 94 71 04 	call	0x8e2	; 0x8e2 <_Z6led_onh>
+ 93c:	08 95       	ret
+
+0000093e <_Z9show_bytehh>:
+		led_off(mindex);
+}
+
+void show_byte( byte result, byte mHiNibble )
+{
+  if (mHiNibble) {
+ 93e:	66 23       	and	r22, r22
+ 940:	69 f0       	breq	.+26     	; 0x95c <_Z9show_bytehh+0x1e>
+	  if ((result & 0x80)>0)  SET_LED_4  else RESET_LED_4 ;
+ 942:	87 ff       	sbrs	r24, 7
+ 944:	20 c0       	rjmp	.+64     	; 0x986 <_Z9show_bytehh+0x48>
+ 946:	5f 9a       	sbi	0x0b, 7	; 11
+	  if ((result & 0x40)>0)  SET_LED_3  else RESET_LED_3 ;
+ 948:	86 ff       	sbrs	r24, 6
+ 94a:	20 c0       	rjmp	.+64     	; 0x98c <_Z9show_bytehh+0x4e>
+ 94c:	5e 9a       	sbi	0x0b, 6	; 11
+	  if ((result & 0x20)>0)  SET_LED_2  else RESET_LED_2 ;
+ 94e:	85 ff       	sbrs	r24, 5
+ 950:	20 c0       	rjmp	.+64     	; 0x992 <_Z9show_bytehh+0x54>
+ 952:	59 9a       	sbi	0x0b, 1	; 11
+	  if ((result & 0x10)>0)  SET_LED_1  else RESET_LED_1 ;
+ 954:	84 fd       	sbrc	r24, 4
+ 956:	0d c0       	rjmp	.+26     	; 0x972 <_Z9show_bytehh+0x34>
+  } else {
+	  if ((result & 0x08)>0)  SET_LED_4  else RESET_LED_4 ;
+	  if ((result & 0x04)>0)  SET_LED_3  else RESET_LED_3 ;
+	  if ((result & 0x02)>0)  SET_LED_2  else RESET_LED_2 ;
+	  if ((result & 0x01)>0)  SET_LED_1  else RESET_LED_1 ;    
+ 958:	58 98       	cbi	0x0b, 0	; 11
+ 95a:	08 95       	ret
+	  if ((result & 0x80)>0)  SET_LED_4  else RESET_LED_4 ;
+	  if ((result & 0x40)>0)  SET_LED_3  else RESET_LED_3 ;
+	  if ((result & 0x20)>0)  SET_LED_2  else RESET_LED_2 ;
+	  if ((result & 0x10)>0)  SET_LED_1  else RESET_LED_1 ;
+  } else {
+	  if ((result & 0x08)>0)  SET_LED_4  else RESET_LED_4 ;
+ 95c:	83 ff       	sbrs	r24, 3
+ 95e:	0b c0       	rjmp	.+22     	; 0x976 <_Z9show_bytehh+0x38>
+ 960:	5f 9a       	sbi	0x0b, 7	; 11
+	  if ((result & 0x04)>0)  SET_LED_3  else RESET_LED_3 ;
+ 962:	82 ff       	sbrs	r24, 2
+ 964:	0b c0       	rjmp	.+22     	; 0x97c <_Z9show_bytehh+0x3e>
+ 966:	5e 9a       	sbi	0x0b, 6	; 11
+	  if ((result & 0x02)>0)  SET_LED_2  else RESET_LED_2 ;
+ 968:	81 ff       	sbrs	r24, 1
+ 96a:	0b c0       	rjmp	.+22     	; 0x982 <_Z9show_bytehh+0x44>
+ 96c:	59 9a       	sbi	0x0b, 1	; 11
+	  if ((result & 0x01)>0)  SET_LED_1  else RESET_LED_1 ;    
+ 96e:	80 ff       	sbrs	r24, 0
+ 970:	f3 cf       	rjmp	.-26     	; 0x958 <_Z9show_bytehh+0x1a>
+ 972:	58 9a       	sbi	0x0b, 0	; 11
+ 974:	08 95       	ret
+	  if ((result & 0x80)>0)  SET_LED_4  else RESET_LED_4 ;
+	  if ((result & 0x40)>0)  SET_LED_3  else RESET_LED_3 ;
+	  if ((result & 0x20)>0)  SET_LED_2  else RESET_LED_2 ;
+	  if ((result & 0x10)>0)  SET_LED_1  else RESET_LED_1 ;
+  } else {
+	  if ((result & 0x08)>0)  SET_LED_4  else RESET_LED_4 ;
+ 976:	5f 98       	cbi	0x0b, 7	; 11
+	  if ((result & 0x04)>0)  SET_LED_3  else RESET_LED_3 ;
+ 978:	82 fd       	sbrc	r24, 2
+ 97a:	f5 cf       	rjmp	.-22     	; 0x966 <_Z9show_bytehh+0x28>
+ 97c:	5e 98       	cbi	0x0b, 6	; 11
+	  if ((result & 0x02)>0)  SET_LED_2  else RESET_LED_2 ;
+ 97e:	81 fd       	sbrc	r24, 1
+ 980:	f5 cf       	rjmp	.-22     	; 0x96c <_Z9show_bytehh+0x2e>
+ 982:	59 98       	cbi	0x0b, 1	; 11
+ 984:	f4 cf       	rjmp	.-24     	; 0x96e <_Z9show_bytehh+0x30>
+}
+
+void show_byte( byte result, byte mHiNibble )
+{
+  if (mHiNibble) {
+	  if ((result & 0x80)>0)  SET_LED_4  else RESET_LED_4 ;
+ 986:	5f 98       	cbi	0x0b, 7	; 11
+	  if ((result & 0x40)>0)  SET_LED_3  else RESET_LED_3 ;
+ 988:	86 fd       	sbrc	r24, 6
+ 98a:	e0 cf       	rjmp	.-64     	; 0x94c <_Z9show_bytehh+0xe>
+ 98c:	5e 98       	cbi	0x0b, 6	; 11
+	  if ((result & 0x20)>0)  SET_LED_2  else RESET_LED_2 ;
+ 98e:	85 fd       	sbrc	r24, 5
+ 990:	e0 cf       	rjmp	.-64     	; 0x952 <_Z9show_bytehh+0x14>
+ 992:	59 98       	cbi	0x0b, 1	; 11
+ 994:	df cf       	rjmp	.-66     	; 0x954 <_Z9show_bytehh+0x16>
+
+00000996 <_Z18show_result_toggleh>:
+}
+
+byte hi_low = 1;
+void show_result_toggle( byte mresult )
+{
+	if (hi_low)	
+ 996:	90 91 15 01 	lds	r25, 0x0115
+ 99a:	99 23       	and	r25, r25
+ 99c:	59 f4       	brne	.+22     	; 0x9b4 <_Z18show_result_toggleh+0x1e>
+      show_byte( mresult, 1 );
+	else 
+      show_byte( mresult, 0 );
+ 99e:	60 e0       	ldi	r22, 0x00	; 0
+ 9a0:	0e 94 9f 04 	call	0x93e	; 0x93e <_Z9show_bytehh>
+	
+	hi_low = ! hi_low;		// toggle
+ 9a4:	81 e0       	ldi	r24, 0x01	; 1
+ 9a6:	90 91 15 01 	lds	r25, 0x0115
+ 9aa:	91 11       	cpse	r25, r1
+ 9ac:	80 e0       	ldi	r24, 0x00	; 0
+ 9ae:	80 93 15 01 	sts	0x0115, r24
+}
+ 9b2:	08 95       	ret
+
+byte hi_low = 1;
+void show_result_toggle( byte mresult )
+{
+	if (hi_low)	
+      show_byte( mresult, 1 );
+ 9b4:	61 e0       	ldi	r22, 0x01	; 1
+ 9b6:	0e 94 9f 04 	call	0x93e	; 0x93e <_Z9show_bytehh>
+ 9ba:	f4 cf       	rjmp	.-24     	; 0x9a4 <_Z18show_result_toggleh+0xe>
+
+000009bc <_exit>:
+ 9bc:	f8 94       	cli
+
+000009be <__stop_program>:
+ 9be:	ff cf       	rjmp	.-2      	; 0x9be <__stop_program>

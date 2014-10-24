@@ -1,0 +1,504 @@
+Archive member included because of file (symbol)
+
+/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
+                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm16m1.o (exit)
+/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_copy_data.o)
+                              button_main.o (__do_copy_data)
+/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clear_bss.o)
+                              button_main.o (__do_clear_bss)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm16m1.o
+LOAD button_main.o
+LOAD buttons.o
+LOAD can.o
+LOAD can_msg.o
+LOAD leds.o
+LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a
+LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a
+LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a
+LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a
+LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000      0x9c0
+ *(.vectors)
+ .vectors       0x00000000       0x7c /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm16m1.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+                0x0000007c                . = ALIGN (0x2)
+                0x0000007c                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0000007c        0x0 linker stubs
+ *(.trampolines*)
+                0x0000007c                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x0000007c                __ctors_start = .
+ *(.ctors)
+                0x0000007c                __ctors_end = .
+                0x0000007c                __dtors_start = .
+ *(.dtors)
+                0x0000007c                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x0000007c        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm16m1.o
+                0x0000007c                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x0000007c        0xc /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm16m1.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000088       0x16 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_copy_data.o)
+                0x00000088                __do_copy_data
+ .init4         0x0000009e       0x10 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clear_bss.o)
+                0x0000009e                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x000000ae        0x8 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm16m1.o
+ *(.init9)
+ *(.text)
+ .text          0x000000b6        0x4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm16m1.o
+                0x000000b6                __vector_20
+                0x000000b6                __vector_28
+                0x000000b6                __vector_1
+                0x000000b6                __vector_24
+                0x000000b6                __vector_12
+                0x000000b6                __bad_interrupt
+                0x000000b6                __vector_6
+                0x000000b6                __vector_3
+                0x000000b6                __vector_23
+                0x000000b6                __vector_30
+                0x000000b6                __vector_25
+                0x000000b6                __vector_11
+                0x000000b6                __vector_13
+                0x000000b6                __vector_17
+                0x000000b6                __vector_19
+                0x000000b6                __vector_7
+                0x000000b6                __vector_27
+                0x000000b6                __vector_5
+                0x000000b6                __vector_4
+                0x000000b6                __vector_9
+                0x000000b6                __vector_2
+                0x000000b6                __vector_21
+                0x000000b6                __vector_15
+                0x000000b6                __vector_29
+                0x000000b6                __vector_8
+                0x000000b6                __vector_26
+                0x000000b6                __vector_14
+                0x000000b6                __vector_10
+                0x000000b6                __vector_16
+                0x000000b6                __vector_22
+ .text          0x000000ba       0xa6 button_main.o
+                0x000000ba                _Z9chip_initv
+                0x000000e4                _Z14send_test_msgsv
+                0x00000124                _Z16led_test_patternv
+                0x0000014a                main
+ .text          0x00000160      0x38a buttons.o
+                0x00000160                _Z5delayl
+                0x000001d0                _Z15set_rows_outputv
+                0x000001d8                _Z14set_rows_inputv
+                0x000001e0                _Z12all_rows_lowv
+                0x000001e8                _Z13all_rows_highv
+                0x000001f0                _Z7set_rowhh
+                0x00000246                _Z18set_switches_inputv
+                0x0000024e                _Z19set_switches_outputv
+                0x00000256                _Z13read_switchesv
+                0x0000025c                _Z10pack_arrayPh
+                0x000002aa                _Z9scan_keysPh
+                0x00000360                _Z16check_for_changePhS_
+                0x00000384                _Z16update_prev_keysv
+                0x000003ae                _Z14wait_for_pressv
+                0x000004ac                _Z10get_columnh
+                0x000004d8                _Z11lookup_charhh
+ .text          0x000004ea      0x394 can.o
+                0x000004ea                __vector_18
+                0x000005a6                _Z11can_receivehssh
+                0x000005ea                _Z8can_initv
+                0x0000065e                _Z15can_set_baud_1Mv
+                0x00000670                _Z17can_set_baud_500Kv
+                0x00000684                _Z17can_set_baud_250Kv
+                0x00000698                _Z17can_set_baud_200Kv
+                0x000006ac                _Z17can_set_baud_125Kv
+                0x000006c0                _Z17can_set_baud_100Kv
+                0x000006d4                _Z6can_txv
+                0x00000734                _Z16can_fill_tx_datahtPhh
+                0x000007aa                _Z17can_retrieve_datahPh
+                0x000007d6                _Z17can_get_timestampv
+                0x000007ec                _Z12can_send_msghP4sCAN
+                0x00000804                _Z11can_get_msghP4sCAN
+                0x0000084e                _Z17can_init_test_msgv
+ .text          0x0000087e       0x5c can_msg.o
+                0x0000087e                _Z21can_prep_board_id_msgP4sCAN
+                0x000008a4                _Z27can_prep_button_pressed_msgP4sCANchh
+                0x000008be                _Z26can_prep_button_roster_msgP4sCAN10uKeyRoster
+ .text          0x000008da       0xe2 leds.o
+                0x000008da                _Z14configure_ledsv
+                0x000008e2                _Z6led_onh
+                0x00000908                _Z7led_offh
+                0x0000092e                _Z7set_ledhh
+                0x0000093e                _Z9show_bytehh
+                0x00000996                _Z18show_result_toggleh
+ .text          0x000009bc        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
+ .text          0x000009bc        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_copy_data.o)
+ .text          0x000009bc        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clear_bss.o)
+                0x000009bc                . = ALIGN (0x2)
+ *(.text.*)
+ .text.libgcc   0x000009bc        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
+ .text.libgcc   0x000009bc        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc   0x000009bc        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clear_bss.o)
+                0x000009bc                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x000009bc        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
+                0x000009bc                exit
+                0x000009bc                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x000009bc        0x4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
+ *(.fini0)
+                0x000009c0                _etext = .
+
+.data           0x00800100       0x16 load address 0x000009c0
+                0x00800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800100        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm16m1.o
+ .data          0x00800100        0x1 button_main.o
+                0x00800100                a
+ .data          0x00800101       0x14 buttons.o
+                0x00800101                assigned_characters
+ .data          0x00800115        0x0 can.o
+ .data          0x00800115        0x0 can_msg.o
+ .data          0x00800115        0x1 leds.o
+                0x00800115                hi_low
+ .data          0x00800116        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
+ .data          0x00800116        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_copy_data.o)
+ .data          0x00800116        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clear_bss.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00800116                . = ALIGN (0x2)
+                0x00800116                _edata = .
+                0x00800116                PROVIDE (__data_end, .)
+
+.bss            0x00800116       0x46
+                0x00800116                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x00800116        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm16m1.o
+ .bss           0x00800116        0xd button_main.o
+                0x00800116                keydata
+ .bss           0x00800123       0x17 buttons.o
+                0x00800123                prev_keys
+                0x00800128                keys
+                0x0080012d                keys2
+                0x00800132                time_delay
+ .bss           0x0080013a       0x22 can.o
+                0x0080013a                msg1
+                0x00800147                msg2
+                0x00800154                data
+ .bss           0x0080015c        0x0 can_msg.o
+ .bss           0x0080015c        0x0 leds.o
+ .bss           0x0080015c        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
+ .bss           0x0080015c        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_copy_data.o)
+ .bss           0x0080015c        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clear_bss.o)
+ *(.bss*)
+ *(COMMON)
+                0x0080015c                PROVIDE (__bss_end, .)
+                0x000009c0                __data_load_start = LOADADDR (.data)
+                0x000009d6                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x0080015c        0x0
+                0x0080015c                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x0080015c                PROVIDE (__noinit_end, .)
+                0x0080015c                _end = .
+                0x0080015c                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab           0x00000000      0x6cc
+ *(.stab)
+ .stab          0x00000000      0x6cc /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm16m1.o
+
+.stabstr        0x00000000       0x81
+ *(.stabstr)
+ .stabstr       0x00000000       0x81 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm16m1.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0xa0
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 button_main.o
+ .debug_aranges
+                0x00000020       0x20 buttons.o
+ .debug_aranges
+                0x00000040       0x20 can.o
+ .debug_aranges
+                0x00000060       0x20 can_msg.o
+ .debug_aranges
+                0x00000080       0x20 leds.o
+
+.debug_pubnames
+                0x00000000      0x419
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x63 button_main.o
+ .debug_pubnames
+                0x00000063      0x174 buttons.o
+ .debug_pubnames
+                0x000001d7      0x15f can.o
+ .debug_pubnames
+                0x00000336       0x6b can_msg.o
+ .debug_pubnames
+                0x000003a1       0x78 leds.o
+
+.debug_info     0x00000000     0x1161
+ *(.debug_info)
+ .debug_info    0x00000000      0x25e button_main.o
+ .debug_info    0x0000025e      0x5c4 buttons.o
+ .debug_info    0x00000822      0x565 can.o
+ .debug_info    0x00000d87      0x260 can_msg.o
+ .debug_info    0x00000fe7      0x17a leds.o
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000      0x6f1
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x16b button_main.o
+ .debug_abbrev  0x0000016b      0x1ea buttons.o
+ .debug_abbrev  0x00000355      0x1f5 can.o
+ .debug_abbrev  0x0000054a      0x120 can_msg.o
+ .debug_abbrev  0x0000066a       0x87 leds.o
+
+.debug_line     0x00000000      0xd8d
+ *(.debug_line)
+ .debug_line    0x00000000      0x1b2 button_main.o
+ .debug_line    0x000001b2      0x3a5 buttons.o
+ .debug_line    0x00000557      0x528 can.o
+ .debug_line    0x00000a7f      0x15e can_msg.o
+ .debug_line    0x00000bdd      0x1b0 leds.o
+
+.debug_frame    0x00000000      0x320
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x50 button_main.o
+ .debug_frame   0x00000050      0x110 buttons.o
+ .debug_frame   0x00000160      0x110 can.o
+ .debug_frame   0x00000270       0x40 can_msg.o
+ .debug_frame   0x000002b0       0x70 leds.o
+
+.debug_str      0x00000000      0x82e
+ *(.debug_str)
+ .debug_str     0x00000000      0x1e5 button_main.o
+                                0x240 (size before relaxing)
+ .debug_str     0x000001e5      0x21c buttons.o
+                                0x2ce (size before relaxing)
+ .debug_str     0x00000401      0x26f can.o
+                                0x368 (size before relaxing)
+ .debug_str     0x00000670       0xef can_msg.o
+                                0x2a8 (size before relaxing)
+ .debug_str     0x0000075f       0xcf leds.o
+                                0x188 (size before relaxing)
+
+.debug_loc      0x00000000      0x671
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x2ad buttons.o
+ .debug_loc     0x000002ad      0x2f2 can.o
+ .debug_loc     0x0000059f       0x78 can_msg.o
+ .debug_loc     0x00000617       0x5a leds.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(button_board.elf elf32-avr)
+LOAD linker stubs
+
+.debug_pubtypes
+                0x00000000       0xad
+ .debug_pubtypes
+                0x00000000       0x2a button_main.o
+ .debug_pubtypes
+                0x0000002a       0x21 buttons.o
+ .debug_pubtypes
+                0x0000004b       0x26 can.o
+ .debug_pubtypes
+                0x00000071       0x2a can_msg.o
+ .debug_pubtypes
+                0x0000009b       0x12 leds.o
+
+.debug_ranges   0x00000000       0xc8
+ .debug_ranges  0x00000000       0x80 buttons.o
+ .debug_ranges  0x00000080       0x48 can.o
