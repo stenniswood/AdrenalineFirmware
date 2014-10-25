@@ -7,6 +7,9 @@ extern word EncoderAcceleration;
 
 
 void 	  encoder_init();
+void	  encoder_disable();
+
+
 long int  get_encoder_angle();
 void 	  encoder_timeslice();
 

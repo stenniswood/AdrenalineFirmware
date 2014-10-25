@@ -70,12 +70,13 @@ done such that the numbers correspond 1 for 1 with the chip.
 #define POT_DDR				DDRD
 #define POT_PORT			PORTD
 
+// ENCODER PIN DEFS:
 #define ENCODER_PORT		PORTB
 #define ENCODER_DDR			DDRB
-#define INDEX				2
+#define ENCODER_INDEX		2
 #define ENCODER_Q1			3
 #define ENCODER_Q2			4
-#define ENCODER_DDR_INPUT_MASK ((1<<ENCODER_Q1) | (1<<ENCODER_Q2) |	(1<<INDEX))
+#define ENCODER_DDR_INPUT_MASK ((1<<ENCODER_Q1) | (1<<ENCODER_Q2) |	(1<<ENCODER_INDEX))
 
 // OUTPUTS:
 #define TXCAN 				2			// PortC

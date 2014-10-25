@@ -75,14 +75,24 @@ ISR ( PCINT0_vect )
 void encoder_init()
 {
 	// SET INPUTS:
-	ENCODER_DDR |= ENCODER_DDR_INPUT_MASK;
+	ENCODER_DDR |= ENCODER_DDR_INPUT_MASK;		// see pin_definitions.h
 
 	// Enable Interrupts on Rising Edges:
-	PCMSK0 |= ((1<<ENCODER_Q1) | (1<<ENCODER_Q2));	
+	PCMSK0 |= ((1<<ENCODER_Q1) | (1<<ENCODER_Q2));	  // | (1<<ENCODER_INDEX);
 	PCICR  |= 0x01;     //PCIE0;
 	//EIFR   |= 0x01;   //INTF0;
-	EIMSK |= 0x01;		//INT0
-	EICRA |= 0x03;		// Rising edges.
+	
+	// Think these are for the non-maskable INT0,INT1,INT2,INT3.
+	// Anyway they are totally different pins!
+	//EIMSK |= 0x01;		//INT0
+	//EICRA |= 0x03;		// Rising edges.
+}
+
+void encoder_disable()
+{
+	// Enable Interrupts on Rising Edges: 
+	PCMSK0 &= ~((1<<ENCODER_Q1) | (1<<ENCODER_Q2));		// zero the bits.	
+	PCICR  |= 0x01;     //PCIE0;		
 }
 
 /* Call every ~20ms ==> 50hz */

@@ -16,8 +16,6 @@ struct sEndPoint
 extern struct sEndPoint 	EndPoint1;
 extern struct sEndPoint 	EndPoint2;
 extern struct sEndPoint 	Range;			// Computed from EndPoint 1 & 2
-//extern struct sStop ExtendedStop1;		// Max Moveable Position
-//extern struct sStop ExtendedStop2;		// Max Moveable Position
 extern word current_1_threshold;
 extern word current_2_threshold;
 
@@ -83,3 +81,6 @@ byte* save_latest_position_eeprom	(byte* addr	);
 byte* read_latest_position_eeprom	(byte* addr	);
 
 #endif
+
+//extern struct sStop ExtendedStop1;		// Max Moveable Position
+//extern struct sStop ExtendedStop2;		// Max Moveable Position

@@ -28,6 +28,7 @@
 #include "leds.h"
 #include "motor.h"
 #include "encoder.h"
+#include "calibrations.h"
 
 // CONSTANTS:
 /**************** TYPE DEFS *************************************/
@@ -54,7 +55,8 @@ void OS_Dispatch()
 	}
 	if ((OS_Event_TIC_Counter % 20) == 0)	// 20ms tasks
 	{	
-		encoder_timeslice();
+		if (isConfigured(MODE_USE_ENCODER))
+			encoder_timeslice();
 	}
 	if ((OS_Event_TIC_Counter % 50) == 0)	// 50ms tasks
 	{

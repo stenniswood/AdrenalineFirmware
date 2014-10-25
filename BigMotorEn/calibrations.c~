@@ -84,7 +84,7 @@ word current_2_threshold = 0x3FF;
  ***************************************************************/	
 void app_default_configuration()
 {
-	config_byte_1 = 0x08;		// Free Spin.
+	config_byte_1 = 0;
 	config_byte_2 = 0;
 	compute_default_stops();
 	

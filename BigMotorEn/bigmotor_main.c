@@ -125,7 +125,7 @@ void init()
 	OS_InitTask();
 	pot_init();	
 	motor_init ();
-	encoder_init();
+	//encoder_init();
 	
 //	can_prep_instance_request( &msg2, 0xBB );
 //	can_send_msg( 0, &msg2 );
