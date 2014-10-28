@@ -253,15 +253,23 @@ RETURN	:  Rate as a multiple of 5ms.  ie Use to init a
 			counter in 5ms timeslice.
 		   -1 means no Report desired!
 *************************************************************/
-byte getReportRate()  			
+byte getReportRate() 		
 {
 	switch ( (config_byte_2 & 0xF0) )
 	{
 	case MODE_SEND_UPDATES_NONE :	return 0; 	break;	
-	case MODE_SEND_UPDATES_10ms :	return 2; 	break;
-	case MODE_SEND_UPDATES_20ms :	return 4; 	break;
-	case MODE_SEND_UPDATES_50ms :	return 10; 	break;
-	case MODE_SEND_UPDATES_100ms:	return 20; break;
+	case MODE_SEND_UPDATES_10ms :	return 1; 	break;
+	case MODE_SEND_UPDATES_20ms :	return 2; 	break;
+	case MODE_SEND_UPDATES_50ms :	return 5; 	break;
+	case MODE_SEND_UPDATES_100ms:	return 10; 	break;
 	default: return -1;  break;
 	}
 }	
+
+BOOL isReportingEnabled()
+{
+	if (getReportRate() != MODE_SEND_UPDATES_NONE)
+		return TRUE;
+	else
+		return FALSE;
+}

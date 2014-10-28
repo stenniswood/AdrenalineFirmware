@@ -28,7 +28,6 @@
 #include "leds.h"
 #include "motor.h"
 #include "encoder.h"
-#include "pot.h"
 #include "calibrations.h"
 
 // CONSTANTS:

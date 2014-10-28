@@ -62,7 +62,8 @@ every:
 //#define MODE_SEND_STATUS		0x04 	// 
 inline void SetReportRate(byte rate)	{  config_byte_2 |= rate; };
 byte 		getReportRate();
-BOOL 		isReportingEnabled();
+byte 		isReportingEnabled();
+
 /**** END OF CONFIG BYTE 2 DEFS   ****/
 /*************************************/
 

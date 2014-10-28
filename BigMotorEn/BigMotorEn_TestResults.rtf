@@ -1,0 +1,207 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 Courier;\f2\fnil\fcharset0 Menlo-Regular;
+\f3\fnil\fcharset0 LucidaGrande;}
+{\colortbl;\red255\green255\blue255;}
+{\info
+{\author Stephen Tenniswood}
+{\*\company Beyond Kinetics, Inc}
+{\*\copyright 2011}}\margl1440\margr1440\vieww17980\viewh10200\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc
+
+\f0\i\fs36 \cf0 BigMotorEn
+\i0\fs28   \
+
+\i Test Results
+\i0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+BIGMOTOR MESSAGE OVERVIEW:\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+BigMotorEn board defines the following CAN messages:\
+\
+
+\i \ul // RECEIVING MESAGES :
+\i0 \ulnone \
+
+\f1 ID_MARK_MOTOR_STOP				0x0040		// 1 or 2 in data[0]\
+ID_MOVE_TO_ANGLE					0x0041		// Instance goes with intended Receiver\
+ID_MOVE_SPEED					0x0042\
+ID_SET_MAX_MOTOR_ACCEL			0x0043\
+ID_MOVE_DUAL_SPEED				0x0044		// For 2 unidirectional motor configuration\
+ID_STOP_MOTOR					0x004B	
+\f0 	
+\f1 // coast/stop/brake
+\f0 \
+\
+
+\i \ul // TRANSMITTING MESSAGE IDs:
+\i0 \ulnone \
+
+\f1 ID_CALIBRATED_STOP				0x0045		// Upon request FOR DEBUG  1 or 2 in data[0]\
+ID_MOTOR_ANGLE					0x0046		// Instance goes with Transmitter\
+ID_MOTOR_VALUE					0x0047\
+ID_MOTOR_SPEED					0x0048\
+ID_MOTOR_ACCEL					0x0049\
+ID_MOTOR_STATUS					0x004A
+\f0 \
+\
+MOTOR CALIBRATION STOPS:\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+1) Set a stop										PASS\
+	\'93ac mot [instance] mark 1 15.0 0x025\'94\
+	\'93ac mot [instance] mark 2 310.0 0x32F\'94\
+\
+2) Verify each with :									PASS\
+	\'93ac mot [instance] getmark 1\'94  \
+	RPI should send a 
+\f2 \CocoaLigature0 ID_MARK_MOTOR_STOP with data[0] = 0x1x\
+	Should get both stops returned (always).\
+\
+
+\f1 	\CocoaLigature1 ID_CALIBRATED_STOP - \CocoaLigature0 byte explanation:\
+	[0] = stop number (ie. 1 or 2)\
+\
+	Angle comes as a 4 byte long int.  Fixed point with 2 decimals (ie = Angle * 100)\
+	[1:2:3:4] = 0xFFEEDDCC  (big endian) direct copy of the EndPoint structure\
+	[5:6]     = 0x03FF	   Corresponding Pot value\CocoaLigature1 \
+
+\f0 \
+3) Cycle power and reverify.								PASS\
+	Cycle power.\
+	repeat Test #2 above.\
+\
+4) See Motor Control to verify motor responds correctly when pot reaches set points\
+\
+\
+MOTOR CONTROL:\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+1) Turn motor on forward								PASS\
+	\'93ac mot [instance] speed 50.0\'94\
+\
+2) Turn motor on backward								PASS\
+	\'93ac mot [instance] speed -50.0\'94\
+\
+3) Motor stop 										PASS\
+	Start the motor per #1 or #2 above.\
+	\'93ac mot [instance] stop\'94\
+	Should stop hard (instantly).\
+\
+4) Motor coast 										PASS\
+	Start the motor per #1 or #2 above.\
+	Turn off and specify an amount of braking (100 is hard stop.  10 is light braking)\
+	\'93ac mot [instance] coast 100.0\'94		Should stop hard (instantly)\
+	\'93ac mot [instance] coast  10.0\'94		Should coast to stop.\
+\
+5) Enable stops and observe motor stop at limit.\
+	Connect Pot \
+	Turn on motor:  \'93ac mot [instance] speed 40.0\'94				PASS- use amon to verify exact values.\
+\
+\
+
+\f3 CONFIGURE MESSAGES:\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+
+\f0 1) Set a configure byte.								PASS\
+	a.  \'93ac config [instance] 1 0xFF 0x08\'94\
+\
+2) Read configure bytes.								PASS\
+	a.  \'93ac config [instance] read\'94	\
+3) Cycle Power and read same config bytes.					PASS\
+	a. cycle power.\
+	b.  \'93ac config [instance] read\'94\
+\
+\
+
+\f3 REPORT MESSAGES:
+\f0 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+1) Potentiometer reporting (Raw)\
+		Set \'93ac config [instance] 2 0xFF 0x41\'94\
+		run amon 250k.  Observe values in first 2 bytes.\
+\
+2) Potentiometer reporting (Angle)\
+		Set stops with:\
+			\'93ac config \
+		Set \'93ac config [instance] 2 0xFF 0x42\'94\
+\
+3) Verify correct report Rate\
+	ac config [instance] 2 0xFF 0x81\
+	ac config [instance] 2 0xFF 0x41\
+	ac config [instance] 2 0xFF 0x21\
+	ac config [instance] 2 0xFF 0x11\
+	Observe time stamps / or count messages per second\
+	Should match \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f2 \cf0 \CocoaLigature0 		0x0x	- No report		   		\
+		0x1x	- Report every 10ms		\
+		0x2x	- Report every 20ms		\
+		0x3x	- Report every 50ms		\
+		0x4x	- Report every 100ms
+\f0 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+Fail :	Some times reports are missing!\
+	Could be amon skipping msgs though.\
+\
+\
+LEDS\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+1) Verify Low Limit LED					some boards fail. work on another\
+	Turn off Free spin config mode.\
+\
+2) Verify High Limit LED\
+	Turn off Free spin config mode.\
+\
+\
+CURRENT\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+1) Verify correct current is reported in the raw message.\
+\
+2) Verify that the motor shuts off when overcurrent.\
+	There are two thresholds here.  The HBridge chips have a shutdown current.\
+	And the software has a calibrateable threshold.\
+\
+3) Set software current threshold.\
+	Verify\
+4) Increase motor speed & or load to exceed the current threshold.\
+	Should see motor stop\
+\
+\
+TEST BASE FREQUENCIES:\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+1) Configure for each base frequency.  Observe pulses on oscilliscope.
+\f2 \CocoaLigature0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf0 	 Base			00 ->  100Hz  \
+	 Frequency	01 ->  300Hz  \
+					10 -> 1000hz  \
+					11 -> 5000Hz  \
+\
+ENCODER\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+
+\f0 Setup:  \
+A) Connect a low resolution (mechanical) encoder.\
+	Make sure the encoder is wired correctly. There is a preferred Q1,Q2 order.  Encoder \
+		should both count up and down.\
+	Configure the board to report the position and speed.\
+		
+\f2 ac config [instance] 2 0xFF 0x11\
+
+\f0 	Enable the encoder:\
+		
+\f2 ac config [instance] 1 0xFF 0x09
+\f0 \
+\
+Test:\
+Observe the first two bytes of ID_MOTOR_VALUE message.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\tqc\tx10107\pardirnatural
+\cf0 	1) Turn clockwise - should see either counting up or down	  PASS\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\tqr\tx10073\tqc\tx10078\pardirnatural
+\cf0 	2) Turn counter-clockwise - should see counting in the opposite direction.	   PASS\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf0 \
+B) Connect a high resolution (optical) encoder.\
+\
+}

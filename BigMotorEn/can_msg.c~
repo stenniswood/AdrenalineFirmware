@@ -358,8 +358,8 @@ void can_prep_motor_values_raw( sCAN* mMsg )
 	mMsg->data[2] = hi(speed);
 	mMsg->data[3] = lo(speed);
 
-	// MOTOR CURRENT:
-	//  (Larger of left/right) (in Amps*10):
+	// Also send Currents Raw:
+	// MOTOR CURRENT (Larger of left/right) (in Amps*10):
 	word CurrentAvg = max(LeftCurrentSampleAvg*10, 
 						  RightCurrentSampleAvg*10 );
 	mMsg->data[4] = hi(CurrentAvg);

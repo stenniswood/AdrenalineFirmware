@@ -52,8 +52,8 @@ byte prev_direction = CW;
 ISR ( PCINT0_vect )
 {
 	byte reg = PINB;		// PortB In
-	byte q1 = (reg & (1<<ENCODER_Q1));
-	byte q2 = (reg & (1<<ENCODER_Q2));
+	byte q1 = (reg & (1<<ENCODER_Q1))>0;
+	byte q2 = (reg & (1<<ENCODER_Q2))>0;
 	byte Direction = CW;
 
 	// Decode Direction & Count!
@@ -61,7 +61,7 @@ ISR ( PCINT0_vect )
 	if ((prev_q1==0) && (q1))		// Low to High
 	{
 		if (q2) Direction = CW;
-		else 	Direction = CCW;
+		else 	   Direction = CCW;
 		
 		if (Direction == CW)
 			EncoderCount++;		// never reset.  Holds _THE_ count from min stop.

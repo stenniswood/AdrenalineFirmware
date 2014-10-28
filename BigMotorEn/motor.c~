@@ -218,7 +218,8 @@ void report_timeslice_10ms()
 			// programmer (ie. the numbers visible on the CAN monitor add up (subtract for speed).
 			// Also because the POT sample rate is far too fast to have a significant resolution
 			// on the speed (only 1 or 2 difference at max!).  This report rate gives good resolution
-			// and reasonable response time.			
+			// and reasonable response time.
+			
 		} 
 	}
 }

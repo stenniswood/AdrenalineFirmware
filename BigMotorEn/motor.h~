@@ -21,7 +21,6 @@ extern float MotorDutyRequest;	// set in can_msg.c;  [-1.0..+1.0]
 
 void motor_init 		 ( 				 );
 void motor_timeslice_10ms(				 );
-void report_timeslice_10ms(				 );
 
 void motor_set_duty_signed( float mSignedFraction );
 void motor_set_duty 	( float mFraction, BOOL mDirection );

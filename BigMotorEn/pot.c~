@@ -77,7 +77,7 @@ void pot_timeslice()
 {
 	compute_pot_speed();
 	compute_pot_acceleration();
-	PotSample[0] = PotSample[1];
+	PotSample[0] 		  = PotSample[1];
 }
 
 /**********************************************
