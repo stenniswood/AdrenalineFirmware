@@ -12,9 +12,6 @@ void an_apply_filters();	//
 void select_chip  ( byte mChip );
 void deselect_chip( byte mChip );
 
-void enable_pin_change_ints();
-void disable_pin_change_ints();
-
 void an_reset_all		( );
 void an_configure_all	( );
 

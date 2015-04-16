@@ -9,8 +9,8 @@ avrdude -p atmega32m1 -b 19200 -c avrisp -P /dev/tty.usbmodemfd131 -Uefuse:w:0xF
 DATE 	:  8/8/2013
 AUTHOR	:  Stephen Tenniswood
 Product of Beyond Kinetics, Inc   
-
 ============================== CAN MESSAGES ===========================
+
 // RECEIVING MESSAGE IDs (higher ids should prioritize higher):
 #define ID_MARK_MOTOR_STOP				0x0040		// 1 or 2 in data[0]
 #define ID_MOVE_TO_ANGLE				0x0042		// Instance goes with intended Receiver
@@ -125,9 +125,10 @@ void init()
 	OS_InitTask();
 	pot_init();	
 	motor_init ();
-
-	can_prep_instance_request( &msg2, 0xBB );
-	can_send_msg( 0, &msg2 );
+	//encoder_init();
+	
+//	can_prep_instance_request( &msg2, 0xBB );
+//	can_send_msg( 0, &msg2 );
 }
 
 //********** main *****************************************************
@@ -137,6 +138,8 @@ int main(void)
 	init();
     while (1)
     {	
+		//motor_set_duty( 0.75 );		
+
     	// CAN Messaging will directly Start/Stop the motor.
 //   	SET_LED_3();
 //		delay(one_second); delay(one_second); 

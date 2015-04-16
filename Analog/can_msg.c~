@@ -130,11 +130,9 @@ void can_send_timeslice()
 
 	if (isConfigured(0x0F)==0)		// None configured...
 		return;
-	
-	led_on(2);		
+		
 	can_send_one( chip, channel );
-	led_on(2);
-	  	
+	
 	channel++;
 	if (channel > 15)
 	{		

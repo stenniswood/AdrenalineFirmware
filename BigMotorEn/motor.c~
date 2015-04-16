@@ -61,7 +61,7 @@ AUTHOR	:  Stephen Tenniswood
 float MotorDutyRequest = 0.00;	// set in can_msg.c;  [-1.0..+1.0]
 
 byte MotorState = MOTOR_OFF;
-short ReportCounter = 1;		// when zero sends update of the motor angle & currents
+
 
 /**************** FUNCTIONS *************************************/
 
@@ -72,13 +72,11 @@ void SetBaseFrequency( )
 {
 	switch (getBaseFreq())
 	{
-	// 244 is lowest with /1 prescaler!  The get_top_value() function
-	// will encounter an overflow (16,000,000 / 100)=160,000 which is bigger than 'word'
-		case 0:	pwm_init(  245., TRUE, TRUE );	break;
-		case 1:	pwm_init(  300., TRUE, TRUE );	break;
+		case 0:	pwm_init( 100., TRUE, TRUE );	break;
+		case 1:	pwm_init( 300., TRUE, TRUE );	break;
 		case 2:	pwm_init( 1000., TRUE, TRUE );	break;
 		case 3:	pwm_init( 5000., TRUE, TRUE );	break;
-		default: pwm_init(5000., TRUE, TRUE );  break;
+		default: pwm_init( 5000., TRUE, TRUE ); break;
 	}
 }
 
@@ -92,16 +90,18 @@ motor_init()
 	Base Frequency of the BTS7960 chips can go upto 25khz	*/
 void motor_init()
 {
-	INHIBIT_DDR  |=  INHIBIT_DDR_MASK;			// HBridge Enable lines (outputs)
+	HILOW_DDR  |=  HILOW_DDR_MASK;			// HBridge Enable lines (outputs)
 	CURRENT_SENSE_DDR &=  ~((1<<CURRENT_SENSE_LEFT) | (1<<CURRENT_SENSE_RIGHT));
 
-	SetBaseFrequency( );	// config_byte_1
-	motor_enable(FALSE);
+	SetBaseFrequency( );		// config_byte_1
+	motor_enable    (TRUE);		// 
+	
+	if (isConfigured(MODE_USE_ENCODER))
+		encoder_init();
 
 	if (isConfigured(MODE_TILT_RESPONDER))
-	{
 		motor_enable( TRUE );
-	}
+
 	// Default stops computed on first run of the board.
 	// See calibrations.c, "app_default_configuration()"
 }
@@ -125,23 +125,29 @@ void motor_timeslice_10ms()
 	// Note if the lights stop working, or this timeslice is not going at all,
 	// 	it could be hung up on can_instance.  ie if there are not any other boards in the network.
 	if (MotorState == MOTOR_REQUEST_PENDING)
-	{
+	{	
 		if (isConfigured(MODE_2_MOTORS)==FALSE)
 		{
-			motor_set_duty( Destination.speed );
-		} 
+			if (Destination.coast == HARD_STOP_MOTOR) {
+				motor_stop(); 
+			} else if (Destination.coast) {
+				motor_coast( Destination.speed );
+			} else {
+				set_motor_direction( Destination.direction );
+				motor_set_duty( Destination.speed, Destination.direction );
+			}
+		}
 		else 
 		{	// 2 unidirectional motors (independant PWM dutys)
-			INHIBIT_PORT &= ~(1<<INHIBIT_LEFT );		// want both low - pulldowns.
-			INHIBIT_PORT &= ~(1<<INHIBIT_RIGHT);		// 0=> Low side active
+			HILOW_PORT &= ~(1<<HILOW_LEFT );		// want both low - pulldowns.
+			HILOW_PORT &= ~(1<<HILOW_RIGHT);		// 0=> Low side active
 			set_dutyA( Destination.speed  );		
 			set_dutyB( Destination.speed2 );		// left side needs power too.  
 		}
 	}
 
 	// READ LATEST POSITION:
-	if (isConfigured(MODE_USE_ENCODER) ) {
-		encoder_timeslice();
+	if (isConfigured(MODE_USE_ENCODER) ) {		
 		position = EncoderCount; 	
 	} else {
 		position = get_pot(); 	
@@ -149,10 +155,13 @@ void motor_timeslice_10ms()
 	}
 
 	if (isConfigured(MODE_FREE_SPIN)==FALSE)
-		stop_action( position );		// check stops and stop motor if necessary
-
+	{
+		byte stop = check_stops( position );
+		stop_action( stop );		// check stops and stop motor if necessary	
+	}
+	
 	if (destination_reached()) {		// destination works in free spin mode.
-		motor_stop();					// just no stops!
+	//	motor_stop();					// just no stops!
 	} 
 
 	// STALL CURRENT?
@@ -167,61 +176,58 @@ void motor_timeslice_10ms()
 		motor_set_duty( pid );
 	} */
 
-	// Time To Report:
-	if (getReportRate() != MODE_SEND_UPDATES_NONE)
+	if (ShutDownState == SHUTDOWN_PENDING)
 	{
-		//if (ReportCounter==-1)
-		//{ }
-		//else 
-		if ((ReportCounter--)==0)
+		//if (isConfigured(MODE_USE_ENCODER))
+		//	save_cal();
+		//motor_enable(FALSE); 
+		//cli();
+		// micro to sleep mode:
+	}
+}
+
+static short ReportCounter = 1;		// when zero sends update of the motor angle & currents
+void report_timeslice_10ms()
+{
+	// Time To Report:
+	if (isReportingEnabled())
+	{
+		ReportCounter--;
+		if (ReportCounter<=0)
 		{
 			ReportCounter = getReportRate();		// Refill
-			if (isConfigured2(MODE_SEND_POSITION_RAW))
-			{
+			if (isConfigured2(MODE_SEND_POSITION_SPEED_CURRENT))
+			{	
+				/* Sends:  Position count, Speed, and Current */
 				can_prep_motor_values_raw( &msg1 );
 				can_send_msg_no_wait( 0, &msg1 );
 			}
-			if (isConfigured2(MODE_SEND_POSITION_CALC))
+			if (isConfigured2(MODE_SEND_ANGLE))
 			{
-				can_prep_motor_angle( &msg1    );
-				can_send_msg_no_wait( 2, &msg1 );	// MOB2 is also unused
+				/* Sends: Motor Angle (based on calibrated stops) */
+				can_prep_motor_angle(    &msg2 );
+				can_send_msg_no_wait( 2, &msg2 );	// MOB2 is also unused
 			}
 			if (isConfigured2(MODE_SEND_STATUS))
 			{
-				can_prep_motor_status( &msg1    );
+				can_prep_motor_status(    &msg1 );
 				can_send_msg_no_wait ( 4, &msg1 );	// MOB4 is also unused
 			}
-			//System_Send_Status 	= 1;	// will be sent on next can_board_100ms_TimeSlice()
+			//System_Send_Status = 1;	// will be sent on next can_board_100ms_TimeSlice()
 
 			// NOTE:  The "previous samples" held in subsript [0] are only updated every
 			// Report time.  This was decided so that it's easily understandable to another 
 			// programmer (ie. the numbers visible on the CAN monitor add up (subtract for speed).
 			// Also because the POT sample rate is far too fast to have a significant resolution
 			// on the speed (only 1 or 2 difference at max!).  This report rate gives good resolution
-			// and reasonable response time.
-			if (isConfigured(MODE_USE_ENCODER) ) {
-					encoder_timeslice();
-			} else {
-					pot_timeslice();
-			}
-			PotSample[0] 		  = PotSample[1];
+			// and reasonable response time.			
 		} 
-	}
-
-	if (ShutDownState == SHUTDOWN_PENDING)
-	{
-		if (isConfigured(MODE_USE_ENCODER))
-			save_cal();
-		motor_enable(FALSE); 
-		//cli();
-		// micro to sleep mode:
 	}
 }
 
-void stop_action(word mPosition)
+void stop_action(byte mStop)
 {
-	byte stop = check_stops( mPosition );
-	if (stop)
+	if (mStop)
 		motor_stop();
 	else 
 		motor_enable(TRUE);
@@ -239,7 +245,6 @@ float get_motor_angle()
     return Angle.value;
 }
 
-
 void motor_enable( BOOL mEnable )
 {
 	if (mEnable)
@@ -248,31 +253,36 @@ void motor_enable( BOOL mEnable )
 		MotorState = MOTOR_DISABLED;
 }
 
+void motor_brake()
+{ 
+	// The dutys are INHIBIT's!  So 1.0 means completely inhibit current.
+	set_dutyA(1.0);
+	set_dutyB(1.0);
+
+	HILOW_PORT |= (1<<HILOW_LEFT);
+	HILOW_PORT |= (1<<HILOW_RIGHT);
+
+	MotorState = MOTOR_BRAKING;	
+}
 void motor_stop()
 {
+	motor_brake();
 	MotorState = MOTOR_OFF;
-	set_dutyA( 0.0 );
-	set_dutyB( 0.0 );
 }
 
-void motor_brake( BOOL mEnable )
-{ 
-	set_dutyA(0.0);
-	set_dutyB(0.0);
-	
-	INHIBIT_PORT &= ~(1<<INHIBIT_LEFT);		// active low!
-	INHIBIT_PORT &= ~(1<<INHIBIT_RIGHT);
-
-	MotorState = MOTOR_BRAKING;	
-}
-void motor_coast( BOOL mEnable )
+/*
+Input:	mFraction - specifies amount of braking. 
+					 1.0 => most Braking.
+					 0.0 => most coasting.
+*/
+void motor_coast( float mFraction )
 {
-	set_dutyA(0.0);
-	set_dutyB(0.0);
+	set_dutyA(mFraction);
+	set_dutyB(mFraction);
 
-	INHIBIT_PORT |= (1<<INHIBIT_LEFT );
-	INHIBIT_PORT |= (1<<INHIBIT_RIGHT);
-	MotorState = MOTOR_BRAKING;	
+	HILOW_PORT &= ~(1<<HILOW_LEFT);
+	HILOW_PORT &= ~(1<<HILOW_RIGHT);
+	MotorState = MOTOR_COASTING;	
 }
 /* Driving incorrectly!!
 	Right now, we pick the motor direction and set those pins on the BTS7960.
@@ -290,55 +300,61 @@ void motor_coast( BOOL mEnable )
 	REVERSE:
 		INH_LEFT=1 and INH_RIGHT=1;
 		HILOW_LEFT=PWM- when 0 recirculates, when 1 drives.;  HILOW_RIGHT=0 	
+
+Rev C (red boards) wiggle the INH line (ENable).  
+So these below are the DIRECTION (HI OR LOW SIDE SELECTOR) pins:
 */
-/*void set_motor_direction( BOOL mForward )
+void set_motor_direction( BOOL mForward )
 {
 	if (mForward)
 	{
-		//HILOW_PORT |=  (1<<HILOW_LEFT );
-		HILOW_PORT &= ~(1<<HILOW_LEFT);
-
+		HILOW_PORT |=  (1<<HILOW_RIGHT );		
+		HILOW_PORT &= ~(1<<HILOW_LEFT  );
 	}
 	else {
+		HILOW_PORT |=  (1<<HILOW_LEFT );
 		HILOW_PORT &= ~(1<<HILOW_RIGHT);
-		//HILOW_PORT |=  (1<<HILOW_RIGHT);
-	} 
-} */
+	}
+}
 
 /*********************************************
 motor_set_duty( float mFraction )
 There are multiple ways of driving the HBridge
-Method A) Keep toggling High/Low on both (but opposite polarity) sides.
+Method A) Select High on one side and Low on the other side of the HBridge.
+		  PWM the LOW side ENABLE line,  and hold the Highside enable positive.
+
+Method B) Keep toggling High/Low on both (but opposite polarity) sides.
 		  0.5 = stopped;  0.6=> slow forward; 0.9=> fast forward;
 		  0.5 = stopped;  0.4=> slow backward; 0.1 => fast backward;
-Method B) 
-	We PWM the LOW side and hold the Highside positive.
-	We change the PWM_Left & PWM_Right pins.
 	
-NOTE :	No change to the Enable lines in this function!
-INPUT:	mPercent - [0.0 .. +1.00]
+NOTE :	Enable lines are changed in call to set_motor_direction() in this function!
+INPUT:	mPercent - [-1.00 .. +1.00]
 *********************************************/
-void motor_set_duty( float mFraction )
-{	
-	if (mFraction>0)
+void motor_set_duty( float mFraction, BOOL mDirection )
+{
+	if (mDirection)
 	{
-		set_dutyA( mFraction );		// left side needs power
-		set_dutyB( 0.0 );
+		// Right is high; Left is low:
+		// DutyB			DutyA
+		set_motor_direction( TRUE );
+		set_dutyA( mFraction );			// wiggle Left side power
+		set_dutyB( 1.000 );				// Hold ON!
 	}
 	else 
 	{
-		set_dutyA( 0.0 );
-		set_dutyB( -mFraction );		// right side needs power
+		// Right is low; Left is high:
+		// DutyB			DutyA
+		set_motor_direction( FALSE );
+		set_dutyA( 1.00		 );		// Hold ON!
+		set_dutyB( mFraction );		// wiggle Right side power
 	}
-
-	// INHIBIT is active LOW.  So it really acts like an ENABLE signal	
-	INHIBIT_PORT |=  (1<<INHIBIT_RIGHT);
-	INHIBIT_PORT |=  (1<<INHIBIT_LEFT);
 }
 
 /* Sets the Motor Direction and Strength
 
-OC1A & OC1B drive the EN => High/Low side active pin.  50% duty will drive motor forward/backward with equal time.
+OC1A & OC1B drive the EN => High/Low side active pin.  
+
+50% duty will drive motor forward/backward with equal time.
 We set up the PWM drive to give opposite polarities.  When left side is high, right side will be low.
 The motor is always getting current this way.  however the back and forth ratios are what determine the speed.
 Just a little different than the normal PWM of the enable pin with a set duty.

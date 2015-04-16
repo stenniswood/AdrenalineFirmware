@@ -17,22 +17,21 @@
  *		  	  December 2007						 				 	 *
  *		  	  Revised for atmel Sept 2013						 	 *
  *********************************************************************/
-//#include "skp_bsp.h"		// include SKP board support package
 #include <avr/sfr_defs.h>
 #include <avr/common.h>
-#include "bk_system_defs.h"
+
 #include "inttypes.h"
 #include "interrupt.h"
-#include "OS_timers.h"
+#include "bk_system_defs.h"
 #include "pin_definitions.h"
 #include "leds.h"
-#include "motor.h"
+#include "OS_timers.h"
+#include "OS_Dispatch.h"
+#include "analog.h"
+#include "can_msg.h"
+
 
 // CONSTANTS:
-/**************** TYPE DEFS *************************************/
-
-/**************** VARIABLES *************************************/
-
 
 /*****************************************************************************
 Name		:  OS_Dispatch()   
@@ -46,25 +45,30 @@ void OS_Dispatch()
 	if ((OS_Event_TIC_Counter % 5) == 0)	// 5ms tasks
 	{
 		//FS_Timeslice();
+
 	}
 	if ((OS_Event_TIC_Counter % 10) == 0) 	// 10ms tasks
-	{		
-		//motor_timeslice_10ms();		
+	{
+		analog_timeslice();  // ~1.2ms per chip (15 channels); 4chips=~5ms	
 	}
 	if ((OS_Event_TIC_Counter % 20) == 0)	// 20ms tasks
-	{	
+	{
+			can_send_timeslice();
 	}
 	if ((OS_Event_TIC_Counter % 50) == 0)	// 50ms tasks
 	{
+
 	}
 	if ((OS_Event_TIC_Counter % 100) == 0)	// 100ms tasks
 	{
+		// send CAN msgs
+		//can_send_analog_msgs();
+		
 		if (t) {
-			//led_on(3);
-			//RESET_LED_4();
+			led_on(3);
 			t = 0;
 		} else {
-			//led_off(3);
+			led_off(3);
 			t = 1;
 		}
 	}

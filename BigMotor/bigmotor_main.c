@@ -77,16 +77,16 @@ void init()
 	init_leds ();
 	can_init  (CAN_250K_BAUD);		/* Enables Mob0 for Reception! */
     can_remove_instance_from_filter( 1 );
+    
     // INIT MYINSTANCE:
 	MyInstance = 0;
 	random_number_adc_init();
-	can_instance_init();
-    set_rx_callback(can_file_message);
-	start_sampling();
+	can_instance_init( );
+    set_rx_callback  ( can_file_message);
+	start_sampling   ( );
 	
 	OS_InitTask();	
 	motor_init ();
-	//motor_set_duty(1.0);
 }
 //********** main *****************************************************
 word prevPosition = 0;

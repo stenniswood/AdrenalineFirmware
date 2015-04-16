@@ -66,14 +66,14 @@ float extract_float_msg( byte* mdata )
 }
 word extract_word_be( byte* mData )
 {
-	word retval = 0;
+	long int retval = 0;
 	retval |= (mData[0]<<8);
 	retval |= mData[1];
 	return retval;
 }
 word extract_word_le( byte* mData )
 {
-	word retval = 0;
+	long int retval = 0;
 	retval |= mData[0];
 	retval |= (mData[1]<<8 );
 	return retval;
@@ -84,8 +84,8 @@ long int extract_long_int_be( byte* mData)
 	long int retval = 0;
 	retval |= (((unsigned long)mData[0])<<24);
 	retval |= (((unsigned long)mData[1])<<16);
-	retval |= (mData[2]<<8);
-	retval |=  mData[3];
+	retval |= (((unsigned long)mData[2])<<8);
+	retval |= (((unsigned long)mData[3]));
 	return retval;
 }
 long int extract_long_int_le( byte* mData)
@@ -108,12 +108,13 @@ long int extract_long_int_le( byte* mData)
 #define ID_MOVE_TO_ANGLE				0x0042		 Instance goes with intended Receiver
 #define ID_MOVE_SPEED					0x0043
 #define ID_SET_MAX_MOTOR_ACCEL			0x0044		*/
+
 void can_file_message( sCAN* mMsg )
 {
 	if ( match( mMsg->id, 	create_CAN_eid(ID_MARK_MOTOR_STOP, MyInstance)) )
 	{
 		// data[0] == [0x1x] means report on the mark stop.
-		if ( (mMsg->data[0] & 0x10) == 0x10)
+		if ( (mMsg->data[0] & 0x10) == 0x10) 	// READ?
 		{
 			can_prep_stop( &msg1, 1 ); 
 			can_prep_stop( &msg2, 2 );
@@ -133,10 +134,17 @@ void can_file_message( sCAN* mMsg )
 	else if ( match(mMsg->id, create_CAN_eid(ID_MOVE_SPEED, MyInstance)) )	
 	{
 		can_proc_move_speed_msg( mMsg );
+		MotorState = MOTOR_REQUEST_PENDING;
+	} 
+	else if ( match(mMsg->id, create_CAN_eid(ID_STOP_MOTOR, MyInstance)) )
+	{
+		can_proc_stop_motor_msg( mMsg );
+		MotorState = MOTOR_REQUEST_PENDING;
 	} 
 	else if ( match(mMsg->id, create_CAN_eid(ID_MOVE_DUAL_SPEED, MyInstance)) )	
 	{
 		can_proc_move_dual_speed_msg( mMsg );
+		MotorState = MOTOR_REQUEST_PENDING;
 	} 
 	else if ( match(mMsg->id, create_CAN_eid(ID_SET_MAX_MOTOR_ACCEL, MyInstance)) )
 	{
@@ -182,7 +190,7 @@ void can_proc_set_stop_msg( sCAN* mMsg )
 	{
 		EndPoint2.angle = extract_long_int_be( &(mMsg->data[1]) );
 		EndPoint2.value = extract_word_be	 ( &(mMsg->data[5]) );
-	}
+	}	
 	//EndPoint1.angle = 0xFFFFFF12;
 	//EndPoint2.angle = 0xFFFFFF13;
 	//order_stops_by_value();
@@ -198,9 +206,10 @@ void can_proc_move_to_angle_msg ( sCAN* mMsg )
 	long int tmp_angle 	 		  = extract_long_int_be( mMsg->data );
 	Destination.starting_position = PotSample[1];
 	Destination.position 		  = convert_to_value(tmp_angle);
-	
-	short spd  = (mMsg->data[4]<<8) + mMsg->data[5];
-	Destination.speed = (spd/100);	    // hundredth percent is sent.
+	Destination.coast 			  = 0x00;  // apply when destination is reached.
+
+	short speed  = (mMsg->data[4]<<8) + mMsg->data[5];
+	Destination.speed = (speed/100);	    // hundredth percent is sent.
 	get_direction_to_destination();
 	MotorState = MOTOR_REQUEST_PENDING;
 }
@@ -211,16 +220,29 @@ void can_proc_move_speed_msg( sCAN* mMsg )
 	// speed is a float
 	// Value is a number [-100.00 to 100.00]  * 100  == [-10000..10000]
 	// So 10,000 represents 100.00%
-	short speed = (short)extract_word_be( mMsg->data );	
-	float fspeed = speed;
-	Destination.speed = (fspeed / 10000.0);
+	short speed = extract_word_be( mMsg->data );	
+	Destination.coast = 0; 
+	Destination.speed = ((float)speed / 10000.0);
 	if (Destination.speed > 0)
 		Destination.direction = 1;
 	else {
 		Destination.direction = 0;
-		//Destination.speed = Destination.speed;
+		Destination.speed = -Destination.speed;	// make it positive
 	}
-	MotorState = MOTOR_REQUEST_PENDING;
+}
+
+void can_proc_stop_motor_msg( sCAN* mMsg )
+{
+	short brake = extract_word_be( &(mMsg->data[0])  );
+	Destination.speed = fabs(((float)brake / 10000.0));
+
+	/* We can have coast (both directions low) with a duty cycle.
+	   Coast with 100% on, is most gradual coast.
+	   Coast with  50% on, cuts down on the recirculation current.	*/
+	if (mMsg->data[2] == 0)
+		Destination.coast = HARD_STOP_MOTOR;		// STOP
+	else 
+		Destination.coast = mMsg->data[2];
 }
 
 void can_proc_move_dual_speed_msg( sCAN* mMsg )
@@ -234,7 +256,7 @@ void can_proc_move_dual_speed_msg( sCAN* mMsg )
 
 	// There's no direction for unidirectional mode!
 	//Destination.direction = 1;	
-	MotorState = MOTOR_REQUEST_PENDING;
+	//MotorState = MOTOR_REQUEST_PENDING;
 }
 
 void can_proc_max_acceleration_msg ( sCAN* mMsg )
@@ -262,8 +284,8 @@ void can_proc_max_acceleration_msg ( sCAN* mMsg )
 /* For informational purposes, send our travel end points. */
 void can_prep_stop( sCAN* mMsg, byte mStopNumber )
 {
-	word  PotValue;
-	long int Angle;
+	word PotValue = 0xFFFF;
+	long int Angle= -1;
     mMsg->id 	  = create_CAN_eid( 0x00, ID_CALIBRATED_STOP, MyInstance );
 
     if (mStopNumber==1) {
@@ -273,7 +295,7 @@ void can_prep_stop( sCAN* mMsg, byte mStopNumber )
     	PotValue = EndPoint2.value;
     	Angle    = EndPoint2.angle;
     }
-    mMsg->data[0] = mStopNumber;
+    mMsg->data[0] = mStopNumber&0x0F;
 	word tmp = hi_word(Angle);
 	mMsg->data[1] = hi(tmp);
 	mMsg->data[2] = lo(tmp);	
@@ -292,48 +314,62 @@ void can_prep_motor_angle( sCAN* mMsg )
     mMsg->id = create_CAN_eid( ID_MOTOR_ANGLE, MyInstance );
 
 	// FILL CURRENT ANGLE :
+	// Fixed point, 
 	float_array Angle; 
 	Angle.value = get_motor_angle();
 	for (int i=0; i<size; i++)
 	    mMsg->data[i] = Angle.array[i];
 
 	// MOTOR CURRENT (Larger of left/right) (in Amps*10):
-	word CurrentAvg = max(LeftCurrentSampleAvg*10, 
+/*	word CurrentAvg = max(LeftCurrentSampleAvg*10, 
 						  RightCurrentSampleAvg*10 );
 
 	mMsg->data[size+0] = hi(CurrentAvg);
-	mMsg->data[size+1] = lo(CurrentAvg);
+	mMsg->data[size+1] = lo(CurrentAvg); */
 
 	// Make (TENTH DEG/SEC) ANGLE SPEED INSTEAD!!!!!:
 	//short TenthDegSec = PotSpeed[1]
-	mMsg->data[size+2] = hi(PotSpeed[1]);
-	mMsg->data[size+3] = lo(PotSpeed[1]);
+	mMsg->data[size+0] = hi(PotSpeed[1]);
+	mMsg->data[size+1] = lo(PotSpeed[1]);
 
-    mMsg->header.DLC = size+4;
+    mMsg->header.DLC = size+2;
     mMsg->header.rtr = 0;
 }
 
+/* Reports: Position, Speed, and electrical Current draw */
 void can_prep_motor_values_raw( sCAN* mMsg )
 {
     mMsg->id 	  = create_CAN_eid( 0x00, ID_MOTOR_VALUE, MyInstance );
+    word position = 0;        
+    short speed = 0;
 	if (isConfigured(MODE_USE_ENCODER))  {
-		mMsg->data[0] = hi(EncoderCount);
-		mMsg->data[1] = lo(EncoderCount);	
+		position = EncoderCount;
+		speed    = EncoderSpeed;
 	} else {
-		mMsg->data[0] = hi(PotSample[1]);
-		mMsg->data[1] = lo(PotSample[1]);
+		position = PotSample[1];
+		speed    = PotSpeed[1];
 	}
 
-	// Also send Currents Raw:
-	word LeftAvg  = LeftCurrentSampleAvg;
-	word RightAvg = RightCurrentSampleAvg;
-	mMsg->data[2] = hi(LeftAvg );
-	mMsg->data[3] = lo(LeftAvg );
-	mMsg->data[4] = hi(RightAvg);
-	mMsg->data[5] = lo(RightAvg);
+	// POSITION
+	mMsg->data[0] = hi( position );
+	mMsg->data[1] = lo( position );
 
-	mMsg->data[6] = hi(PotSpeed[1]);
-	mMsg->data[7] = lo(PotSpeed[1]);	
+	// SPEED
+	mMsg->data[2] = hi(speed);
+	mMsg->data[3] = lo(speed);
+
+	// MOTOR CURRENT:
+	//  (Larger of left/right) (in Amps*10):
+	word CurrentAvg = max(LeftCurrentSampleAvg*10, 
+						  RightCurrentSampleAvg*10 );
+	mMsg->data[4] = hi(CurrentAvg);
+	mMsg->data[5] = lo(CurrentAvg);
+
+	// for DEBUG ONLY
+	short RCurrentAvg = round(RightCurrentSampleAvg*10.); 
+	mMsg->data[6] = hi(RCurrentAvg);
+	mMsg->data[7] = lo(RCurrentAvg);
+	
     mMsg->header.DLC = 8;
     mMsg->header.rtr = 0;
 }

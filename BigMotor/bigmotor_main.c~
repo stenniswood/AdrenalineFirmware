@@ -80,8 +80,9 @@ void init()
     // INIT MYINSTANCE:
 	MyInstance = 0;
 	random_number_adc_init();
-	can_instance_init();
-    set_rx_callback(can_file_message);
+	can_instance_init( );
+    set_rx_callback  ( can_file_message);
+	start_sampling   ( );
 	
 	OS_InitTask();	
 	motor_init ();

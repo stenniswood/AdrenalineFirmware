@@ -84,8 +84,8 @@ long int extract_long_int_be( byte* mData)
 	long int retval = 0;
 	retval |= (((unsigned long)mData[0])<<24);
 	retval |= (((unsigned long)mData[1])<<16);
-	retval |= (mData[2]<<8);
-	retval |=  mData[3];
+	retval |= (((unsigned long)mData[2])<<8);
+	retval |= (((unsigned long)mData[3]));
 	return retval;
 }
 long int extract_long_int_le( byte* mData)
@@ -130,6 +130,7 @@ void can_file_message( sCAN* mMsg )
 	{
 		// includes a speed:
 		can_proc_move_to_angle_msg( mMsg );
+		MotorState = MOTOR_REQUEST_PENDING;
 	}
 	else if ( match(mMsg->id, create_CAN_eid(ID_MOVE_SPEED, MyInstance)) )	
 	{
@@ -206,12 +207,11 @@ void can_proc_move_to_angle_msg ( sCAN* mMsg )
 	long int tmp_angle 	 		  = extract_long_int_be( mMsg->data );
 	Destination.starting_position = PotSample[1];
 	Destination.position 		  = convert_to_value(tmp_angle);
-	Destination.coast 			  = mMsg->data[2];  // apply when destination is reached.
-	
-	short spd  = (mMsg->data[4]<<8) + mMsg->data[5];
-	Destination.speed = (spd/100);	    // hundredth percent is sent.
+	Destination.coast 			  = 0x00;  // apply when destination is reached.
+
+	short speed  = (mMsg->data[4]<<8) + mMsg->data[5];
+	Destination.speed = (speed/100);	    // hundredth percent is sent.
 	get_direction_to_destination();
-	MotorState = MOTOR_REQUEST_PENDING;
 }
 
 /* Extract angle from the Message */

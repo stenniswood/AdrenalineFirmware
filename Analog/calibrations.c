@@ -50,8 +50,9 @@
 *******************************************************/	
 void app_default_configuration()
 {
-	config_byte_1 = 0;
-	config_byte_2 = 0;
+	config_byte_1 = 0x01;		// Enable just chip #1
+	config_byte_2 = 0x81;
+	
 }
 
 /* Callback for configuration change. */
@@ -100,7 +101,7 @@ byte getReportRate()
 {  
 	switch ( (config_byte_2 & 0xF0) )
 	{
-	case MODE_SEND_UPDATES_NONE :	return -1; 	break;	
+	case MODE_SEND_UPDATES_NONE :	return -1; 	break;
 	case MODE_SEND_UPDATES_10ms :	return  2; 	break;
 	case MODE_SEND_UPDATES_20ms :	return  4; 	break;
 	case MODE_SEND_UPDATES_50ms :	return 10; 	break;
@@ -109,4 +110,11 @@ byte getReportRate()
 	}
 }	
 
+BOOL isReportingEnabled()
+{
+	if ( (config_byte_2 & 0xF0) != MODE_SEND_UPDATES_NONE )
+		return TRUE;
+	else
+		return FALSE;
+}
 

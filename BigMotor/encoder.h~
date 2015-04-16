@@ -5,10 +5,12 @@ extern word EncoderCount;
 extern word EncoderSpeed;
 extern word EncoderAcceleration;
 
+void encoder_init();
 
-void 		encoder_init();
-long int  	get_encoder_angle();
-void 		encoder_timeslice();
+long int  get_encoder_angle();
+
+void encoder_timeslice();
+
 
 
 

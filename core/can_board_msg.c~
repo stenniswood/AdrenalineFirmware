@@ -96,7 +96,7 @@ BOOL can_board_msg_responder( sCAN* mMsg )
 			Need to delay by the instance number of timeslices.
 			See can_board_timeslice_100ms() below.
 		*/
-		//protected_led_on( 3 );
+		//protected_led_on( 3 );      
 		System_Send_Status			 |=0x20;
 		Board_presence_response_type = mMsg->data[0];
 		Board_presence_delay 		 = MyInstance;

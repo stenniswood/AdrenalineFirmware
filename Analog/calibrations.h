@@ -3,14 +3,14 @@
 
 /************* CONFIGURATION *****************/
 /**** CONFIG BYTE 1 - BIT DEFS ****/
-#define MODE_READ_ADC_CHIP1				 0x01		// 
-#define MODE_READ_ADC_CHIP2				 0x02		// 
-#define MODE_READ_ADC_CHIP3				 0x04		// 
-#define MODE_READ_ADC_CHIP4 			 0x08		// 
-#define MODE_RESERVED_1 			 0x10		// 
-#define MODE_RESERVED_2 			 0x20		// 
-#define MODE_RESERVED_3				 0x40		// 
-#define MODE_RESERVED_4				 0x80		// 
+#define MODE_ENABLE_ADC_CHIP1				 0x01		// 
+#define MODE_ENABLE_ADC_CHIP2				 0x02		// 
+#define MODE_ENABLE_ADC_CHIP3				 0x04		// 
+#define MODE_ENABLE_ADC_CHIP4 				 0x08		// 
+#define MODE_SEND_DERIVATIVES_1 			 0x10		// 
+#define MODE_SEND_DERIVATIVES_2 			 0x20		// 
+#define MODE_SEND_DERIVATIVES_3				 0x40		// 
+#define MODE_SEND_DERIVATIVES_4				 0x80		// 
 
 /**** CONFIG BYTE 2 - BIT DEFS ****/
 /* Upper nibble of config_byte_2 defines the update rate.  
@@ -27,10 +27,14 @@ every:
 #define MODE_SEND_UPDATES_50ms	0x40		// 
 #define MODE_SEND_UPDATES_100ms	0x80		// 
 
+void app_default_configuration();
+void config_change( byte mByteChanged );
+
 byte* save_cal();
 byte* read_cal();
 
 byte getReportRate();
+BOOL isReportingEnabled();
 
 
 #endif

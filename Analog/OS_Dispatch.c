@@ -27,6 +27,8 @@
 #include "leds.h"
 #include "OS_timers.h"
 #include "OS_Dispatch.h"
+#include "analog.h"
+#include "can_msg.h"
 
 
 // CONSTANTS:
@@ -43,14 +45,15 @@ void OS_Dispatch()
 	if ((OS_Event_TIC_Counter % 5) == 0)	// 5ms tasks
 	{
 		//FS_Timeslice();
+
 	}
 	if ((OS_Event_TIC_Counter % 10) == 0) 	// 10ms tasks
 	{
-		
+		analog_timeslice();  // ~1.2ms per chip (15 channels); 4chips=~5ms	
 	}
 	if ((OS_Event_TIC_Counter % 20) == 0)	// 20ms tasks
 	{
-		
+		can_send_timeslice();
 	}
 	if ((OS_Event_TIC_Counter % 50) == 0)	// 50ms tasks
 	{
@@ -58,6 +61,9 @@ void OS_Dispatch()
 	}
 	if ((OS_Event_TIC_Counter % 100) == 0)	// 100ms tasks
 	{
+		// send CAN msgs
+		//can_send_analog_msgs();
+		
 		if (t) {
 			led_on(3);
 			t = 0;

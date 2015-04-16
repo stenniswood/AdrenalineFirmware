@@ -1,5 +1,5 @@
 PRG            = Analog_board
-OBJ            = analog_main.o can_msg.o analog.o OS_Dispatch.o calibrations.o
+OBJ            = analog_main.o can_msg.o calibrations.o analog.o OS_Dispatch.o 
 CORE_OBJS	   = can.o can_instance.o can_eid.o can_board_msg.o can_buff.o   \
 				 leds.o spi.o pwm.o bk_system_defs.o OS_timers.o configuration.o \
 				 adc.o
@@ -7,7 +7,7 @@ CORE_OBJS	   = can.o can_instance.o can_eid.o can_board_msg.o can_buff.o   \
 MCU_TARGET     = atmega16m1
 OPTIMIZE       = -O2
 INC			   = ../core ./
-SELF_INC	   = ../Analog
+SELF_INC	   = ../Analog/
 DEFS           =
 LIBS           =
 

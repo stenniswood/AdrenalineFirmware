@@ -28,7 +28,7 @@ done such that the numbers correspond 1 for 1 with the chip.
 #define LED_2 5			// switched b/c board layout.
 #define LED_3 7
 #define LED_4 1
-#define LED_DDR_MASK 	((1<<LED_1) | (1<<LED_2) | (1<<LED_3) | (1<<LED_4))
+#define LED_DDR_MASK 	((1<<LED_1) | (1<<LED_2) | (1<<LED_3))
 
 #define LED_1_DDR 		DDRD
 #define LED_2_DDR 		DDRD

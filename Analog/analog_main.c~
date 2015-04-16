@@ -90,8 +90,8 @@ int main(void)
     {
 		/* OS_Dispatch reads ALL ACTIVE ANALOG SIGNALS.
 			sends CAN report msgs periodically */		
-		led_on(4);
-		led_off(4);		
+		led_on(2);
+		led_off(2);		
     }
     return(0);
 } 

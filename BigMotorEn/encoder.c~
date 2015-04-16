@@ -92,7 +92,7 @@ void encoder_init()
 
 void encoder_disable()
 {
-	// Disable Interrupts on Rising Edges: 
+	// Enable Interrupts on Rising Edges: 
 	PCMSK0 &= ~((1<<ENCODER_Q1) | (1<<ENCODER_Q2));		// zero the bits.	
 	PCICR  &= ~0x01;     //PCIE0;		
 }

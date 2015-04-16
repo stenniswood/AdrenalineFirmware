@@ -93,13 +93,15 @@ void motor_init()
 	HILOW_DDR  |=  HILOW_DDR_MASK;			// HBridge Enable lines (outputs)
 	CURRENT_SENSE_DDR &=  ~((1<<CURRENT_SENSE_LEFT) | (1<<CURRENT_SENSE_RIGHT));
 
-	SetBaseFrequency( );	// config_byte_1
-	motor_enable(TRUE);		//
+	SetBaseFrequency( );		// config_byte_1
+	motor_enable    (TRUE);		// 
+	
+	if (isConfigured(MODE_USE_ENCODER))
+		encoder_init();
 
 	if (isConfigured(MODE_TILT_RESPONDER))
-	{
 		motor_enable( TRUE );
-	}
+
 	// Default stops computed on first run of the board.
 	// See calibrations.c, "app_default_configuration()"
 }
@@ -282,6 +284,7 @@ void motor_coast( float mFraction )
 	HILOW_PORT &= ~(1<<HILOW_RIGHT);
 	MotorState = MOTOR_COASTING;	
 }
+
 /* Driving incorrectly!!
 	Right now, we pick the motor direction and set those pins on the BTS7960.
 	Then we PWM the INHibit pin.  That pin however disables both High & Low side drivers!
