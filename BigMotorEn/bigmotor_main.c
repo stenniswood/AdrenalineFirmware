@@ -142,13 +142,8 @@ int main(void)
 {
 	init();
     while (1)
-    {	
-		//motor_set_duty( 0.75 );		
-
+    {
     	// CAN Messaging will directly Start/Stop the motor.
-//   	SET_LED_3();
-//		delay(one_second); delay(one_second); 
-//		RESET_LED_3();
 		delay(one_second); delay(one_second); 
 
 //		can_prep_eeprom_dump1_msg( );

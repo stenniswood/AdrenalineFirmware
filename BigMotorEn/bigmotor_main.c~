@@ -10,6 +10,11 @@ DATE 	:  8/8/2013
 AUTHOR	:  Stephen Tenniswood
 Product of Beyond Kinetics, Inc   
 ============================== CAN MESSAGES ===========================
+To compile on MacBook Pro:
+Add : /usr/local/CrossPack-AVR-20120217/bin:
+to the front of PATH environment variable.  For example:
+> PATH=/usr/local/CrossPack-AVR-20120217/bin:/opt/local/bin:/opt/local/sbin:/sw/bin:/sw/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/stephentenniswood/Downloads/android-sdk-mac_x86/platform-tools/:/usr/local/bin:/opt/X11/bin
+
 
 // RECEIVING MESSAGE IDs (higher ids should prioritize higher):
 #define ID_MARK_MOTOR_STOP				0x0040		// 1 or 2 in data[0]
@@ -137,9 +142,7 @@ int main(void)
 {
 	init();
     while (1)
-    {	
-		//motor_set_duty( 0.75 );		
-
+    {
     	// CAN Messaging will directly Start/Stop the motor.
 //   	SET_LED_3();
 //		delay(one_second); delay(one_second); 

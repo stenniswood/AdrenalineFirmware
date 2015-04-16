@@ -62,12 +62,13 @@ void init()
 	delay	   (1000000);			// ~ 2 sec
 	read_cal   ( );
 	can_init   ( CAN_250K_BAUD);		/* Enables Mob0 for Reception!	*/	
-    set_rx_callback			( can_file_message );
-	set_configure_callback	( config_change    );
 	
 	config_init		 ( );
 	can_instance_init( );
 	an_init    ( );						/* Analog SPI module init 		*/
+
+    set_rx_callback			( can_file_message );
+	set_configure_callback	( config_change    );
 	sei		   ( );
 
 	OS_InitTask();	
@@ -82,10 +83,6 @@ CAN ID :	0x7F7F 7F0			(29 bits - medium priority)
 int main(void)
 {	
 	init();
-	
-	/* TEST B)  Button boards configured as receivers;  LEDs showing upper nibble.
-		1 Analog board on network will transmit a message.			*/
-	//send_test_msgs();
     while (1)
     {
 		/* OS_Dispatch reads ALL ACTIVE ANALOG SIGNALS.
@@ -95,7 +92,6 @@ int main(void)
     }
     return(0);
 } 
-
 
 
 /*  What's it need?

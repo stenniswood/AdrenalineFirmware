@@ -107,6 +107,7 @@ void can_send_analog_msgs( )
 
 void can_send_one(byte mChip, byte mchan)
 {
+	byte index = 0;
 	byte test = (MODE_SEND_DERIVATIVES_1<<mChip);
 	if ( isConfigured(test) )
 	{
@@ -117,7 +118,8 @@ void can_send_one(byte mChip, byte mchan)
 	}
 	else 
 	{
-		can_prep_analog_msg ( &tcan, Readings[mChip*16+mchan], mchan );
+		index = (mChip<<4) | mchan;	
+		can_prep_analog_msg ( &tcan, Readings[mChip*16+mchan], index );
 		can_send_msg( 0, &tcan );
 	}
 }

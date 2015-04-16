@@ -11,6 +11,9 @@
 #define MODE_SEND_DERIVATIVES_2 			 0x20		// 
 #define MODE_SEND_DERIVATIVES_3				 0x40		// 
 #define MODE_SEND_DERIVATIVES_4				 0x80		// 
+/* Board chip layout : 
+	1	3
+	4	2			*/
 
 /**** CONFIG BYTE 2 - BIT DEFS ****/
 /* Upper nibble of config_byte_2 defines the update rate.  
