@@ -40,7 +40,7 @@ Returns		:  nothing
 Description	:  Dispatches the tasks when their time is due
 ******************************************************************************/
 int t=0;
-extern void can_send_configs();
+void can_send_configs();
 
 void OS_Dispatch()
 {	

@@ -153,7 +153,7 @@ void can_instance_init()
 
 	if (Confirmed==NOT_CLAIMED)
 	{	
-		// START AT 0; PICK a DELAY TIME
+		// START AT 0; PICK a DELAY TIME : 
 		init_path = 1;
 		setup_instance_claim_mob();
 		MyInstance= 0;				// start at 0!
@@ -173,6 +173,8 @@ void can_instance_init()
 
 byte ts_state = 0;
 
+extern bool okay_to_read_cal;
+
 void can_instance_timeslice()
 {
 	ts_state = 1;
@@ -180,8 +182,8 @@ void can_instance_timeslice()
 	if (init_complete==FALSE) return;		//
 	if (rand_delay-- > 0)	  return;		// wait until our appointed time to claim
 	rand_delay = 1;							// so that it comes back in here next timeslice
-	ts_state = 2;
-	
+	ts_state   = 2;
+
 	if (Confirmed==NOT_CLAIMED)
 	{
 		ts_state = 3;
@@ -201,7 +203,7 @@ void can_instance_timeslice()
 	{
 		ts_state = 4;	
 		// Wait for either TXOK or RX ID_INSTANCE_CLAIM (aborts the TX)
-		// OR a TIMEOUT
+		// OR a TIMEOUT 
 		cli();
 		byte restore = CANPAGE;
 		CANPAGE 	 = 0x00;
@@ -210,7 +212,7 @@ void can_instance_timeslice()
 			// We finished sending, so we claimed it.
 			Confirmed = DIRTY;		// save on next timeslice
 			// see "can_board_msg.c"  can_board_msg_responder(),
-			//   if an incoming ID_INSTANCE_CLAIM comes in, it will
+			//   if an incoming ID_INSTANCE_CLAIM comes in with same ID, it will
 			//   abort transmission & update Confirmed.
 			// It was aborted and MyInstance was bumped.
 			// do nothing just wait for next timeslice.
@@ -226,10 +228,12 @@ void can_instance_timeslice()
 	}
 	if (Confirmed == DIRTY)			// Dirty bit set?
 	{
-		ts_state = 5;
+		ts_state  = 5;
 		Confirmed = CLAIMED;		// don't save next time, just skip the claiming
-		cli();  save_configuration();  sei();
 		
+		cli();  save_configuration();  sei();
+		okay_to_read_cal = true;
+
 		// SEND 1 MORE FOR DEBUG PURPOSES:
 		//can_prep_instance_request( &msg2, MyInstance );
 		//can_send_msg_no_wait( 0, &msg2    );

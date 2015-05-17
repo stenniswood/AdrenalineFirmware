@@ -98,14 +98,17 @@ void default_configuration()
 	sys_config_byte |= CAN_NEW_BOARD;		// means no longer new board
 	Confirmed        = NOT_CLAIMED; 		// will force MyInstance to init
 	MyInstance 		 = 0x98;
+	
+	//led_on(4);
 }
 
 void config_init()
 {
-	//read_configuration( );	// would like to remove and force each app to call prior to.
+	//read_configuration( ); // would like to remove and force each app to call prior to.
 							// b/c BigMotorEn board already does and we should have a consistent interface.
 							// and b/c it's better the user knows when it's read.
-
+	//led_off(4);
+	
 	// BECAUSE read_configuration_eeprom() reads with a ~, 
 	// The CAN_NEW_BOARD bit will be a 0 after reflash (~1)
 	if (isSysConfigured(CAN_NEW_BOARD)==FALSE)		// Active Low
@@ -118,6 +121,7 @@ void config_init()
 		// as above and if it doesn't complete an instance, then it will continue
 		// trying on boot until it does.  This is the expected.  And it keeps the new board
 		// status until an instance is assigned (happens in can_instance_timeslice())
+		// See: can_instance_timeslice()  if (Confirmed == DIRTY)...
 		// save_configuration();
 	}	
 }
@@ -142,7 +146,6 @@ byte* save_configuration()
 	Ptr = save_confirmed_status(Ptr);
 	return save_configuration_eeprom( Ptr );
 }
-
 /**********************************************************
 read_configuration(byte mStartAddress)
 Reads from EEPROM, and stores into the RAM
@@ -197,11 +200,13 @@ Report DTCs (overtemperature, over voltage)
 ***********************************************/
 byte* save_configuration_eeprom(byte* addr)
 {
+	byte* address = addr;
 	eeprom_write_byte( addr++, ~config_byte_1 );
 	eeprom_write_byte( addr++, ~config_byte_2 );	
 	eeprom_write_byte( addr++, ~config_byte_3 );	
 	eeprom_write_byte( addr++, ~config_byte_4 );
 	eeprom_write_byte( addr++, ~sys_config_byte);
+	okay_to_read_cal = true;
 	return addr;
 }
 

@@ -1,7 +1,7 @@
 PRG            = bigmotor
 OBJ            = bigmotor_main.o can_msg.o calibrations.o motor.o pot.o encoder.o OS_Dispatch.o adc.o
 CORE_OBJS	   = can.o can_instance.o can_eid.o can_board_msg.o can_buff.o \
-				 leds.o pwm.o bk_system_defs.o OS_timers.o configuration.o
+				 leds.o pwm.o bk_system_defs.o OS_timers.o configuration.o 
 MCU_TARGET     = atmega16m1
 OPTIMIZE       = -O2
 INC			   = ../core/

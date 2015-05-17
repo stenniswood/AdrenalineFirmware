@@ -40,6 +40,7 @@ AUTHOR	:  Stephen Tenniswood
 #include "can_buff.h"
 #include "configuration.h"
 #include "calibrations.h"
+#include "leds.h"
 
 
 // FOR DEBUG!:
@@ -88,7 +89,7 @@ BOOL can_board_msg_responder( sCAN* mMsg )
 	{
 		can_parse_led_request( mMsg );				// in leds.c 
 		return TRUE;
-	} 
+	}
 	else if ( id_match( mMsg->id, create_CAN_eid	(ID_BOARD_PRESENCE_REQUEST, 0)) )
 	{
 		/* Ah we have problems getting all of these sometimes because...
@@ -130,7 +131,7 @@ BOOL can_board_msg_responder( sCAN* mMsg )
 		Confirmed  = CLAIMED;
 		MyInstance = mMsg->data[0];
 		System_Send_Status |= 0x08;
-		//save_configuration();		// maybe shouldn't do here in ISR.
+		//save_configuration();					// maybe shouldn't do here in ISR.
    		can_remove_instance_from_filter( 1 );	// move before MyInstance
 		can_add_instance_to_filter     ( 1, MyInstance );
 		return TRUE;
@@ -255,6 +256,7 @@ void can_board_timeslice()
 	if ((System_Send_Status&0x08)==0x08) {		// Save Configuration 
 		cli();
 		save_configuration();
+		led_on(4);
 		System_Send_Status &= (~0x08);
 		sei();
 	}
@@ -276,6 +278,7 @@ void can_board_timeslice()
 		}
 	}
 }
+
 //////////////////////////////////////////////////////////////////////////////
 ////////////////////// OUT GOING MESSAGES ////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////

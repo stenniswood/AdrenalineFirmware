@@ -30,6 +30,7 @@ inline void ConfigureCANBaudRate(byte BaudRate)	{  config_byte_4 = (BaudRate & 0
 #define CAN_NEW_BOARD 			0x01		// This is 1 after a reflash.
 #define NORMAL_HISTORY_OP_MODE	0x02		// defined in can_buff.c
 //#define MAILBOX_HISTORY_OP_MODE	0x02	
+inline byte isNewBoard()				{  return (isSysConfigured(CAN_NEW_BOARD)==0);  };
 /**** END OF CONFIG BYTE 4 DEFS ****/
 
 void default_configuration();

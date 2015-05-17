@@ -68,7 +68,7 @@ void init()
 	read_configuration   ( );
 	can_init   (CAN_250K_BAUD);		/* Enables Mob0 for Reception!	*/	
 	
-//	config_init		 ( );
+	config_init		 ( );
 	can_instance_init( );
 	an_init    		 ( );						/* Analog SPI module init 		*/
 
