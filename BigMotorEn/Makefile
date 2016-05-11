@@ -43,7 +43,6 @@ lst:  $(PRG).lst
 	$(OBJDUMP) -h -S $< > $@
 
 # Rules for building the .text rom images
-
 text: hex bin srec
 
 hex:  $(PRG).hex
@@ -60,7 +59,6 @@ srec: $(PRG).srec
 	$(OBJCOPY) -j .text -j .data -O binary $< $@
 
 # Rules for building the .eeprom rom images
-
 eeprom: ehex ebin esrec
 
 ehex:  $(PRG)_eeprom.hex

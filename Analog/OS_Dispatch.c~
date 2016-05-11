@@ -40,7 +40,7 @@ Returns		:  nothing
 Description	:  Dispatches the tasks when their time is due
 ******************************************************************************/
 int t=0;
-void can_send_configs();
+extern void can_send_configs();
 
 void OS_Dispatch()
 {	
@@ -50,11 +50,12 @@ void OS_Dispatch()
 	}
 	if ((OS_Event_TIC_Counter % 10) == 0) 	// 10ms tasks
 	{
+		can_send_timeslice();		
 		analog_timeslice();  // ~1.2ms per chip (15 channels); 4chips=~5ms	
 	}
 	if ((OS_Event_TIC_Counter % 20) == 0)	// 20ms tasks
 	{
-		can_send_timeslice();
+
 	}
 	if ((OS_Event_TIC_Counter % 50) == 0)	// 50ms tasks
 	{
@@ -62,14 +63,15 @@ void OS_Dispatch()
 	}
 	if ((OS_Event_TIC_Counter % 100) == 0)	// 100ms tasks
 	{
+#define PULSE 1
 		// send CAN msgs
 		//can_send_analog_msgs();
-		can_send_configs();
 		if (t) {
-			led_on(3);
+			//can_send_configs();
+			led_on(PULSE);
 			t = 0;
 		} else {
-			led_off(3);
+			led_off(PULSE);
 			t = 1;
 		}
 	}

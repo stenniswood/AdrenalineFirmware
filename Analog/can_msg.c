@@ -73,11 +73,11 @@ void can_prep_analog_derivative_msg( sCAN* mMsg,
 /* 4 Chips;  16 channels each.  = 64 channels total for Analog board. 
 	64 channels * 2 bytes package = 128 bytes 
 	/ 8 = 16 CAN msgs minimum.
-
+		DEPRECATED!
 */
 void can_send_analog_msgs( )
 {
-	byte configd;
+/*	byte configd;
 	byte test;
 	for (int chip=0; chip<4; chip++)
 	{
@@ -102,9 +102,10 @@ void can_send_analog_msgs( )
 					can_send_msg( 0, &tcan );
 				}
 			}
-	}
+	} */
 }
 
+/* Sends Just 1 Analog channel */
 void can_send_one(byte mChip, byte mchan)
 {
 	byte index = 0;
@@ -124,31 +125,42 @@ void can_send_one(byte mChip, byte mchan)
 	}
 }
 
+static short ReportCounter = 1;		// when zero sends update
+
 void can_send_timeslice()
 {
-	byte configd;
-	static byte chip    = 0;
-	static byte channel = 0;
+	byte   configd;
+	static byte chip = 0;
+	byte   channel = 0;
 
-	if (isConfigured(0x0F)==0)		// None configured...
+	if (isConfigured(0x0F)==0)		// No chips enabled...
 		return;
-	
-	led_on(2);		
-	can_send_one( chip, channel );
-	led_on(2);
-	  	
-	channel++;
-	if (channel > 15)
-	{		
-		channel = 0;
 
-		// Next Chip!
-		do {
-			chip++;
-			if (chip>3) chip = 0;
-			configd = isConfigured( 1<<chip );
-		} while ( !configd );
-	}		
+	if (isReportingEnabled())
+	{
+		ReportCounter--;
+		if (ReportCounter<=0)			// Time To Report ? 
+		{ 
+			ReportCounter = getReportRate();	// Refill
+			led_on(2);
+
+			// TRANSMIT ALL CHANNELS FOR A GIVEN CHIP:
+			byte channels = get_num_channels(chip);
+			do {
+				can_send_one( chip, channel );
+				channel++;
+			} while (channel < channels);
+		
+			// Prepare for Next Chip!
+			do {
+				chip++;
+				if (chip>3) chip = 0;
+				configd = isConfigured( 1<<chip );
+			} while ( !configd );
+
+			led_off(2);
+		}
+	}
 }
 
 void can_init_test_msg()

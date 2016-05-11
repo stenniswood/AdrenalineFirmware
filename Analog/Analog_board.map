@@ -9,7 +9,7 @@ Archive member included because of file (symbol)
 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
                               /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm16m1.o (exit)
 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_copy_data.o)
-                              analog.o (__do_copy_data)
+                              can_msg.o (__do_copy_data)
 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clear_bss.o)
                               analog_main.o (__do_clear_bss)
 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
@@ -191,7 +191,7 @@ LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x3722
+.text           0x00000000     0x35ec
  *(.vectors)
  .vectors       0x00000000       0x7c /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm16m1.o
                 0x00000000                __vectors
@@ -275,271 +275,271 @@ LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a
                 0x000000c6                __vector_10
                 0x000000c6                __vector_16
                 0x000000c6                __vector_22
- .text          0x000000ca       0xca analog_main.o
-                0x000000ca                _Z16can_send_configsv
-                0x00000132                _Z4initv
-                0x00000172                main
- .text          0x00000194      0x30a can_msg.o
-                0x00000194                _Z16can_file_messageP4sCAN
-                0x00000196                _Z19can_prep_analog_msgP4sCANjh
-                0x000001ea                _Z30can_prep_analog_derivative_msgP4sCANhjj
-                0x0000023a                _Z20can_send_analog_msgsv
-                0x0000035e                _Z12can_send_onehh
-                0x000003f0                _Z18can_send_timeslicev
-                0x0000045e                _Z17can_init_test_msgv
- .text          0x0000049e       0x66 calibrations.o
-                0x0000049e                _Z25app_default_configurationv
-                0x000004ac                _Z13config_changeh
-                0x000004ae                _Z8save_calv
-                0x000004b4                _Z8read_calv
-                0x000004ba                _Z13getReportRatev
-                0x000004f6                _Z18isReportingEnabledv
- .text          0x00000504      0x3ae analog.o
-                0x00000504                _Z22enable_pin_change_intsv
-                0x00000510                _Z23disable_pin_change_intsv
-                0x0000051c                _Z11select_chiph
-                0x0000053e                _Z13deselect_chiph
-                0x00000560                _Z8an_reseth
-                0x00000578                _Z12an_reset_allv
-                0x00000592                _Z17get_chip_readingsh
-                0x0000063e                _Z13an_conversionhh
-                0x00000690                _Z8an_setuph
-                0x000006a8                _Z16an_averaging_offh
-                0x000006c0                _Z16an_configure_allv
-                0x000006ea                _Z7an_initv
-                0x00000712                _Z15an_averaging_onhh
-                0x00000740                _Z7an_readh
-                0x00000780                _Z13an_start_readh
-                0x00000788                _Z12an_start_allv
-                0x000007c8                _Z12get_readingsh
-                0x00000808                __vector_23
-                0x0000087e                _Z16analog_timeslicev
- .text          0x000008b2       0x84 OS_Dispatch.o
-                0x000008b2                _Z11OS_Dispatchv
- .text          0x00000936      0x790 ../core/can.o
-                0x00000936                _Z15set_rx_callbackPFvP4sCANE
-                0x00000940                _Z15set_tx_callbackPFvvE
-                0x0000094a                _Z26can_add_instance_to_filterht
-                0x000009aa                _Z31can_remove_instance_from_filterh
-                0x000009ce                _Z10can_set_idh6idType
-                0x00000a2e                _Z20can_add_id_to_filterhtt
-                0x00000af6                _Z25can_remove_id_from_filterh
-                0x00000b22                _Z12can_set_maskhss
-                0x00000b42                _Z11can_set_taghss
-                0x00000b62                _Z21can_setup_receive_mobhssh
-                0x00000bbe                _Z13can_init_mobsv
-                0x00000c6e                _Z15can_disable_mobh
-                0x00000c86                _Z15can_retrieve_idP4sCAN
-                0x00000cf4                _Z17can_retrieve_dataP4sCAN
-                0x00000d36                __vector_18
-                0x00000e84                _Z20can_send_msg_no_waithP4sCAN
-                0x00000eea                _Z12can_send_msghP4sCAN
-                0x00000ef8                _Z17can_get_timestampv
-                0x00000f0e                _Z11can_get_msgP4sCAN
-                0x00000f40                _Z8set_baudh
-                0x00000f84                _Z8can_inith
-                0x00000fc0                _Z15can_set_baud_1Mh
-                0x00000fea                _Z17can_set_baud_500Kh
-                0x00001016                _Z17can_set_baud_250Kh
-                0x00001042                _Z17can_set_baud_200Kh
-                0x0000106e                _Z17can_set_baud_125Kh
-                0x0000109a                _Z17can_set_baud_100Kh
- .text          0x000010c6      0x2ac ../core/can_instance.o
-                0x000010c6                _Z22random_number_adc_initv
-                0x000010de                _Z18pick_random_numberv
-                0x00001132                _Z24setup_instance_claim_mobv
-                0x00001158                _Z17can_instance_initv
-                0x000011c0                _Z25can_prep_instance_requestP4sCANh
-                0x00001208                _Z22can_instance_timeslicev
-                0x00001330                _Z23can_prep_instance_queryP4sCAN
-                0x0000135e                _Z28can_process_instance_requestP4sCAN
- .text          0x00001372       0x60 ../core/can_eid.o
-                0x00001372                _Z14create_CAN_eidth
-                0x0000137e                _Z14create_CAN_eidhth
-                0x0000138c                _Z9get_block6idType
-                0x00001390                _Z12get_instance6idType
-                0x00001394                _Z6get_id6idType
-                0x0000139a                _Z5match6idTypeS_
-                0x000013ac                _Z11block_match6idTypeS_
-                0x000013b4                _Z8id_match6idTypeS_
-                0x000013ca                _Z14instance_match6idTypeh
- .text          0x000013d2      0x4e4 ../core/can_board_msg.o
-                0x000013d2                _Z22set_configure_callbackPFvhE
-                0x000013dc                _Z27can_prep_board_presence_msgP4sCAN
-                0x0000141a                _Z27can_prep_board_revision_msgP4sCAN
-                0x00001456                _Z26can_prep_serial_number_msgP4sCAN
-                0x00001492                _Z30can_prep_board_description_msgP4sCAN
-                0x000014de                _Z24can_board_presence_replyv
-                0x00001544                _Z19can_board_timeslicev
-                0x00001614                _Z18can_prep_configureP4sCAN
-                0x00001654                _Z23can_board_msg_responderP4sCAN
- .text          0x000018b6      0x1e2 ../core/can_buff.o
-                0x000018b6                _Z11FindMailBox6idType
-                0x00001922                _Z12copy_can_msgP4sCANS0_
-                0x0000193a                _Z16addNormalHistoryP4sCAN
-                0x00001976                _Z17addMailboxHistoryP4sCAN
-                0x000019f6                _Z12QueueMessageP4sCAN
-                0x00001a0a                _Z15RetrieveMessagev
-                0x00001a5e                _Z13GetMessagePtrh
-                0x00001a80                _Z15CAN_Q_Timeslicev
- .text          0x00001a98      0x238 ../core/leds.o
-                0x00001a98                _Z9init_ledsv
-                0x00001ab2                _Z16protected_led_onh
-                0x00001ad8                _Z17protected_led_offh
-                0x00001afe                _Z11strobe_ledsh
-                0x00001b60                _Z6led_onh
-                0x00001b6e                _Z7led_offh
-                0x00001b7c                _Z17protected_set_ledhh
-                0x00001b8c                _Z7set_ledhh
-                0x00001b9a                _Z19protected_show_bytehh
-                0x00001bf2                _Z9show_bytehh
-                0x00001c04                _Z18show_result_toggleh
-                0x00001c38                _Z21can_parse_led_requestP4sCAN
-                0x00001c74                _Z19led_timeslice_100msv
- .text          0x00001cd0      0x136 ../core/spi.o
-                0x00001cd0                set_spi_isr_callback
-                0x00001cda                __vector_26
-                0x00001cf8                _Z16SPI_SlaveReceivev
-                0x00001d02                spi_setBitOrder
-                0x00001d16                spi_setDataMode
-                0x00001d20                spi_setClockDivider
-                0x00001d42                _Z7pin_ddrhh
-                0x00001d84                spi_init
-                0x00001dea                spi_transfer
-                0x00001df6                spi_attachInterrupt
-                0x00001dfe                spi_detachInterrupt
- .text          0x00001e06      0x384 ../core/pwm.o
-                0x00001e06                _Z11OCR1A_Writej
-                0x00001e16                _Z11OCR1B_Writej
-                0x00001e26                _Z13get_top_valuef
-                0x00001e68                _Z7set_topt
-                0x00001e7a                _Z16select_prescalerf
-                0x00001f56                _Z20get_tccr1b_prescalert
-                0x00001f96                _Z17set_base_PWM_freqf
-                0x00001fe6                _Z8pwm_initfhh
-                0x0000209a                _Z13set_polarityAh
-                0x000020b8                _Z13set_polarityBh
-                0x000020d6                _Z9set_dutyAf
-                0x00002130                _Z9set_dutyBf
- .text          0x0000218a       0x88 ../core/bk_system_defs.o
-                0x0000218a                _Z5delayl
-                0x000021fa                _Z9chip_initv
- .text          0x00002212      0x162 ../core/OS_timers.o
-                0x00002212                _Z11OS_InitTaskv
-                0x0000222c                _Z13Enter_HS_Modev
-                0x00002234                _Z17Enter_Normal_Modev
-                0x0000223a                _Z15System_Dispatchv
-                0x00002296                __vector_15
-                0x0000235a                _Z11OS_tmr_initv
- .text          0x00002374      0x288 ../core/configuration.o
-                0x00002374                _Z27can_parse_configure_requestP4sCAN
-                0x000023cc                _Z21default_configurationv
-                0x000023f8                _Z11config_initv
-                0x0000240a                _Z20save_instance_numberPh
-                0x0000242e                _Z20read_instance_numberPh
-                0x00002448                _Z21save_confirmed_statusPh
-                0x0000246c                _Z21read_confirmed_statusPh
-                0x00002486                _Z25save_configuration_eepromPh
-                0x00002536                _Z18save_configurationv
-                0x00002548                _Z21save_configuration_div
-                0x00002550                _Z21make_system_new_boardt
-                0x00002572                _Z25read_configuration_eepromPh
-                0x000025ea                _Z18read_configurationv
- .text          0x000025fc       0xb6 ../core/adc.o
-                0x000025fc                __vector_27
-                0x0000266c                _Z9adc_sleepv
-                0x00002678                _Z8adc_initv
-                0x000026a0                _Z14start_samplingv
- .text          0x000026b2        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodhi4.o)
- .text          0x000026b2        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodhi4.o)
- .text          0x000026b2        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodsi4.o)
- .text          0x000026b2        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
- .text          0x000026b2        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_copy_data.o)
- .text          0x000026b2        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clear_bss.o)
- .text          0x000026b2       0x58 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
-                0x000026b2                __fixunssfsi
- .text          0x0000270a      0x350 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o)
-                0x0000299e                __addsf3
-                0x000029f8                __subsf3
- .text          0x00002a5a      0x1f4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
-                0x00002a5a                __mulsf3
- .text          0x00002c4e      0x15c /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
-                0x00002c4e                __divsf3
- .text          0x00002daa       0x60 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o)
-                0x00002daa                __gtsf2
- .text          0x00002e0a       0x60 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_ge_sf.o)
-                0x00002e0a                __gesf2
- .text          0x00002e6a       0x60 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_lt_sf.o)
-                0x00002e6a                __ltsf2
- .text          0x00002eca       0xc0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
-                0x00002eca                __floatsisf
- .text          0x00002f8a       0xa4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_sf_to_si.o)
-                0x00002f8a                __fixsfsi
- .text          0x0000302e        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_thenan_sf.o)
- .text          0x0000302e       0xf0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_usi_to_sf.o)
-                0x0000302e                __floatunsisf
- .text          0x0000311e        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodsi4.o)
- .text          0x0000311e        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_prologue.o)
- .text          0x0000311e        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_epilogue.o)
- .text          0x0000311e       0xb4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o)
-                0x0000311e                __clzsi2
- .text          0x000031d2      0x19a /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_pack_sf.o)
-                0x000031d2                __pack_f
- .text          0x0000336c       0xd2 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
-                0x0000336c                __unpack_f
- .text          0x0000343e       0xb2 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
-                0x0000343e                __fpcmp_parts_f
- .text          0x000034f0        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clz.o)
- .text          0x000034f0        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(ceil.o)
- .text          0x000034f0        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_mintl.o)
- .text          0x000034f0        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_mpack.o)
- .text          0x000034f0        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_trunc.o)
- .text          0x000034f0        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_zero.o)
- .text          0x000034f0        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_split3.o)
-                0x000034f0                . = ALIGN (0x2)
+ .text          0x000000ca       0x66 analog_main.o
+                0x000000ca                _Z4initv
+                0x0000010e                main
+ .text          0x00000130      0x21a can_msg.o
+                0x00000130                _Z16can_file_messageP4sCAN
+                0x00000132                _Z19can_prep_analog_msgP4sCANjh
+                0x00000186                _Z30can_prep_analog_derivative_msgP4sCANhjj
+                0x000001d6                _Z20can_send_analog_msgsv
+                0x000001d8                _Z12can_send_onehh
+                0x0000026a                _Z18can_send_timeslicev
+                0x0000030a                _Z17can_init_test_msgv
+ .text          0x0000034a       0x66 calibrations.o
+                0x0000034a                _Z25app_default_configurationv
+                0x00000358                _Z13config_changeh
+                0x0000035a                _Z8save_calv
+                0x00000360                _Z8read_calv
+                0x00000366                _Z13getReportRatev
+                0x000003a2                _Z18isReportingEnabledv
+ .text          0x000003b0      0x3d2 analog.o
+                0x000003b0                _Z22enable_pin_change_intsv
+                0x000003bc                _Z23disable_pin_change_intsv
+                0x000003c8                _Z11select_chiph
+                0x000003ea                _Z13deselect_chiph
+                0x0000040c                _Z8an_reseth
+                0x00000424                _Z12an_reset_allv
+                0x0000043e                _Z17get_chip_readingsh
+                0x000004ea                _Z13an_conversionhh
+                0x0000053c                _Z8an_setuph
+                0x00000554                _Z16an_averaging_offh
+                0x0000056c                _Z16an_configure_allv
+                0x00000596                _Z7an_initv
+                0x000005be                _Z15an_averaging_onhh
+                0x000005ec                _Z7an_readh
+                0x0000062c                _Z13an_start_readhh
+                0x00000632                _Z16get_num_channelsi
+                0x00000674                _Z12an_start_allv
+                0x000006bc                _Z12get_readingsh
+                0x000006fc                __vector_23
+                0x00000772                _Z16analog_timeslicev
+ .text          0x00000782       0x7e OS_Dispatch.o
+                0x00000782                _Z11OS_Dispatchv
+ .text          0x00000800      0x790 ../core/can.o
+                0x00000800                _Z15set_rx_callbackPFvP4sCANE
+                0x0000080a                _Z15set_tx_callbackPFvvE
+                0x00000814                _Z26can_add_instance_to_filterht
+                0x00000874                _Z31can_remove_instance_from_filterh
+                0x00000898                _Z10can_set_idh6idType
+                0x000008f8                _Z20can_add_id_to_filterhtt
+                0x000009c0                _Z25can_remove_id_from_filterh
+                0x000009ec                _Z12can_set_maskhss
+                0x00000a0c                _Z11can_set_taghss
+                0x00000a2c                _Z21can_setup_receive_mobhssh
+                0x00000a88                _Z13can_init_mobsv
+                0x00000b38                _Z15can_disable_mobh
+                0x00000b50                _Z15can_retrieve_idP4sCAN
+                0x00000bbe                _Z17can_retrieve_dataP4sCAN
+                0x00000c00                __vector_18
+                0x00000d4e                _Z20can_send_msg_no_waithP4sCAN
+                0x00000db4                _Z12can_send_msghP4sCAN
+                0x00000dc2                _Z17can_get_timestampv
+                0x00000dd8                _Z11can_get_msgP4sCAN
+                0x00000e0a                _Z8set_baudh
+                0x00000e4e                _Z8can_inith
+                0x00000e8a                _Z15can_set_baud_1Mh
+                0x00000eb4                _Z17can_set_baud_500Kh
+                0x00000ee0                _Z17can_set_baud_250Kh
+                0x00000f0c                _Z17can_set_baud_200Kh
+                0x00000f38                _Z17can_set_baud_125Kh
+                0x00000f64                _Z17can_set_baud_100Kh
+ .text          0x00000f90      0x2ac ../core/can_instance.o
+                0x00000f90                _Z22random_number_adc_initv
+                0x00000fa8                _Z18pick_random_numberv
+                0x00000ffc                _Z24setup_instance_claim_mobv
+                0x00001022                _Z17can_instance_initv
+                0x0000108a                _Z25can_prep_instance_requestP4sCANh
+                0x000010d2                _Z22can_instance_timeslicev
+                0x000011fa                _Z23can_prep_instance_queryP4sCAN
+                0x00001228                _Z28can_process_instance_requestP4sCAN
+ .text          0x0000123c       0x60 ../core/can_eid.o
+                0x0000123c                _Z14create_CAN_eidth
+                0x00001248                _Z14create_CAN_eidhth
+                0x00001256                _Z9get_block6idType
+                0x0000125a                _Z12get_instance6idType
+                0x0000125e                _Z6get_id6idType
+                0x00001264                _Z5match6idTypeS_
+                0x00001276                _Z11block_match6idTypeS_
+                0x0000127e                _Z8id_match6idTypeS_
+                0x00001294                _Z14instance_match6idTypeh
+ .text          0x0000129c      0x4e4 ../core/can_board_msg.o
+                0x0000129c                _Z22set_configure_callbackPFvhE
+                0x000012a6                _Z27can_prep_board_presence_msgP4sCAN
+                0x000012e4                _Z27can_prep_board_revision_msgP4sCAN
+                0x00001320                _Z26can_prep_serial_number_msgP4sCAN
+                0x0000135c                _Z30can_prep_board_description_msgP4sCAN
+                0x000013a8                _Z24can_board_presence_replyv
+                0x0000140e                _Z19can_board_timeslicev
+                0x000014de                _Z18can_prep_configureP4sCAN
+                0x0000151e                _Z23can_board_msg_responderP4sCAN
+ .text          0x00001780      0x1e2 ../core/can_buff.o
+                0x00001780                _Z11FindMailBox6idType
+                0x000017ec                _Z12copy_can_msgP4sCANS0_
+                0x00001804                _Z16addNormalHistoryP4sCAN
+                0x00001840                _Z17addMailboxHistoryP4sCAN
+                0x000018c0                _Z12QueueMessageP4sCAN
+                0x000018d4                _Z15RetrieveMessagev
+                0x00001928                _Z13GetMessagePtrh
+                0x0000194a                _Z15CAN_Q_Timeslicev
+ .text          0x00001962      0x238 ../core/leds.o
+                0x00001962                _Z9init_ledsv
+                0x0000197c                _Z16protected_led_onh
+                0x000019a2                _Z17protected_led_offh
+                0x000019c8                _Z11strobe_ledsh
+                0x00001a2a                _Z6led_onh
+                0x00001a38                _Z7led_offh
+                0x00001a46                _Z17protected_set_ledhh
+                0x00001a56                _Z7set_ledhh
+                0x00001a64                _Z19protected_show_bytehh
+                0x00001abc                _Z9show_bytehh
+                0x00001ace                _Z18show_result_toggleh
+                0x00001b02                _Z21can_parse_led_requestP4sCAN
+                0x00001b3e                _Z19led_timeslice_100msv
+ .text          0x00001b9a      0x136 ../core/spi.o
+                0x00001b9a                set_spi_isr_callback
+                0x00001ba4                __vector_26
+                0x00001bc2                _Z16SPI_SlaveReceivev
+                0x00001bcc                spi_setBitOrder
+                0x00001be0                spi_setDataMode
+                0x00001bea                spi_setClockDivider
+                0x00001c0c                _Z7pin_ddrhh
+                0x00001c4e                spi_init
+                0x00001cb4                spi_transfer
+                0x00001cc0                spi_attachInterrupt
+                0x00001cc8                spi_detachInterrupt
+ .text          0x00001cd0      0x384 ../core/pwm.o
+                0x00001cd0                _Z11OCR1A_Writej
+                0x00001ce0                _Z11OCR1B_Writej
+                0x00001cf0                _Z13get_top_valuef
+                0x00001d32                _Z7set_topt
+                0x00001d44                _Z16select_prescalerf
+                0x00001e20                _Z20get_tccr1b_prescalert
+                0x00001e60                _Z17set_base_PWM_freqf
+                0x00001eb0                _Z8pwm_initfhh
+                0x00001f64                _Z13set_polarityAh
+                0x00001f82                _Z13set_polarityBh
+                0x00001fa0                _Z9set_dutyAf
+                0x00001ffa                _Z9set_dutyBf
+ .text          0x00002054       0x88 ../core/bk_system_defs.o
+                0x00002054                _Z5delayl
+                0x000020c4                _Z9chip_initv
+ .text          0x000020dc      0x162 ../core/OS_timers.o
+                0x000020dc                _Z11OS_InitTaskv
+                0x000020f6                _Z13Enter_HS_Modev
+                0x000020fe                _Z17Enter_Normal_Modev
+                0x00002104                _Z15System_Dispatchv
+                0x00002160                __vector_15
+                0x00002224                _Z11OS_tmr_initv
+ .text          0x0000223e      0x288 ../core/configuration.o
+                0x0000223e                _Z27can_parse_configure_requestP4sCAN
+                0x00002296                _Z21default_configurationv
+                0x000022c2                _Z11config_initv
+                0x000022d4                _Z20save_instance_numberPh
+                0x000022f8                _Z20read_instance_numberPh
+                0x00002312                _Z21save_confirmed_statusPh
+                0x00002336                _Z21read_confirmed_statusPh
+                0x00002350                _Z25save_configuration_eepromPh
+                0x00002400                _Z18save_configurationv
+                0x00002412                _Z21save_configuration_div
+                0x0000241a                _Z21make_system_new_boardt
+                0x0000243c                _Z25read_configuration_eepromPh
+                0x000024b4                _Z18read_configurationv
+ .text          0x000024c6       0xb6 ../core/adc.o
+                0x000024c6                __vector_27
+                0x00002536                _Z9adc_sleepv
+                0x00002542                _Z8adc_initv
+                0x0000256a                _Z14start_samplingv
+ .text          0x0000257c        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodhi4.o)
+ .text          0x0000257c        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodhi4.o)
+ .text          0x0000257c        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodsi4.o)
+ .text          0x0000257c        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
+ .text          0x0000257c        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_copy_data.o)
+ .text          0x0000257c        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clear_bss.o)
+ .text          0x0000257c       0x58 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
+                0x0000257c                __fixunssfsi
+ .text          0x000025d4      0x350 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o)
+                0x00002868                __addsf3
+                0x000028c2                __subsf3
+ .text          0x00002924      0x1f4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
+                0x00002924                __mulsf3
+ .text          0x00002b18      0x15c /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
+                0x00002b18                __divsf3
+ .text          0x00002c74       0x60 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o)
+                0x00002c74                __gtsf2
+ .text          0x00002cd4       0x60 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_ge_sf.o)
+                0x00002cd4                __gesf2
+ .text          0x00002d34       0x60 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_lt_sf.o)
+                0x00002d34                __ltsf2
+ .text          0x00002d94       0xc0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
+                0x00002d94                __floatsisf
+ .text          0x00002e54       0xa4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_sf_to_si.o)
+                0x00002e54                __fixsfsi
+ .text          0x00002ef8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_thenan_sf.o)
+ .text          0x00002ef8       0xf0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_usi_to_sf.o)
+                0x00002ef8                __floatunsisf
+ .text          0x00002fe8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodsi4.o)
+ .text          0x00002fe8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_prologue.o)
+ .text          0x00002fe8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_epilogue.o)
+ .text          0x00002fe8       0xb4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o)
+                0x00002fe8                __clzsi2
+ .text          0x0000309c      0x19a /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_pack_sf.o)
+                0x0000309c                __pack_f
+ .text          0x00003236       0xd2 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
+                0x00003236                __unpack_f
+ .text          0x00003308       0xb2 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
+                0x00003308                __fpcmp_parts_f
+ .text          0x000033ba        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clz.o)
+ .text          0x000033ba        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(ceil.o)
+ .text          0x000033ba        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_mintl.o)
+ .text          0x000033ba        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_mpack.o)
+ .text          0x000033ba        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_trunc.o)
+ .text          0x000033ba        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_zero.o)
+ .text          0x000033ba        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_split3.o)
+                0x000033ba                . = ALIGN (0x2)
  *(.text.*)
- .text.libgcc   0x000034f0       0x28 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodhi4.o)
-                0x000034f0                __udivmodhi4
- .text.libgcc   0x00003518       0x26 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodhi4.o)
-                0x00003518                __divmodhi4
-                0x00003518                _div
- .text.libgcc   0x0000353e       0x36 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodsi4.o)
-                0x0000353e                __divmodsi4
- .text.libgcc   0x00003574        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
- .text.libgcc   0x00003574        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_copy_data.o)
- .text.libgcc   0x00003574        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clear_bss.o)
- .text.libgcc   0x00003574       0x44 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodsi4.o)
-                0x00003574                __udivmodsi4
- .text.libgcc   0x000035b8       0x38 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_prologue.o)
-                0x000035b8                __prologue_saves__
- .text.libgcc   0x000035f0       0x36 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_epilogue.o)
-                0x000035f0                __epilogue_restores__
+ .text.libgcc   0x000033ba       0x28 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodhi4.o)
+                0x000033ba                __udivmodhi4
+ .text.libgcc   0x000033e2       0x26 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodhi4.o)
+                0x000033e2                __divmodhi4
+                0x000033e2                _div
+ .text.libgcc   0x00003408       0x36 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodsi4.o)
+                0x00003408                __divmodsi4
+ .text.libgcc   0x0000343e        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
+ .text.libgcc   0x0000343e        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000343e        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x0000343e       0x44 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodsi4.o)
+                0x0000343e                __udivmodsi4
+ .text.libgcc   0x00003482       0x38 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_prologue.o)
+                0x00003482                __prologue_saves__
+ .text.libgcc   0x000034ba       0x36 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_epilogue.o)
+                0x000034ba                __epilogue_restores__
  .text.avr-libc.fplib
-                0x00003626       0x26 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(ceil.o)
-                0x00003626                ceil
+                0x000034f0       0x26 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(ceil.o)
+                0x000034f0                ceil
  .text.avr-libc.fplib
-                0x0000364c       0x36 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_mintl.o)
-                0x0000364c                __fp_mintl
+                0x00003516       0x36 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_mintl.o)
+                0x00003516                __fp_mintl
  .text.avr-libc.fplib
-                0x00003682       0x1c /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_mpack.o)
-                0x00003682                __fp_mpack
-                0x00003686                __fp_mpack_finite
+                0x0000354c       0x1c /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_mpack.o)
+                0x0000354c                __fp_mpack
+                0x00003550                __fp_mpack_finite
  .text.avr-libc.fplib
-                0x0000369e       0x2e /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_trunc.o)
-                0x0000369e                __fp_trunc
+                0x00003568       0x2e /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_trunc.o)
+                0x00003568                __fp_trunc
  .text.avr-libc.fplib
-                0x000036cc        0xe /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_zero.o)
-                0x000036cc                __fp_zero
-                0x000036ce                __fp_szero
+                0x00003596        0xe /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_zero.o)
+                0x00003596                __fp_zero
+                0x00003598                __fp_szero
  .text.avr-libc.fplib
-                0x000036da       0x44 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_split3.o)
-                0x000036da                __fp_split3
-                0x000036ea                __fp_splitA
-                0x0000371e                . = ALIGN (0x2)
+                0x000035a4       0x44 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_split3.o)
+                0x000035a4                __fp_split3
+                0x000035b4                __fp_splitA
+                0x000035e8                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000371e        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
-                0x0000371e                exit
-                0x0000371e                _exit
+ .fini9         0x000035e8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
+                0x000035e8                exit
+                0x000035e8                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -558,18 +558,18 @@ LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000371e        0x4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
+ .fini0         0x000035e8        0x4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
  *(.fini0)
-                0x00003722                _etext = .
+                0x000035ec                _etext = .
 
-.data           0x00800100      0x118 load address 0x00003722
+.data           0x00800100      0x118 load address 0x000035ec
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800100        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm16m1.o
  .data          0x00800100        0x0 analog_main.o
- .data          0x00800100        0x0 can_msg.o
- .data          0x00800100        0x0 calibrations.o
- .data          0x00800100        0x6 analog.o
+ .data          0x00800100        0x2 can_msg.o
+ .data          0x00800102        0x0 calibrations.o
+ .data          0x00800102        0x4 analog.o
  .data          0x00800106        0x0 OS_Dispatch.o
  .data          0x00800106        0x0 ../core/can.o
  .data          0x00800106        0x1 ../core/can_instance.o
@@ -629,117 +629,117 @@ LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a
                 0x00800218                _edata = .
                 0x00800218                PROVIDE (__data_end, .)
 
-.bss            0x00800218      0x1e0
+.bss            0x00800218      0x1df
                 0x00800218                PROVIDE (__bss_start, .)
  *(.bss)
  .bss           0x00800218        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm16m1.o
  .bss           0x00800218        0x1 analog_main.o
                 0x00800218                okay_to_read_cal
- .bss           0x00800219       0x11 can_msg.o
+ .bss           0x00800219       0x10 can_msg.o
                 0x00800219                tcan
- .bss           0x0080022a        0x0 calibrations.o
- .bss           0x0080022a      0x108 analog.o
-                0x0080022a                ActiveSignalMask
-                0x00800232                Readings
-                0x008002b2                ReadingsPrev
- .bss           0x00800332        0x2 OS_Dispatch.o
-                0x00800332                t
- .bss           0x00800334       0x3b ../core/can.o
-                0x00800334                msg1
-                0x00800343                msg2
-                0x00800352                LastReceivedMsg
-                0x00800361                NewMessageReceivedFlag
-                0x00800362                TransmittedSuccesfully
-                0x00800363                data
-                0x0080036b                rx_call_back
-                0x0080036d                tx_call_back
- .bss           0x0080036f        0xa ../core/can_instance.o
-                0x0080036f                MyInstance
-                0x00800370                Confirmed
-                0x00800371                init_complete
-                0x00800372                rand_delay
-                0x00800374                rand_instance
-                0x00800375                timeout_10ms_mult
-                0x00800377                init_path
-                0x00800378                ts_state
- .bss           0x00800379        0x0 ../core/can_eid.o
- .bss           0x00800379        0x8 ../core/can_board_msg.o
-                0x00800379                BoardStatus
-                0x0080037a                MappedBlock
-                0x0080037b                Starting_Index
-                0x0080037c                System_Send_Status
-                0x0080037d                ShutDownState
-                0x0080037e                config_call_back
-                0x00800380                Board_presence_response_type
- .bss           0x00800381       0x5c ../core/can_buff.o
-                0x00800381                Received
-                0x008003db                RxHead
-                0x008003dc                RxTail
- .bss           0x008003dd        0x3 ../core/leds.o
-                0x008003dd                System_LED_Control
-                0x008003df                LED_state
- .bss           0x008003e0        0x2 ../core/spi.o
-                0x008003e0                spi_isr_call_back
- .bss           0x008003e2        0x0 ../core/pwm.o
- .bss           0x008003e2        0x4 ../core/bk_system_defs.o
-                0x008003e2                time_delay
- .bss           0x008003e6        0x8 ../core/OS_timers.o
-                0x008003e6                OS_Event_HSTIC_Counter
-                0x008003e8                OS_Event_TIC_Counter
-                0x008003ea                OS_Timer_Event_Flag
-                0x008003ec                OS_HighSpeedSampling
- .bss           0x008003ee        0x5 ../core/configuration.o
-                0x008003ee                config_byte_1
-                0x008003ef                config_byte_2
-                0x008003f0                config_byte_3
-                0x008003f1                config_byte_4
-                0x008003f2                sys_config_byte
- .bss           0x008003f3        0x5 ../core/adc.o
-                0x008003f3                LightSensorSample
-                0x008003f7                next_channel
- .bss           0x008003f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodhi4.o)
- .bss           0x008003f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodhi4.o)
- .bss           0x008003f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodsi4.o)
- .bss           0x008003f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
- .bss           0x008003f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_copy_data.o)
- .bss           0x008003f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clear_bss.o)
- .bss           0x008003f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
- .bss           0x008003f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o)
- .bss           0x008003f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
- .bss           0x008003f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
- .bss           0x008003f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o)
- .bss           0x008003f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_ge_sf.o)
- .bss           0x008003f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_lt_sf.o)
- .bss           0x008003f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
- .bss           0x008003f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_sf_to_si.o)
- .bss           0x008003f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_thenan_sf.o)
- .bss           0x008003f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_usi_to_sf.o)
- .bss           0x008003f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodsi4.o)
- .bss           0x008003f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_prologue.o)
- .bss           0x008003f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_epilogue.o)
- .bss           0x008003f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o)
- .bss           0x008003f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_pack_sf.o)
- .bss           0x008003f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
- .bss           0x008003f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
- .bss           0x008003f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clz.o)
- .bss           0x008003f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(ceil.o)
- .bss           0x008003f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_mintl.o)
- .bss           0x008003f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_mpack.o)
- .bss           0x008003f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_trunc.o)
- .bss           0x008003f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_zero.o)
- .bss           0x008003f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_split3.o)
+ .bss           0x00800229        0x0 calibrations.o
+ .bss           0x00800229      0x108 analog.o
+                0x00800229                ActiveSignalMask
+                0x00800231                Readings
+                0x008002b1                ReadingsPrev
+ .bss           0x00800331        0x2 OS_Dispatch.o
+                0x00800331                t
+ .bss           0x00800333       0x3b ../core/can.o
+                0x00800333                msg1
+                0x00800342                msg2
+                0x00800351                LastReceivedMsg
+                0x00800360                NewMessageReceivedFlag
+                0x00800361                TransmittedSuccesfully
+                0x00800362                data
+                0x0080036a                rx_call_back
+                0x0080036c                tx_call_back
+ .bss           0x0080036e        0xa ../core/can_instance.o
+                0x0080036e                MyInstance
+                0x0080036f                Confirmed
+                0x00800370                init_complete
+                0x00800371                rand_delay
+                0x00800373                rand_instance
+                0x00800374                timeout_10ms_mult
+                0x00800376                init_path
+                0x00800377                ts_state
+ .bss           0x00800378        0x0 ../core/can_eid.o
+ .bss           0x00800378        0x8 ../core/can_board_msg.o
+                0x00800378                BoardStatus
+                0x00800379                MappedBlock
+                0x0080037a                Starting_Index
+                0x0080037b                System_Send_Status
+                0x0080037c                ShutDownState
+                0x0080037d                config_call_back
+                0x0080037f                Board_presence_response_type
+ .bss           0x00800380       0x5c ../core/can_buff.o
+                0x00800380                Received
+                0x008003da                RxHead
+                0x008003db                RxTail
+ .bss           0x008003dc        0x3 ../core/leds.o
+                0x008003dc                System_LED_Control
+                0x008003de                LED_state
+ .bss           0x008003df        0x2 ../core/spi.o
+                0x008003df                spi_isr_call_back
+ .bss           0x008003e1        0x0 ../core/pwm.o
+ .bss           0x008003e1        0x4 ../core/bk_system_defs.o
+                0x008003e1                time_delay
+ .bss           0x008003e5        0x8 ../core/OS_timers.o
+                0x008003e5                OS_Event_HSTIC_Counter
+                0x008003e7                OS_Event_TIC_Counter
+                0x008003e9                OS_Timer_Event_Flag
+                0x008003eb                OS_HighSpeedSampling
+ .bss           0x008003ed        0x5 ../core/configuration.o
+                0x008003ed                config_byte_1
+                0x008003ee                config_byte_2
+                0x008003ef                config_byte_3
+                0x008003f0                config_byte_4
+                0x008003f1                sys_config_byte
+ .bss           0x008003f2        0x5 ../core/adc.o
+                0x008003f2                LightSensorSample
+                0x008003f6                next_channel
+ .bss           0x008003f7        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodhi4.o)
+ .bss           0x008003f7        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodhi4.o)
+ .bss           0x008003f7        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodsi4.o)
+ .bss           0x008003f7        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
+ .bss           0x008003f7        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_copy_data.o)
+ .bss           0x008003f7        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clear_bss.o)
+ .bss           0x008003f7        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
+ .bss           0x008003f7        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o)
+ .bss           0x008003f7        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
+ .bss           0x008003f7        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
+ .bss           0x008003f7        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o)
+ .bss           0x008003f7        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_ge_sf.o)
+ .bss           0x008003f7        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_lt_sf.o)
+ .bss           0x008003f7        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
+ .bss           0x008003f7        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_sf_to_si.o)
+ .bss           0x008003f7        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_thenan_sf.o)
+ .bss           0x008003f7        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_usi_to_sf.o)
+ .bss           0x008003f7        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodsi4.o)
+ .bss           0x008003f7        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_prologue.o)
+ .bss           0x008003f7        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_epilogue.o)
+ .bss           0x008003f7        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o)
+ .bss           0x008003f7        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_pack_sf.o)
+ .bss           0x008003f7        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
+ .bss           0x008003f7        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
+ .bss           0x008003f7        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clz.o)
+ .bss           0x008003f7        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(ceil.o)
+ .bss           0x008003f7        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_mintl.o)
+ .bss           0x008003f7        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_mpack.o)
+ .bss           0x008003f7        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_trunc.o)
+ .bss           0x008003f7        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_zero.o)
+ .bss           0x008003f7        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_split3.o)
  *(.bss*)
  *(COMMON)
-                0x008003f8                PROVIDE (__bss_end, .)
-                0x00003722                __data_load_start = LOADADDR (.data)
-                0x0000383a                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x008003f7                PROVIDE (__bss_end, .)
+                0x000035ec                __data_load_start = LOADADDR (.data)
+                0x00003704                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x008003f8        0x0
-                0x008003f8                PROVIDE (__noinit_start, .)
+.noinit         0x008003f7        0x0
+                0x008003f7                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x008003f8                PROVIDE (__noinit_end, .)
-                0x008003f8                _end = .
-                0x008003f8                PROVIDE (__heap_start, .)
+                0x008003f7                PROVIDE (__noinit_end, .)
+                0x008003f7                _end = .
+                0x008003f7                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -873,13 +873,13 @@ LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a
                 0x00000000     0x1381
  *(.debug_pubnames)
  .debug_pubnames
-                0x00000000       0x4e analog_main.o
+                0x00000000       0x39 analog_main.o
  .debug_pubnames
-                0x0000004e       0xc2 can_msg.o
+                0x00000039       0xc2 can_msg.o
  .debug_pubnames
-                0x00000110       0x85 calibrations.o
+                0x000000fb       0x85 calibrations.o
  .debug_pubnames
-                0x00000195      0x1a0 analog.o
+                0x00000180      0x1b5 analog.o
  .debug_pubnames
                 0x00000335       0x28 OS_Dispatch.o
  .debug_pubnames
@@ -939,121 +939,121 @@ LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a
  .debug_pubnames
                 0x00001361       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clz.o)
 
-.debug_info     0x00000000     0x75b6
+.debug_info     0x00000000     0x7542
  *(.debug_info)
- .debug_info    0x00000000      0x34c analog_main.o
- .debug_info    0x0000034c      0x5cb can_msg.o
- .debug_info    0x00000917      0x230 calibrations.o
- .debug_info    0x00000b47      0x688 analog.o
- .debug_info    0x000011cf      0x19e OS_Dispatch.o
- .debug_info    0x0000136d      0xd3b ../core/can.o
- .debug_info    0x000020a8      0x540 ../core/can_instance.o
- .debug_info    0x000025e8      0x435 ../core/can_eid.o
- .debug_info    0x00002a1d      0x619 ../core/can_board_msg.o
- .debug_info    0x00003036      0x511 ../core/can_buff.o
- .debug_info    0x00003547      0x4ec ../core/leds.o
- .debug_info    0x00003a33      0x346 ../core/spi.o
- .debug_info    0x00003d79      0x5c9 ../core/pwm.o
- .debug_info    0x00004342       0xc0 ../core/bk_system_defs.o
- .debug_info    0x00004402      0x200 ../core/OS_timers.o
- .debug_info    0x00004602      0x886 ../core/configuration.o
- .debug_info    0x00004e88      0x1bb ../core/adc.o
- .debug_info    0x00005043       0xbd /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
- .debug_info    0x00005100      0x455 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o)
- .debug_info    0x00005555      0x3ec /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
- .debug_info    0x00005941      0x37f /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
- .debug_info    0x00005cc0      0x28a /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o)
- .debug_info    0x00005f4a      0x28a /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_ge_sf.o)
- .debug_info    0x000061d4      0x28a /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_lt_sf.o)
- .debug_info    0x0000645e      0x22f /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
- .debug_info    0x0000668d      0x2a5 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_sf_to_si.o)
- .debug_info    0x00006932      0x15e /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_thenan_sf.o)
- .debug_info    0x00006a90      0x232 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_usi_to_sf.o)
- .debug_info    0x00006cc2      0x12c /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o)
- .debug_info    0x00006dee      0x2d5 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_pack_sf.o)
- .debug_info    0x000070c3      0x25c /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
- .debug_info    0x0000731f      0x1f1 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
- .debug_info    0x00007510       0xa6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clz.o)
+ .debug_info    0x00000000      0x22b analog_main.o
+ .debug_info    0x0000022b      0x566 can_msg.o
+ .debug_info    0x00000791      0x230 calibrations.o
+ .debug_info    0x000009c1      0x79a analog.o
+ .debug_info    0x0000115b      0x19e OS_Dispatch.o
+ .debug_info    0x000012f9      0xd3b ../core/can.o
+ .debug_info    0x00002034      0x540 ../core/can_instance.o
+ .debug_info    0x00002574      0x435 ../core/can_eid.o
+ .debug_info    0x000029a9      0x619 ../core/can_board_msg.o
+ .debug_info    0x00002fc2      0x511 ../core/can_buff.o
+ .debug_info    0x000034d3      0x4ec ../core/leds.o
+ .debug_info    0x000039bf      0x346 ../core/spi.o
+ .debug_info    0x00003d05      0x5c9 ../core/pwm.o
+ .debug_info    0x000042ce       0xc0 ../core/bk_system_defs.o
+ .debug_info    0x0000438e      0x200 ../core/OS_timers.o
+ .debug_info    0x0000458e      0x886 ../core/configuration.o
+ .debug_info    0x00004e14      0x1bb ../core/adc.o
+ .debug_info    0x00004fcf       0xbd /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
+ .debug_info    0x0000508c      0x455 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o)
+ .debug_info    0x000054e1      0x3ec /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
+ .debug_info    0x000058cd      0x37f /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
+ .debug_info    0x00005c4c      0x28a /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o)
+ .debug_info    0x00005ed6      0x28a /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_ge_sf.o)
+ .debug_info    0x00006160      0x28a /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_lt_sf.o)
+ .debug_info    0x000063ea      0x22f /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
+ .debug_info    0x00006619      0x2a5 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_sf_to_si.o)
+ .debug_info    0x000068be      0x15e /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_thenan_sf.o)
+ .debug_info    0x00006a1c      0x232 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_usi_to_sf.o)
+ .debug_info    0x00006c4e      0x12c /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o)
+ .debug_info    0x00006d7a      0x2d5 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_pack_sf.o)
+ .debug_info    0x0000704f      0x25c /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
+ .debug_info    0x000072ab      0x1f1 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
+ .debug_info    0x0000749c       0xa6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clz.o)
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev   0x00000000     0x2e2f
+.debug_abbrev   0x00000000     0x2e0b
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x162 analog_main.o
- .debug_abbrev  0x00000162      0x1fb can_msg.o
- .debug_abbrev  0x0000035d       0xf0 calibrations.o
- .debug_abbrev  0x0000044d      0x1a5 analog.o
- .debug_abbrev  0x000005f2       0x96 OS_Dispatch.o
- .debug_abbrev  0x00000688      0x32e ../core/can.o
- .debug_abbrev  0x000009b6      0x1fc ../core/can_instance.o
- .debug_abbrev  0x00000bb2      0x10d ../core/can_eid.o
- .debug_abbrev  0x00000cbf      0x221 ../core/can_board_msg.o
- .debug_abbrev  0x00000ee0      0x1f4 ../core/can_buff.o
- .debug_abbrev  0x000010d4      0x193 ../core/leds.o
- .debug_abbrev  0x00001267      0x196 ../core/spi.o
- .debug_abbrev  0x000013fd      0x1c5 ../core/pwm.o
- .debug_abbrev  0x000015c2       0x7f ../core/bk_system_defs.o
- .debug_abbrev  0x00001641       0xe4 ../core/OS_timers.o
- .debug_abbrev  0x00001725      0x274 ../core/configuration.o
- .debug_abbrev  0x00001999       0xe3 ../core/adc.o
- .debug_abbrev  0x00001a7c       0x5d /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
- .debug_abbrev  0x00001ad9      0x1af /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o)
- .debug_abbrev  0x00001c88      0x1d9 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
- .debug_abbrev  0x00001e61      0x1c4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
- .debug_abbrev  0x00002025      0x151 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o)
- .debug_abbrev  0x00002176      0x151 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_ge_sf.o)
- .debug_abbrev  0x000022c7      0x151 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_lt_sf.o)
- .debug_abbrev  0x00002418      0x162 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
- .debug_abbrev  0x0000257a      0x160 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_sf_to_si.o)
- .debug_abbrev  0x000026da       0xcb /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_thenan_sf.o)
- .debug_abbrev  0x000027a5      0x173 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_usi_to_sf.o)
- .debug_abbrev  0x00002918       0xce /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o)
- .debug_abbrev  0x000029e6      0x192 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_pack_sf.o)
- .debug_abbrev  0x00002b78      0x14b /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
- .debug_abbrev  0x00002cc3      0x10b /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
- .debug_abbrev  0x00002dce       0x61 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clz.o)
+ .debug_abbrev  0x00000000       0xe5 analog_main.o
+ .debug_abbrev  0x000000e5      0x1ec can_msg.o
+ .debug_abbrev  0x000002d1       0xf0 calibrations.o
+ .debug_abbrev  0x000003c1      0x20d analog.o
+ .debug_abbrev  0x000005ce       0x96 OS_Dispatch.o
+ .debug_abbrev  0x00000664      0x32e ../core/can.o
+ .debug_abbrev  0x00000992      0x1fc ../core/can_instance.o
+ .debug_abbrev  0x00000b8e      0x10d ../core/can_eid.o
+ .debug_abbrev  0x00000c9b      0x221 ../core/can_board_msg.o
+ .debug_abbrev  0x00000ebc      0x1f4 ../core/can_buff.o
+ .debug_abbrev  0x000010b0      0x193 ../core/leds.o
+ .debug_abbrev  0x00001243      0x196 ../core/spi.o
+ .debug_abbrev  0x000013d9      0x1c5 ../core/pwm.o
+ .debug_abbrev  0x0000159e       0x7f ../core/bk_system_defs.o
+ .debug_abbrev  0x0000161d       0xe4 ../core/OS_timers.o
+ .debug_abbrev  0x00001701      0x274 ../core/configuration.o
+ .debug_abbrev  0x00001975       0xe3 ../core/adc.o
+ .debug_abbrev  0x00001a58       0x5d /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
+ .debug_abbrev  0x00001ab5      0x1af /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o)
+ .debug_abbrev  0x00001c64      0x1d9 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
+ .debug_abbrev  0x00001e3d      0x1c4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
+ .debug_abbrev  0x00002001      0x151 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o)
+ .debug_abbrev  0x00002152      0x151 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_ge_sf.o)
+ .debug_abbrev  0x000022a3      0x151 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_lt_sf.o)
+ .debug_abbrev  0x000023f4      0x162 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
+ .debug_abbrev  0x00002556      0x160 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_sf_to_si.o)
+ .debug_abbrev  0x000026b6       0xcb /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_thenan_sf.o)
+ .debug_abbrev  0x00002781      0x173 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_usi_to_sf.o)
+ .debug_abbrev  0x000028f4       0xce /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o)
+ .debug_abbrev  0x000029c2      0x192 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_pack_sf.o)
+ .debug_abbrev  0x00002b54      0x14b /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
+ .debug_abbrev  0x00002c9f      0x10b /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
+ .debug_abbrev  0x00002daa       0x61 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clz.o)
 
-.debug_line     0x00000000     0x4b35
+.debug_line     0x00000000     0x4abe
  *(.debug_line)
- .debug_line    0x00000000      0x1d6 analog_main.o
- .debug_line    0x000001d6      0x394 can_msg.o
- .debug_line    0x0000056a      0x144 calibrations.o
- .debug_line    0x000006ae      0x478 analog.o
- .debug_line    0x00000b26       0xe6 OS_Dispatch.o
- .debug_line    0x00000c0c      0x9f9 ../core/can.o
- .debug_line    0x00001605      0x3c2 ../core/can_instance.o
- .debug_line    0x000019c7      0x12e ../core/can_eid.o
- .debug_line    0x00001af5      0x5fe ../core/can_board_msg.o
- .debug_line    0x000020f3      0x281 ../core/can_buff.o
- .debug_line    0x00002374      0x3c5 ../core/leds.o
- .debug_line    0x00002739      0x2bc ../core/spi.o
- .debug_line    0x000029f5      0x3ef ../core/pwm.o
- .debug_line    0x00002de4       0xc2 ../core/bk_system_defs.o
- .debug_line    0x00002ea6      0x1bb ../core/OS_timers.o
- .debug_line    0x00003061      0x5fb ../core/configuration.o
- .debug_line    0x0000365c      0x130 ../core/adc.o
- .debug_line    0x0000378c       0x9d /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
- .debug_line    0x00003829      0x2c2 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o)
- .debug_line    0x00003aeb      0x25e /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
- .debug_line    0x00003d49      0x1e4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
- .debug_line    0x00003f2d       0xd9 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o)
- .debug_line    0x00004006       0xd9 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_ge_sf.o)
- .debug_line    0x000040df       0xd9 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_lt_sf.o)
- .debug_line    0x000041b8      0x121 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
- .debug_line    0x000042d9      0x113 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_sf_to_si.o)
- .debug_line    0x000043ec       0x86 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_thenan_sf.o)
- .debug_line    0x00004472      0x12f /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_usi_to_sf.o)
- .debug_line    0x000045a1       0xc3 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o)
- .debug_line    0x00004664      0x1c9 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_pack_sf.o)
- .debug_line    0x0000482d      0x149 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
- .debug_line    0x00004976      0x14d /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
- .debug_line    0x00004ac3       0x72 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clz.o)
+ .debug_line    0x00000000      0x14c analog_main.o
+ .debug_line    0x0000014c      0x329 can_msg.o
+ .debug_line    0x00000475      0x144 calibrations.o
+ .debug_line    0x000005b9      0x4fe analog.o
+ .debug_line    0x00000ab7       0xde OS_Dispatch.o
+ .debug_line    0x00000b95      0x9f9 ../core/can.o
+ .debug_line    0x0000158e      0x3c2 ../core/can_instance.o
+ .debug_line    0x00001950      0x12e ../core/can_eid.o
+ .debug_line    0x00001a7e      0x5fe ../core/can_board_msg.o
+ .debug_line    0x0000207c      0x281 ../core/can_buff.o
+ .debug_line    0x000022fd      0x3c5 ../core/leds.o
+ .debug_line    0x000026c2      0x2bc ../core/spi.o
+ .debug_line    0x0000297e      0x3ef ../core/pwm.o
+ .debug_line    0x00002d6d       0xc2 ../core/bk_system_defs.o
+ .debug_line    0x00002e2f      0x1bb ../core/OS_timers.o
+ .debug_line    0x00002fea      0x5fb ../core/configuration.o
+ .debug_line    0x000035e5      0x130 ../core/adc.o
+ .debug_line    0x00003715       0x9d /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
+ .debug_line    0x000037b2      0x2c2 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o)
+ .debug_line    0x00003a74      0x25e /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
+ .debug_line    0x00003cd2      0x1e4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
+ .debug_line    0x00003eb6       0xd9 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o)
+ .debug_line    0x00003f8f       0xd9 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_ge_sf.o)
+ .debug_line    0x00004068       0xd9 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_lt_sf.o)
+ .debug_line    0x00004141      0x121 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
+ .debug_line    0x00004262      0x113 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_sf_to_si.o)
+ .debug_line    0x00004375       0x86 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_thenan_sf.o)
+ .debug_line    0x000043fb      0x12f /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_usi_to_sf.o)
+ .debug_line    0x0000452a       0xc3 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o)
+ .debug_line    0x000045ed      0x1c9 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_pack_sf.o)
+ .debug_line    0x000047b6      0x149 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
+ .debug_line    0x000048ff      0x14d /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
+ .debug_line    0x00004a4c       0x72 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clz.o)
 
 .debug_frame    0x00000000      0xcd0
  *(.debug_frame)
- .debug_frame   0x00000000       0x40 analog_main.o
- .debug_frame   0x00000040       0x80 can_msg.o
- .debug_frame   0x000000c0       0x70 calibrations.o
- .debug_frame   0x00000130      0x140 analog.o
+ .debug_frame   0x00000000       0x30 analog_main.o
+ .debug_frame   0x00000030       0x80 can_msg.o
+ .debug_frame   0x000000b0       0x70 calibrations.o
+ .debug_frame   0x00000120      0x150 analog.o
  .debug_frame   0x00000270       0x20 OS_Dispatch.o
  .debug_frame   0x00000290      0x1c0 ../core/can.o
  .debug_frame   0x00000450       0x90 ../core/can_instance.o
@@ -1082,102 +1082,102 @@ LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a
  .debug_frame   0x00000c90       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
  .debug_frame   0x00000cb0       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
 
-.debug_str      0x00000000     0x219a
+.debug_str      0x00000000     0x21ab
  *(.debug_str)
- .debug_str     0x00000000      0x2f9 analog_main.o
-                                0x358 (size before relaxing)
- .debug_str     0x000002f9      0x1d9 can_msg.o
-                                0x4e0 (size before relaxing)
- .debug_str     0x000004d2       0xea calibrations.o
+ .debug_str     0x00000000      0x299 analog_main.o
+                                0x2d8 (size before relaxing)
+ .debug_str     0x00000299      0x220 can_msg.o
+                                0x4f2 (size before relaxing)
+ .debug_str     0x000004b9       0xea calibrations.o
                                 0x2d3 (size before relaxing)
- .debug_str     0x000005bc      0x2c6 analog.o
-                                0x5ba (size before relaxing)
- .debug_str     0x00000882       0x40 OS_Dispatch.o
+ .debug_str     0x000005a3      0x2f0 analog.o
+                                0x5e3 (size before relaxing)
+ .debug_str     0x00000893       0x40 OS_Dispatch.o
                                 0x284 (size before relaxing)
- .debug_str     0x000008c2      0x49a ../core/can.o
+ .debug_str     0x000008d3      0x49a ../core/can.o
                                 0x6b5 (size before relaxing)
- .debug_str     0x00000d5c      0x224 ../core/can_instance.o
+ .debug_str     0x00000d6d      0x224 ../core/can_instance.o
                                 0x51d (size before relaxing)
- .debug_str     0x00000f80      0x139 ../core/can_eid.o
+ .debug_str     0x00000f91      0x139 ../core/can_eid.o
                                 0x3bf (size before relaxing)
- .debug_str     0x000010b9      0x306 ../core/can_board_msg.o
+ .debug_str     0x000010ca      0x306 ../core/can_board_msg.o
                                 0x648 (size before relaxing)
- .debug_str     0x000013bf      0x16a ../core/can_buff.o
+ .debug_str     0x000013d0      0x16a ../core/can_buff.o
                                 0x44f (size before relaxing)
- .debug_str     0x00001529      0x210 ../core/leds.o
+ .debug_str     0x0000153a      0x210 ../core/leds.o
                                 0x42f (size before relaxing)
- .debug_str     0x00001739      0x129 ../core/spi.o
+ .debug_str     0x0000174a      0x129 ../core/spi.o
                                 0x2e3 (size before relaxing)
- .debug_str     0x00001862      0x1ac ../core/pwm.o
+ .debug_str     0x00001873      0x1ac ../core/pwm.o
                                 0x344 (size before relaxing)
- .debug_str     0x00001a0e       0x4d ../core/bk_system_defs.o
+ .debug_str     0x00001a1f       0x4d ../core/bk_system_defs.o
                                 0x106 (size before relaxing)
- .debug_str     0x00001a5b       0xf8 ../core/OS_timers.o
+ .debug_str     0x00001a6c       0xf8 ../core/OS_timers.o
                                 0x2af (size before relaxing)
- .debug_str     0x00001b53      0x2c4 ../core/configuration.o
+ .debug_str     0x00001b64      0x2c4 ../core/configuration.o
                                 0x64e (size before relaxing)
- .debug_str     0x00001e17       0x81 ../core/adc.o
+ .debug_str     0x00001e28       0x81 ../core/adc.o
                                 0x229 (size before relaxing)
- .debug_str     0x00001e98       0xc2 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
+ .debug_str     0x00001ea9       0xc2 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
                                 0x13b (size before relaxing)
- .debug_str     0x00001f5a      0x145 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o)
+ .debug_str     0x00001f6b      0x145 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o)
                                 0x24e (size before relaxing)
- .debug_str     0x0000209f       0x27 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
+ .debug_str     0x000020b0       0x27 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
                                 0x207 (size before relaxing)
- .debug_str     0x000020c6       0x35 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
+ .debug_str     0x000020d7       0x35 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
                                 0x210 (size before relaxing)
- .debug_str     0x000020fb        0x8 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o)
+ .debug_str     0x0000210c        0x8 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o)
                                 0x1d5 (size before relaxing)
- .debug_str     0x00002103        0x8 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_ge_sf.o)
+ .debug_str     0x00002114        0x8 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_ge_sf.o)
                                 0x1d5 (size before relaxing)
- .debug_str     0x0000210b        0x8 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_lt_sf.o)
+ .debug_str     0x0000211c        0x8 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_lt_sf.o)
                                 0x1d5 (size before relaxing)
- .debug_str     0x00002113       0x27 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
+ .debug_str     0x00002124       0x27 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
                                 0x1c4 (size before relaxing)
- .debug_str     0x0000213a        0xa /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_sf_to_si.o)
+ .debug_str     0x0000214b        0xa /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_sf_to_si.o)
                                 0x1de (size before relaxing)
  .debug_str     0x00000000      0x180 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_thenan_sf.o)
- .debug_str     0x00002144       0x14 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_usi_to_sf.o)
+ .debug_str     0x00002155       0x14 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_usi_to_sf.o)
                                 0x1c0 (size before relaxing)
- .debug_str     0x00002158       0x17 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o)
+ .debug_str     0x00002169       0x17 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o)
                                 0x147 (size before relaxing)
- .debug_str     0x0000216f       0x10 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_pack_sf.o)
+ .debug_str     0x00002180       0x10 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_pack_sf.o)
                                 0x1dd (size before relaxing)
- .debug_str     0x0000217f        0xb /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
+ .debug_str     0x00002190        0xb /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
                                 0x1bf (size before relaxing)
- .debug_str     0x0000218a       0x10 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
+ .debug_str     0x0000219b       0x10 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
                                 0x1a3 (size before relaxing)
  .debug_str     0x00000000      0x12a /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clz.o)
 
-.debug_loc      0x00000000     0x2d21
+.debug_loc      0x00000000     0x2d9b
  *(.debug_loc)
- .debug_loc     0x00000000      0x2ce can_msg.o
- .debug_loc     0x000002ce      0x330 analog.o
- .debug_loc     0x000005fe      0x652 ../core/can.o
- .debug_loc     0x00000c50      0x112 ../core/can_instance.o
- .debug_loc     0x00000d62       0xa8 ../core/can_eid.o
- .debug_loc     0x00000e0a      0x1b4 ../core/can_board_msg.o
- .debug_loc     0x00000fbe      0x18e ../core/can_buff.o
- .debug_loc     0x0000114c      0x148 ../core/leds.o
- .debug_loc     0x00001294      0x11d ../core/spi.o
- .debug_loc     0x000013b1      0x4f2 ../core/pwm.o
- .debug_loc     0x000018a3       0x34 ../core/bk_system_defs.o
- .debug_loc     0x000018d7      0x601 ../core/configuration.o
- .debug_loc     0x00001ed8       0x47 ../core/adc.o
- .debug_loc     0x00001f1f       0x34 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
- .debug_loc     0x00001f53      0x31d /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o)
- .debug_loc     0x00002270      0x2a4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
- .debug_loc     0x00002514      0x1ac /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
- .debug_loc     0x000026c0       0x48 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o)
- .debug_loc     0x00002708       0x48 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_ge_sf.o)
- .debug_loc     0x00002750       0x48 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_lt_sf.o)
- .debug_loc     0x00002798       0xb4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
- .debug_loc     0x0000284c       0x56 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_sf_to_si.o)
- .debug_loc     0x000028a2       0x96 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_usi_to_sf.o)
- .debug_loc     0x00002938       0xb2 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o)
- .debug_loc     0x000029ea      0x1d6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_pack_sf.o)
- .debug_loc     0x00002bc0      0x111 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
- .debug_loc     0x00002cd1       0x50 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
+ .debug_loc     0x00000000      0x23d can_msg.o
+ .debug_loc     0x0000023d      0x43b analog.o
+ .debug_loc     0x00000678      0x652 ../core/can.o
+ .debug_loc     0x00000cca      0x112 ../core/can_instance.o
+ .debug_loc     0x00000ddc       0xa8 ../core/can_eid.o
+ .debug_loc     0x00000e84      0x1b4 ../core/can_board_msg.o
+ .debug_loc     0x00001038      0x18e ../core/can_buff.o
+ .debug_loc     0x000011c6      0x148 ../core/leds.o
+ .debug_loc     0x0000130e      0x11d ../core/spi.o
+ .debug_loc     0x0000142b      0x4f2 ../core/pwm.o
+ .debug_loc     0x0000191d       0x34 ../core/bk_system_defs.o
+ .debug_loc     0x00001951      0x601 ../core/configuration.o
+ .debug_loc     0x00001f52       0x47 ../core/adc.o
+ .debug_loc     0x00001f99       0x34 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
+ .debug_loc     0x00001fcd      0x31d /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o)
+ .debug_loc     0x000022ea      0x2a4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
+ .debug_loc     0x0000258e      0x1ac /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
+ .debug_loc     0x0000273a       0x48 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o)
+ .debug_loc     0x00002782       0x48 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_ge_sf.o)
+ .debug_loc     0x000027ca       0x48 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_lt_sf.o)
+ .debug_loc     0x00002812       0xb4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
+ .debug_loc     0x000028c6       0x56 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_sf_to_si.o)
+ .debug_loc     0x0000291c       0x96 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_usi_to_sf.o)
+ .debug_loc     0x000029b2       0xb2 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o)
+ .debug_loc     0x00002a64      0x1d6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_pack_sf.o)
+ .debug_loc     0x00002c3a      0x111 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
+ .debug_loc     0x00002d4b       0x50 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -1185,87 +1185,87 @@ OUTPUT(Analog_board.elf elf32-avr)
 LOAD linker stubs
 
 .debug_pubtypes
-                0x00000000      0x974
+                0x00000000      0x960
  .debug_pubtypes
-                0x00000000       0x26 analog_main.o
+                0x00000000       0x12 analog_main.o
  .debug_pubtypes
-                0x00000026       0x33 can_msg.o
+                0x00000012       0x33 can_msg.o
  .debug_pubtypes
-                0x00000059       0x12 calibrations.o
+                0x00000045       0x12 calibrations.o
  .debug_pubtypes
-                0x0000006b       0x12 analog.o
+                0x00000057       0x12 analog.o
  .debug_pubtypes
-                0x0000007d       0x12 OS_Dispatch.o
+                0x00000069       0x12 OS_Dispatch.o
  .debug_pubtypes
-                0x0000008f       0x31 ../core/can.o
+                0x0000007b       0x31 ../core/can.o
  .debug_pubtypes
-                0x000000c0       0x26 ../core/can_instance.o
+                0x000000ac       0x26 ../core/can_instance.o
  .debug_pubtypes
-                0x000000e6       0x1d ../core/can_eid.o
+                0x000000d2       0x1d ../core/can_eid.o
  .debug_pubtypes
-                0x00000103       0x4a ../core/can_board_msg.o
+                0x000000ef       0x4a ../core/can_board_msg.o
  .debug_pubtypes
-                0x0000014d       0x26 ../core/can_buff.o
+                0x00000139       0x26 ../core/can_buff.o
  .debug_pubtypes
-                0x00000173       0x35 ../core/leds.o
+                0x0000015f       0x35 ../core/leds.o
  .debug_pubtypes
-                0x000001a8       0x1e ../core/spi.o
+                0x00000194       0x1e ../core/spi.o
  .debug_pubtypes
-                0x000001c6       0x12 ../core/pwm.o
+                0x000001b2       0x12 ../core/pwm.o
  .debug_pubtypes
-                0x000001d8       0x12 ../core/bk_system_defs.o
+                0x000001c4       0x12 ../core/bk_system_defs.o
  .debug_pubtypes
-                0x000001ea       0x12 ../core/OS_timers.o
+                0x000001d6       0x12 ../core/OS_timers.o
  .debug_pubtypes
-                0x000001fc       0x3f ../core/configuration.o
+                0x000001e8       0x3f ../core/configuration.o
  .debug_pubtypes
-                0x0000023b       0x12 ../core/adc.o
+                0x00000227       0x12 ../core/adc.o
  .debug_pubtypes
-                0x0000024d       0x34 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
+                0x00000239       0x34 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
  .debug_pubtypes
-                0x00000281       0x9d /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o)
+                0x0000026d       0x9d /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o)
  .debug_pubtypes
-                0x0000031e       0x86 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
+                0x0000030a       0x86 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
  .debug_pubtypes
-                0x000003a4       0x86 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
+                0x00000390       0x86 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
  .debug_pubtypes
-                0x0000042a       0x91 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o)
+                0x00000416       0x91 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o)
  .debug_pubtypes
-                0x000004bb       0x91 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_ge_sf.o)
+                0x000004a7       0x91 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_ge_sf.o)
  .debug_pubtypes
-                0x0000054c       0x91 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_lt_sf.o)
+                0x00000538       0x91 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_lt_sf.o)
  .debug_pubtypes
-                0x000005dd       0x7e /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
+                0x000005c9       0x7e /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
  .debug_pubtypes
-                0x0000065b       0x91 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_sf_to_si.o)
+                0x00000647       0x91 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_sf_to_si.o)
  .debug_pubtypes
-                0x000006ec       0x5b /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_thenan_sf.o)
+                0x000006d8       0x5b /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_thenan_sf.o)
  .debug_pubtypes
-                0x00000747       0x73 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_usi_to_sf.o)
+                0x00000733       0x73 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_usi_to_sf.o)
  .debug_pubtypes
-                0x000007ba       0x35 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o)
+                0x000007a6       0x35 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o)
  .debug_pubtypes
-                0x000007ef       0x86 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_pack_sf.o)
+                0x000007db       0x86 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_pack_sf.o)
  .debug_pubtypes
-                0x00000875       0x86 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
+                0x00000861       0x86 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
  .debug_pubtypes
-                0x000008fb       0x5b /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
+                0x000008e7       0x5b /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
  .debug_pubtypes
-                0x00000956       0x1e /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clz.o)
+                0x00000942       0x1e /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clz.o)
 
-.debug_ranges   0x00000000      0x2c8
+.debug_ranges   0x00000000      0x2f8
  .debug_ranges  0x00000000       0x18 analog_main.o
- .debug_ranges  0x00000018       0x48 can_msg.o
- .debug_ranges  0x00000060       0x60 analog.o
- .debug_ranges  0x000000c0       0x60 ../core/can.o
- .debug_ranges  0x00000120       0x18 ../core/can_instance.o
- .debug_ranges  0x00000138       0x18 ../core/can_board_msg.o
- .debug_ranges  0x00000150       0x30 ../core/can_buff.o
- .debug_ranges  0x00000180       0x18 ../core/spi.o
- .debug_ranges  0x00000198       0x68 ../core/pwm.o
- .debug_ranges  0x00000200       0x18 ../core/OS_timers.o
- .debug_ranges  0x00000218       0x18 ../core/configuration.o
- .debug_ranges  0x00000230       0x18 ../core/adc.o
- .debug_ranges  0x00000248       0x30 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
- .debug_ranges  0x00000278       0x38 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
- .debug_ranges  0x000002b0       0x18 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
+ .debug_ranges  0x00000018       0x18 can_msg.o
+ .debug_ranges  0x00000030       0xc0 analog.o
+ .debug_ranges  0x000000f0       0x60 ../core/can.o
+ .debug_ranges  0x00000150       0x18 ../core/can_instance.o
+ .debug_ranges  0x00000168       0x18 ../core/can_board_msg.o
+ .debug_ranges  0x00000180       0x30 ../core/can_buff.o
+ .debug_ranges  0x000001b0       0x18 ../core/spi.o
+ .debug_ranges  0x000001c8       0x68 ../core/pwm.o
+ .debug_ranges  0x00000230       0x18 ../core/OS_timers.o
+ .debug_ranges  0x00000248       0x18 ../core/configuration.o
+ .debug_ranges  0x00000260       0x18 ../core/adc.o
+ .debug_ranges  0x00000278       0x30 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
+ .debug_ranges  0x000002a8       0x38 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
+ .debug_ranges  0x000002e0       0x18 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)

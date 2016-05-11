@@ -115,14 +115,14 @@ void init()
     chip_init ();    				// Chip initialization
 	init_leds ();
 	delay(1000000);					// ~ 2 sec
-	read_cal();						// Read everything including motor stops.	
+	read_cal();						// Read everything including motor stops.
 	// yes can_init() needs MyInstance to be set already for filtering!
 	can_init(CAN_250K_BAUD);		/* Enables Mob0 for Reception! */
 
     // INIT MYINSTANCE:	
 	config_init();
 	can_instance_init();
-	
+
     set_rx_callback			( can_file_message );
 	set_configure_callback	( config_change    );
 	sei();
@@ -144,9 +144,6 @@ int main(void)
     while (1)
     {
     	// CAN Messaging will directly Start/Stop the motor.
-//   	SET_LED_3();
-//		delay(one_second); delay(one_second); 
-//		RESET_LED_3();
 		delay(one_second); delay(one_second); 
 
 //		can_prep_eeprom_dump1_msg( );

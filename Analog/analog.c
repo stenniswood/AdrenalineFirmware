@@ -25,6 +25,9 @@ uint8_t 	ActiveSignalMask[8];
 uint16_t	Readings[64];				// Analog Readings 
 uint16_t	ReadingsPrev[64];			// Analog Readings 
 
+/* Setup the Atmel SPI port hardware.
+	Also configure the Maxim chips.
+*/
 void an_init()
 {
 	// Analog board uses regular MISO pins.  	TRUE
@@ -107,6 +110,10 @@ void an_reset(byte mChip)
 	deselect_chip(mChip);
 }
 
+/*
+	Reads the values from the middle of the SPI data stream.
+	Does not send any commands.
+*/
 void get_chip_readings( byte mChip )
 {
 	// READ RESULT:
@@ -130,7 +137,9 @@ void get_chip_readings( byte mChip )
 }
 
 /*
-	mChannel - [0 to 15]
+	mChip	   [1..4]	  there are 4 Analog chips on board.
+	mChannel - [0 to 15]  the number of channels to read.
+			   [4, 8, 16] 
 */
 void an_conversion(byte mChip, byte mChannel)
 {
@@ -192,7 +201,7 @@ word an_read( byte mChip )
 }
 
 // Read from the Maxim 11624 chips
-void an_start_read(byte mChip)
+void an_start_read(byte mChip, byte mChannels)
 {
 	// Results come back in 16 bits:
 		// 4 leading zeros:  0000
@@ -200,21 +209,48 @@ void an_start_read(byte mChip)
 		// 2 trailing zeros:			     00
 
 	// Start a conversion by writing byte to the conversion register.
-	static byte channel = 15;		// loops 0 thru 7 (same on all 4 chips!)
-	an_conversion(mChip, channel);
+	an_conversion(mChip, mChannels);
 }
 
-// Read from the Maxim 11624 chips
+/* The number of channels as represented by the CONFIG bytes */
+byte get_num_channels( int mChip )
+{
+	byte channels=0;
+	byte configd = isConfigured( 1<<mChip );
+	if (configd) {
+		channels=4;
+		byte upper8 = isConfigured3( MODE_ENABLE_ADC_CHIP1_UPPER8<<mChip );
+		if (upper8) 
+			channels = 15;
+		else {
+			byte mid4 = isConfigured3( MODE_ENABLE_ADC_CHIP1_MID4<<mChip );
+			if (mid4) 
+				channels = 8;
+		}
+	}
+	return channels;
+}
+
+/*
+	Start conversions on all active Maxim 11624 chips.
+	
+*/
 void an_start_all()
 {
-	for (int i=0; i<4; i++)
+	byte channels;
+	for (int chip=0; chip<4; chip++)
 	{
-		byte configd = isConfigured( 1<<i );
-		if (configd)
-			an_start_read(i);
+		byte configd = isConfigured( 1<<chip );
+		if (configd) {
+			channels = get_num_channels(chip);
+			an_start_read(chip, channels);
+		}
 	}
 }
 
+/*
+	
+*/
 void get_readings(byte mChip)
 {
 	for (int r=0; r<16; r++)
@@ -226,6 +262,11 @@ void get_readings(byte mChip)
 #define CHIP_THREE 0x40
 #define CHIP_FOUR  0x80
 
+/*
+	Interrupt on Pin Change - Interrupt indicates all requested conversions 
+	are completed.
+	Determine which pin changed, and read the results.
+*/
 ISR ( PCINT1_vect ) /* PCINT[8..15] */
 { 
 	int chip=-1;
@@ -251,24 +292,24 @@ ISR ( PCINT1_vect ) /* PCINT[8..15] */
 	}
 }
 
-
-static short ReportCounter = 1;		// when zero sends update
+/* 
+	Called from OS_Dispatch()  10ms time slice.
+	Starts A/D conversions on all active chips at same rate as report rate!
+*/
 void analog_timeslice()
 {
-	// Time To Report:
-	if (isReportingEnabled())
+	if (isReportingEnabled())		
 	{
-		ReportCounter--;
-		if (ReportCounter<=0)
+		//ReportCounter--;
+		//if (ReportCounter<=0)			// Time To Report?
 		{
-			//led_on(4);		
-			ReportCounter = getReportRate();	// Refill 
+			//ReportCounter = getReportRate();	// Refill 
 
 			// Initiate a conversion for each active chip  (isr will handle data)
 			an_start_all();
+
 			// Will this buffer up the messages or block until all are sent?!
 			// probably need to redesign
-			//led_off(4);
 		}
 	}
 }

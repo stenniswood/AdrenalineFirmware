@@ -74,6 +74,10 @@ Firmup the software / Glitch List:
 #include "configuration.h"
 #include "calibrations.h"
 
+
+bool okay_to_read_cal = false;
+
+
 void can_prep_eeprom_dump_msg( sCAN* mMsg, byte* addr )
 {
 	mMsg->id  = create_CAN_eid( 0x0111, MyInstance );

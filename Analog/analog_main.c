@@ -38,44 +38,23 @@ AUTHOR	:  Stephen Tenniswood
 
 bool okay_to_read_cal = false;
 
-// Use to verify that multiple boards receive the messages simultaneously
-// There was a defect observed when this was sending an 2 other boards were receiving.
-// Top nibble was shown on 1 tilt board Leds and lower nibble on another.
-// One started lagging the other.  Since this message is sent only once, it means
-// 		Maybe a sign error somewhere top nibble is taken as signed char.
-//		Or the receiver buffer wasn't getting serviced properly.
-
-void can_send_configs()
-{
-	if (okay_to_read_cal)	read_configuration();
-    msg1.id 	 = create_CAN_eid( 0x123, MyInstance );
-    msg1.data[0] = config_byte_1;
-    msg1.data[1] = config_byte_2;
-    msg1.data[2] = config_byte_3;
-    msg1.data[3] = config_byte_4;    
-    msg1.data[4] = sys_config_byte; 
-    msg1.header.DLC = 5;
-    msg1.header.rtr = 0;
-    can_send_msg( 0, &msg1 );
-}
-
 void init()
 {
  	cli();
     chip_init  ( );	    			/* Chip initialization			*/
 	init_leds  ( );
-	delay	   (1000000);			// ~ 2 sec
+	delay	   (1000000);			/* ~ 2 sec						*/
 	read_configuration   ( );
 	can_init   (CAN_250K_BAUD);		/* Enables Mob0 for Reception!	*/	
-	
-//	config_init		 ( );
+
+	config_init		 ( );
 	can_instance_init( );
-	an_init    		 ( );						/* Analog SPI module init 		*/
+	an_init    		 ( );			/* Analog SPI module init 		*/
 
     set_rx_callback			( can_file_message );
 	set_configure_callback	( config_change    );
-	sei		   ( );
 
+	sei		   ( );
 	OS_InitTask();	
 }
 
@@ -89,7 +68,7 @@ int main(void)
 {	
 	init();
     while (1)
-    {
+    {    
 		/* OS_Dispatch reads ALL ACTIVE ANALOG SIGNALS.
 			sends CAN report msgs periodically */		
 		if (isSysConfigured(CAN_NEW_BOARD))		
@@ -101,8 +80,7 @@ int main(void)
 } 
 
 
-/*  What's it need?
-
+/*  What does it need?
 	A)  Interrupts on the EOC_ pins (portc).
 	To implement:
 		Set PCINT0, PCINT1, PCINT2 vectors to the routine.
@@ -110,17 +88,19 @@ int main(void)
 		Setup PCICR (bits 0,1,2)
 			For Analog Rev 2, we want PCINT12,13,14,15 which corrresponds to 
 									  PORTC 4,5,6,7
-				This go in ISR( PCINT1_vect ) {}  
-				
+				This go in ISR( PCINT1_vect ) {}  				
 		Enable individual pins in PCMSK1 
 		
 		Look for flag in PCIFR interrupt flag register.
 		Look for specific pin in PINC	
-		
 ------------------ done:
-	B)	Timesliced operation.				COMPLETED
 	C)  Respond to board presence requests.
-	C)  CAN Transmitter resistor divider?  NOT NEEDED.
+		CAN_isr() calls can_board_msg_responder()
+		CAN Msg is received in , flag set to send response.
+		later in can_board_timeslice() which uses can_board_presence_reply() 
+		sending over Mob #2
+
+	D)  CAN Transmitter resistor divider?  NOT NEEDED
 */
 
 /* To summarize Analog Board CAN :
@@ -143,3 +123,21 @@ int main(void)
 	Prog other ButtonBoard and see if it receives.
 		Yes/No?			
 */
+
+
+// Use to verify that multiple boards receive the messages simultaneously
+// There was a defect observed when this was sending and 2 other boards were receiving.
+// Top nibble was shown on 1 tilt board Leds and lower nibble on another.
+// One started lagging the other.  Since this message is sent only once, it means
+// 		Maybe a sign error somewhere top nibble is taken as signed char.
+//		Or the receiver buffer wasn't getting serviced properly.
+
+
+//MyInstance = 0x55;
+//config_byte_1 = 0x01;
+//config_byte_2 = 0x02;
+//config_byte_3 = 0x03;
+//save_configuration();	
+//can_init_test_msg();
+//if (okay_to_read_cal)	read_configuration();
+

@@ -1,6 +1,11 @@
 /*********************************************************************
 Sends a CAN message with the info
 
+To compile on MacBook Pro:
+Add : /usr/local/CrossPack-AVR-20120217/bin:
+to the front of PATH environment variable.  For example:
+> PATH=/usr/local/CrossPack-AVR-20120217/bin:$PATH
+
 AFTER COMPILE, PROGRAM WITH:
 avrdude -p atmega32m1 -b 19200 -c avrisp -P /dev/tty.usbmodemfd131 -Uflash:w:./bigmotor.hex
 avrdude -p atmega32m1 -b 19200 -c avrisp -P /dev/tty.usbmodemfd131 -Ulfuse:w:0xE4:m
@@ -69,6 +74,10 @@ Firmup the software / Glitch List:
 #include "configuration.h"
 #include "calibrations.h"
 
+
+bool okay_to_read_cal = false;
+
+
 void can_prep_eeprom_dump_msg( sCAN* mMsg, byte* addr )
 {
 	mMsg->id  = create_CAN_eid( 0x0111, MyInstance );
@@ -132,21 +141,23 @@ void init()
 
 //********** main *****************************************************
 word prevPosition = 0;
+
 int main(void)
 {
 	init();
     while (1)
     {	
     	// CAN Messaging will directly Start/Stop the motor.
-//   	SET_LED_3();
-//		delay(one_second); delay(one_second); 
-//		RESET_LED_3();
-		delay(one_second); delay(one_second); 
-
-//		can_prep_eeprom_dump1_msg( );
-//		can_prep_eeprom_dump2_msg( );
-//		can_prep_eeprom_dump3_msg( );			
+		delay(one_second);
+		delay(one_second);
     }
     return (0);
 }
 
+
+//   	SET_LED_3();
+//		delay(one_second); delay(one_second); 
+//		RESET_LED_3();
+//		can_prep_eeprom_dump1_msg( );
+//		can_prep_eeprom_dump2_msg( );
+//		can_prep_eeprom_dump3_msg( );

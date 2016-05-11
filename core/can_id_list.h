@@ -22,7 +22,7 @@
 #define ID_BOARD_SERIAL_NUMBER			0xFC13		// OUT "
 #define ID_BOARD_DESCRIPTION			0xFC14		// OUT "
 
-/* Instance Numbers will be unique per network.  ie the counting sequence goes 
+/* Instance Numbers will be unique per network. ie the counting sequence goes 
 	 for all boards not just per type.		*/
 #define ID_INSTANCE_CLAIM				0xFC23	// Claim an Instance Number request  (instance goes with transmitter - random)
 #define ID_INSTANCE_QUERY				0xFC24	// (MyInstance)

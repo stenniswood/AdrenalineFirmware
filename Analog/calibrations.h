@@ -30,6 +30,17 @@ every:
 #define MODE_SEND_UPDATES_50ms	0x40		// 
 #define MODE_SEND_UPDATES_100ms	0x80		// 
 
+/**** CONFIG BYTE 3 - BIT DEFS ****/
+#define MODE_ENABLE_ADC_CHIP1_MID4			0x01	// disable channels 4-7
+#define MODE_ENABLE_ADC_CHIP2_MID4			0x02	// 
+#define MODE_ENABLE_ADC_CHIP3_MID4			0x04	// 
+#define MODE_ENABLE_ADC_CHIP4_MID4			0x08	// 
+#define MODE_ENABLE_ADC_CHIP1_UPPER8		0x10	// disable channels 8-15
+#define MODE_ENABLE_ADC_CHIP2_UPPER8		0x20	// 
+#define MODE_ENABLE_ADC_CHIP3_UPPER8		0x40	// 
+#define MODE_ENABLE_ADC_CHIP4_UPPER8 		0x80	// 
+
+
 void app_default_configuration();
 void config_change( byte mByteChanged );
 

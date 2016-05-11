@@ -128,7 +128,7 @@ ISR ( CAN_INT_vect )
 	       	if (rx_call_back != NULL)
     	   		rx_call_back( &LastReceivedMsg );
 		}
-		
+
 		// (Re)Enable Reception 29 bit IDE DLC8:
       	CANCDMOB = (( 1 << CONMOB1 ) | ( 1 << IDE ) | ( 8 << DLC0));
       	// Note - the DLC field of the CANCDMO register is updated by the received MOb. 

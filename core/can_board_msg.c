@@ -107,9 +107,9 @@ BOOL can_board_msg_responder( sCAN* mMsg )
 	{
 		if ( (mMsg->data[0] & 0x10) == 0x10)		// Read Config command
 		{
-			can_prep_configure( &msg1 ); 
+			can_prep_configure( &msg1 );
 			System_Send_Status = 1;
-		} else {
+		} else { 
 			can_parse_configure_request( mMsg );	// in configuration.c
 			System_Send_Status = 8;					// Save configuration!
 		}
@@ -231,10 +231,6 @@ void can_board_presence_reply(  )
 */
 void can_board_timeslice()
 {	
-/* PROB:  
-		Could do 1 at a time, but if requested too quickly, then 
-		the first request gets overwritten by the 2nd.
-*/
 	if ((System_Send_Status&0x01)==1) {			// Send channel 1 msg !
 		can_send_msg_no_wait( 0, &msg1 );
 		System_Send_Status &= (~0x01);

@@ -1,7 +1,6 @@
 /*********************************************************************
 Product of Beyond Kinetics, Inc
 Core Adrenaline Firmware configuration.
-
 --------------------------------------------
 DATE 	:  9/23/2013
 AUTHOR	:  Stephen Tenniswood
@@ -28,13 +27,15 @@ byte config_byte_1 	= 0x00;			// the actual use of the bits herein shall be defi
 byte config_byte_2 	= 0x00;			// by the application through use of the isConfigured() 
 byte config_byte_3 	= 0x00;			// macro.
 byte config_byte_4 	= 0x00;
-byte sys_config_byte= 0x00;		// Protected can only be modified by system! Not directly user modifiable bits! (contains NewBoard bit)
+byte sys_config_byte= 0x00;			// Protected can only be modified by system! Not directly user modifiable bits! (contains NewBoard bit)
 
 // This must be defined in the app - "calibrations.c" file.
 extern void app_default_configuration();
 
 /* return 1 = NEW BOARD OKAY
-		  0 = bad password */
+		  0 = bad password 
+	Caller:		None found in BigMotorEn.				  
+		  */
 byte make_system_new_board( word passcode )
 {
 	byte retval = 0;
@@ -47,6 +48,7 @@ byte make_system_new_board( word passcode )
 	}
 	return retval;
 }
+
 /**********************************************
 can_parse_configure_request()
 Return	:	The module configuration bytes
@@ -98,7 +100,7 @@ void default_configuration()
 	sys_config_byte |= CAN_NEW_BOARD;		// means no longer new board
 	Confirmed        = NOT_CLAIMED; 		// will force MyInstance to init
 	MyInstance 		 = 0x98;
-	
+
 	//led_on(4);
 }
 
@@ -163,7 +165,7 @@ byte* read_configuration()
 save_instance_number()
 Return	:	The instance number within the network
 **************************************************/
-byte* save_instance_number(byte* mEEPROMAddress )
+byte* save_instance_number( byte* mEEPROMAddress )
 {
     eeprom_write_byte( (unsigned char*)mEEPROMAddress,   MyInstance );
     return mEEPROMAddress+1;
@@ -191,6 +193,8 @@ byte* read_confirmed_status(byte* mEEPROMAddress)
     Confirmed  = eeprom_read_byte( (unsigned char*)mEEPROMAddress );
     return mEEPROMAddress+1;
 }
+
+extern bool okay_to_read_cal;
 
 /**********************************************
 save_configuration_eeprom()

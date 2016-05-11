@@ -8,6 +8,12 @@ AFTER COMPILE, PROGRAM WITH:
 avrdude -p atmega16m1 -b 19200 -c avrisp -P /dev/tty.usbmodemfd131 -Uflash:w:./tilt_board.hex
 avrdude -p atmega16m1 -b 19200 -c avrisp -P /dev/tty.usbmodemfd131 -Ulfuse:w:0xE4:m
 
+To compile on MacBook Pro:
+Add : /usr/local/CrossPack-AVR-20120217/bin:
+to the front of PATH environment variable.  For example:
+> PATH=/usr/local/CrossPack-AVR-20120217/bin:$PATH
+
+
     LIS3D - Requirements are :
 	SCLK must IDLE High  (CPOL=1)
 	MOSI/MISO driven on Falling edge of clk and sampled on Rising edge.
@@ -97,6 +103,7 @@ AUTHOR	:  Stephen Tenniswood
 
 
 /***** Initialization ***********************************/
+bool okay_to_read_cal = false;
 
 /* Callback for configuration change. */
 void config_change(byte mByteChanged)

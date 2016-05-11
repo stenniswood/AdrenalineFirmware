@@ -3,24 +3,20 @@
 
 #include "configuration.h"
 
-
 /*********** TYPE DEFINITIONS *******************************************/
-// Use this structure for storing the Calibration points
-// into EEPROM:
+// Use this structure for storing the Calibration points 
+// into EEPROM : 
 struct sEndPoint
 {
-	long int angle;		// FPA type;  Degrees*100  
+	long int angle;		// Fixed Point A type;  Degrees*100  
 	word 	 value;		// Pot value
 };
 
 extern struct sEndPoint 	EndPoint1;
 extern struct sEndPoint 	EndPoint2;
-extern struct sEndPoint 	Range;			// Computed from EndPoint 1 & 2
-extern word current_1_threshold;
-extern word current_2_threshold;
-
-void app_default_configuration();
-void config_change			  (byte mByteChanged);
+extern struct sEndPoint 	Range;			// Computed from EndPoint 1 & 2 
+extern word current_1_threshold; 
+extern word current_2_threshold; 
 
 /************* CONFIGURATION *****************/
 /**** CONFIG BYTE 1 - BIT DEFS ****/
@@ -32,7 +28,7 @@ void config_change			  (byte mByteChanged);
 #define MODE_PID_CONTROL	0x20		// PID or constant speed.
 #define MODE_BASE_FREQ_1	0x40		// 00->100Hz;  01--> 300Hz
 #define MODE_BASE_FREQ_2	0x80		// 10->1000hz; 11--> 5000Hz
-inline byte getBaseFreq() 	{  return ((config_byte_1 & 0xC0)>>6);  }
+inline  byte getBaseFreq() 	{  return ((config_byte_1 & 0xC0)>>6);  }
 /**** END OF CONFIG BYTE 1 DEFS   ****/
 /*************************************/
 
@@ -58,11 +54,8 @@ every:
 #define MODE_SEND_STATUS					0x04 	// 
 
 //#define MODE_SEND_POSITION_RAW	0x01 	// Measured Pot/Encoder, CurrentLeft, CurrentRight, Speed
-//#define MODE_SEND_POSITION_CALC 0x02 	// Calculated quantities: Angle (deg*100), Current (Amps*100)
-//#define MODE_SEND_STATUS		0x04 	// 
-inline void SetReportRate(byte rate)	{  config_byte_2 |= rate; };
-byte 		getReportRate();
-BOOL 		isReportingEnabled();
+//#define MODE_SEND_POSITION_CALC 	0x02 	// Calculated quantities: Angle (deg*100), Current (Amps*100)
+//#define MODE_SEND_STATUS			0x04 	// 
 /**** END OF CONFIG BYTE 2 DEFS   ****/
 /*************************************/
 
@@ -71,17 +64,15 @@ BOOL 		isReportingEnabled();
 /**** END OF CONFIG BYTE 3 DEFS   ****/
 /*************************************/
 
-byte* save_cal( );		// Saves all of the following EEPROM Data
-byte* read_cal( );		// Reads all of the following EEPROM Data
+void app_default_configuration	(   		);			// When called?
+void config_change			  	( byte mByteChanged);	// Called by 
 
-byte* save_stops_eeprom				(byte* addr );
-byte* read_stops_eeprom				(byte* addr	);
-byte* save_currentThresholds_eeprom	(byte* addr	);
-byte* read_currentThresholds_eeprom (byte* addr );
-byte* save_latest_position_eeprom	(byte* addr	);
-byte* read_latest_position_eeprom	(byte* addr	);
+byte* save_cal					( );		// Saves all of the following EEPROM Data
+byte* read_cal					( );		// Reads all of the following EEPROM Data
+
+inline void SetReportRate		( byte rate)	{  config_byte_2 |= rate; };
+byte 		getReportRate		( );
+BOOL 		isReportingEnabled	( );
 
 #endif
 
-//extern struct sStop ExtendedStop1;		// Max Moveable Position
-//extern struct sStop ExtendedStop2;		// Max Moveable Position

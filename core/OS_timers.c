@@ -49,7 +49,7 @@ Description	: Handler for the event tic.
 void OS_InitTask()
 {
 	OS_tmr_init();	
-	/******************* PERIPHERAL INIT ********************/
+	/******************* PERIPHERAL INIT  ********************/
 	/******************* APPLICATION INIT ********************/
 
 	// Look for serial idle:	
@@ -74,7 +74,7 @@ void System_Dispatch()
 		{
 			can_instance_timeslice();
 			if ((OS_Event_TIC_Counter % 20) == 0)	// 20ms tasks
-			{
+			{	
 				can_board_timeslice();
 				if ((OS_Event_TIC_Counter % 50) == 0)	// 50ms tasks
 				{

@@ -52,9 +52,9 @@ void OS_Dispatch()
 	}
 	if ((OS_Event_TIC_Counter % 10) == 0) 	// 10ms tasks
 	{		
-		motor_timeslice_10ms();		
+		motor_timeslice_10ms();
 		report_timeslice_10ms();
-		pot_timeslice();			// update speed,accel.	
+		pot_timeslice();					// update speed,accel
 	}
 	if ((OS_Event_TIC_Counter % 20) == 0)	// 20ms tasks
 	{	
@@ -66,14 +66,6 @@ void OS_Dispatch()
 	}
 	if ((OS_Event_TIC_Counter % 100) == 0)	// 100ms tasks
 	{
-		if (t) {
-			//led_on(3);
-			//RESET_LED_4();
-			t = 0;
-		} else {
-			//led_off(3);
-			t = 1;
-		}
 	}
 	
 	/******************************************************************************

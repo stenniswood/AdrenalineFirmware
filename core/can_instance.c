@@ -74,8 +74,8 @@ AUTHOR	:  Stephen Tenniswood
 // NEEDS TO BE SAVED INTO EEPROM!
 byte	MyInstance 			 = 0x00;
 byte 	Confirmed  			 = 0x00;  	// MyInstance was approved on previous boot.	0x80 is dirty bit
-byte 	LastReceivedInstance = 0xFF;  
-byte 	init_complete 		 = FALSE;	//
+byte 	LastReceivedInstance = 0xFF;  	// 
+byte 	init_complete 		 = FALSE;	// 
 word 	rand_delay			 = 0;		// 
 byte 	rand_instance		 = 0;		// 
 word 	timeout_10ms_mult 	 = 0;
@@ -90,13 +90,18 @@ Some platforms use adc.c and others don't
 #include "adc.h"
 #include "pin_definitions.h"
 
+/********************************************************
+   Sets up a read from an unused ADC pin (high impedance)	
+	The lsb's of the value will be used as a seed to the random number 
+	generator.		
+ ********************************************************/
 void random_number_adc_init()
 {
-	// AD Control & Status Register A:
+	// Analog to Digital Control & Status Register A:
 	byte reg = (1<<ADEN) | (1<<ADIF) | 0x03;   // prescaler = 0b011
 	ADCSRA = reg;
 	//	Digital Input Disable (reduce power consumption)
-	//  We are using ADC2, ADC8, ADC9:
+	//  We are using ADC2, ADC8, ADC9 : 
 	DIDR0  |=  (1<<ADC3D);
 	// HighSpeed Mode & AREF Enable internal circuitry.
 	ADCSRB = (1<<ADHSM);
@@ -104,33 +109,33 @@ void random_number_adc_init()
 
 word pick_random_number()
 {
-	DDRD &= ~(0x40);		// Make ADC3-PORTD_6-LED4 an input temporarily
+	DDRD &= ~(0x40);
+	// Make ADC3-PORTD_6-LED4 an input temporarily.
 	// Sample PD6 (ADC3 - LED3).  Ie. Since this is used during power up, 
-	// the LED pin can be turned into an input, the LED should be high impediance 
+	// the LED pin can be turned into an input, the LED off will give high impedance 
 	// and therefore the lowest bits of ADC should certainly be random.	
-	word result = 0;
-	word tmp    = 0;
+	word random_result = 0;		
+	word tmp    = 0;			
 
-	// SELECT AND START CONVERSION:
-	for (int i=0; i<16; i++)
+	// SELECT AND START CONVERSION : 
+	for (int i=0; i<16; i++)			// Get a 16 bit random number.
 	{
-		ADMUX  =  RANDOM_NUMBER_ADC_MUX;
-		ADCSRA |= (1<<ADSC);
-		while ( (ADCSRA & (1<<ADSC)) > 0) {};
-		// PICK UP RESULT: (use lowest 2 bits)
-		tmp  = (ADCL & 0x01) << (i % 16);
-		result |= (tmp);
-		tmp = ADCH;  
+		ADMUX  =  RANDOM_NUMBER_ADC_MUX;		
+		ADCSRA |= (1<<ADSC);					
+		while ( (ADCSRA & (1<<ADSC)) > 0) {};	// Wait for conversion to finish.
+		// PICK UP RESULT: (use lowest 2 bits)	
+		tmp  = (ADCL & 0x01) << (i % 16);		
+		random_result |= (tmp);					
+		tmp = ADCH;								
 	}
-	DDRD |= 0x40;		// Set ADC3-PORTD_6-LED4 back to being an output
-	return result;
+	DDRD |= 0x40;					// Set ADC3-PORTD_6-LED4 back to being an output
+	return random_result;
 }
 
-/*void tx_instance_callback()
-{
-	Confirmed = DIRTY;		// save to EEPROM on next timeslice; then => CLAIMED
-}*/
-
+/* A hardware channel devoted to detecting an instance claim.
+	This is needed because:
+		
+*/
 void setup_instance_claim_mob()
 {
 	// To obtain an instance, we need a receive mob:
@@ -140,49 +145,48 @@ void setup_instance_claim_mob()
 	can_add_id_to_filter		   ( INSTANCE_TX_MOB, ID_INSTANCE_CLAIM, ID_INSTANCE_CLAIM );
 }
 
-byte init_path = 0;
+byte init_path = 0;		// Indicates the state of the Confirmed status at boot-up.
 
 void can_instance_init()
 {
-	random_number_adc_init();
-	word tmp = pick_random_number();		// random time delay
-	rand_instance = rand_delay = (tmp & 0xFF);	
+	random_number_adc_init		 ( );
+	word tmp = pick_random_number( );		// random time delay
+	rand_instance = rand_delay = ( tmp & 0xFF);	
 
-	// put adc back into mode for POT
+	// put adc back into mode for Potentiometer
 	adc_init();
 
 	if (Confirmed==NOT_CLAIMED)
-	{	
+	{
 		// START AT 0; PICK a DELAY TIME : 
 		init_path = 1;
 		setup_instance_claim_mob();
 		MyInstance= 0;				// start at 0!
 	} else {
 		// PICK a DELAY TIME
-		//MyInstance=0x99;
 		init_path  = 2;
 		Confirmed = REPORT;
 		/* We cannot send a CAN message in this function because it is called from 
 		  inside the can_board_msg handler (part of isr() no transmits allowed! b/c they'll
-		  generating an infinit loop of interrupts as soon as the transmit is done!)
+		  generating an infinite loop of interrupts as soon as the transmit is done!)
 		  */
 	}
-	init_path |= 0x80;	
+	init_path |= DIRTY;
 	init_complete = TRUE;
 }
 
-byte ts_state = 0;
-
-
-
+byte ts_state = 0;				// Sent in __ message for debug purposes.
+/* Called from OS_timers.c		
+		"SystemDispatch()" every 10ms.		
+*/
 void can_instance_timeslice()
 {
 	ts_state = 1;
 	if (Confirmed==CLAIMED)	  return;		// nothing to do
 	if (init_complete==FALSE) return;		//
+	ts_state   = 2;
 	if (rand_delay-- > 0)	  return;		// wait until our appointed time to claim
 	rand_delay = 1;							// so that it comes back in here next timeslice
-	ts_state   = 2;
 
 	if (Confirmed==NOT_CLAIMED)
 	{
@@ -220,19 +224,17 @@ void can_instance_timeslice()
 		timeout_10ms_mult--;
 		if (timeout_10ms_mult == 0)
 		{
-			//SET_LED_3();
 			Confirmed = NOT_USING_INSTANCES;
 		}
 		CANPAGE = restore;
 		sei();		
 	}
-	if (Confirmed == DIRTY)			// Dirty bit set?
+	if (Confirmed == DIRTY)			// (Claimed, but not saved to EEPROM) Dirty bit set? 
 	{
 		ts_state  = 5;
 		Confirmed = CLAIMED;		// don't save next time, just skip the claiming
 		
 		cli();  save_configuration();  sei();
-
 
 		// SEND 1 MORE FOR DEBUG PURPOSES:
 		//can_prep_instance_request( &msg2, MyInstance );
@@ -245,7 +247,7 @@ void can_instance_timeslice()
 		//cli(); save_configuration(); sei();
 		// SEND 1 MORE FOR DEBUG PURPOSES:
 		//can_prep_instance_request( &msg2, MyInstance );
-		//can_send_msg_no_wait			 ( 0, &msg2    );
+		//can_send_msg_no_wait( 0, &msg2    );
 	}
 	ts_state |= 0x80;
 }
@@ -291,7 +293,10 @@ void can_prep_instance_query( sCAN* mMsg )
 }
 
 /************************************************************
- We received a request.
+ We received a request.  
+ 	Another board wants to claim an instance number.
+ 	
+ Extract instance from the Message.
  ***********************************************************/
 void can_process_instance_request( sCAN* mMsg )
 {
@@ -300,6 +305,7 @@ void can_process_instance_request( sCAN* mMsg )
 
 	MyInstance = instance+1;
 }
+
 
 
 /*		Add this later after above is working.
@@ -311,3 +317,7 @@ void can_process_instance_request( sCAN* mMsg )
 			// if it has a reply (2 nodes bad in network), try it's reply largest value.
 			// repeat until done.
 		}	*/
+/*void tx_instance_callback()
+{
+	Confirmed = DIRTY;		// save to EEPROM on next timeslice; then => CLAIMED
+}*/

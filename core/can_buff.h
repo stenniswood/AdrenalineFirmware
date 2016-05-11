@@ -10,12 +10,12 @@ defined in "configuration.h" file now
 */
 //extern byte OperationalMode;
 
-byte FindMailBox  ( tID mID 							  );
-void copy_can_msg ( struct sCAN* mDest, struct sCAN* mSrc );
-void QueueMessage ( struct sCAN* mMsg 					  );
-struct sCAN* GetMessagePtr  ( byte mIndex 			);
-struct sCAN* RetrieveMessage( );
-void 		 CAN_Q_Timeslice();
+byte 		 FindMailBox  	( tID mID 			  );
+void 		 copy_can_msg 	( struct sCAN* mDest, struct sCAN* mSrc );
+void 		 QueueMessage 	( struct sCAN* mMsg   );
+struct sCAN* GetMessagePtr  ( byte mIndex 		  );
+struct sCAN* RetrieveMessage( 	);
+void 		 CAN_Q_Timeslice(	);
 
 
 // "PROTECTED/HELPER" Functions:

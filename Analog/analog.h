@@ -44,9 +44,11 @@ void an_conversion		( byte mChip, byte mChannel);
 void an_setup	  		( byte mChip );
 void an_averaging_off	( byte mChip );
 void an_averaging_on	( byte mChip, byte mAverageMask );
-void an_start_read		( byte mChip );
+void an_start_read		( byte mChip, byte mChannels );
 void an_start_all		( );
 void get_readings		( byte mChip );
+byte get_num_channels	( int mChip );
+
 
 void delay( long int mdelay );
 void analog_timeslice	(   );

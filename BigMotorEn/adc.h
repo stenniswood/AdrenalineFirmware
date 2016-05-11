@@ -3,8 +3,6 @@
 
 
 extern word PotSample[2];
-//extern short PotSpeed[2];
-//extern short PotAcceleration[2];
 
 extern word LeftCurrentSample ;
 extern word RightCurrentSample;
