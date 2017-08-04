@@ -1,69 +1,71 @@
-Archive member included because of file (symbol)
+Archive member included to satisfy reference by file (symbol)
 
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodhi4.o)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_udivmodhi4.o)
                               pot.o (__udivmodhi4)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodhi4.o)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_divmodhi4.o)
                               can_msg.o (__divmodhi4)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodsi4.o)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_divmodsi4.o)
                               pot.o (__divmodsi4)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
-                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm16m1.o (exit)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_copy_data.o)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_negsi2.o)
+                              /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_divmodsi4.o) (__negsi2)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_exit.o)
+                              /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm16m1.o (exit)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_copy_data.o)
                               can_msg.o (__do_copy_data)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clear_bss.o)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_clear_bss.o)
                               bigmotor_main.o (__do_clear_bss)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
-                              can_msg.o (__fixunssfsi)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o)
-                              pot.o (__addsf3)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
-                              can_msg.o (__mulsf3)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
-                              can_msg.o (__divsf3)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o)
-                              can_msg.o (__gtsf2)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_ge_sf.o)
-                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o) (__gesf2)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_lt_sf.o)
-                              ../core/pwm.o (__ltsf2)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
-                              can_msg.o (__floatsisf)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_sf_to_si.o)
-                              can_msg.o (__fixsfsi)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_thenan_sf.o)
-                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o) (__thenan_sf)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_usi_to_sf.o)
-                              pot.o (__floatunsisf)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodsi4.o)
-                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodsi4.o) (__udivmodsi4)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_prologue.o)
-                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o) (__prologue_saves__)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_epilogue.o)
-                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o) (__epilogue_restores__)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o)
-                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o) (__clzsi2)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_pack_sf.o)
-                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o) (__pack_f)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
-                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o) (__unpack_f)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
-                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o) (__fpcmp_parts_f)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clz.o)
-                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o) (__clz_tab)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(ceil.o)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_umulhisi3.o)
+                              ../core/OS_timers.o (__umulhisi3)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_udivmodsi4.o)
+                              /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_divmodsi4.o) (__udivmodsi4)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(addsf3.o)
+                              pot.o (__subsf3)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(addsf3x.o)
+                              /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(addsf3.o) (__addsf3x)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(ceil.o)
                               ../core/pwm.o (ceil)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_mintl.o)
-                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(ceil.o) (__fp_mintl)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_mpack.o)
-                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(ceil.o) (__fp_mpack)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_trunc.o)
-                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(ceil.o) (__fp_trunc)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_zero.o)
-                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(ceil.o) (__fp_szero)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(round.o)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(cmpsf2.o)
+                              ../core/pwm.o (__ltsf2)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(divsf3.o)
+                              can_msg.o (__divsf3)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(divsf3x.o)
+                              /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(divsf3.o) (__divsf3x)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fixsfsi.o)
+                              can_msg.o (__fixsfsi)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fixunssfsi.o)
+                              can_msg.o (__fixunssfsi)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(floatsisf.o)
+                              pot.o (__floatunsisf)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_cmp.o)
+                              /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(cmpsf2.o) (__fp_cmp)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_inf.o)
+                              /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(addsf3x.o) (__fp_inf)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_mintl.o)
+                              /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(ceil.o) (__fp_mintl)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_mpack.o)
+                              /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(ceil.o) (__fp_mpack)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_nan.o)
+                              /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(addsf3x.o) (__fp_nan)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_pscA.o)
+                              /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(addsf3x.o) (__fp_pscA)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_pscB.o)
+                              /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(addsf3x.o) (__fp_pscB)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_round.o)
+                              /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(addsf3.o) (__fp_round)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_split3.o)
+                              /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(addsf3x.o) (__fp_split3)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_trunc.o)
+                              /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(ceil.o) (__fp_trunc)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_zero.o)
+                              /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(addsf3x.o) (__fp_zero)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(gesf2.o)
+                              can_msg.o (__gtsf2)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(mulsf3.o)
+                              can_msg.o (__mulsf3)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(mulsf3x.o)
+                              /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(mulsf3.o) (__mulsf3x)
+/Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(round.o)
                               can_msg.o (round)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_split3.o)
-                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_trunc.o) (__fp_splitA)
 
 Memory Configuration
 
@@ -79,7 +81,7 @@ signature        0x00840000         0x00000400         rw !x
 Linker script and memory map
 
 Address of section .data set to 0x800100
-LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm16m1.o
+LOAD /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm16m1.o
 LOAD bigmotor_main.o
 LOAD can_msg.o
 LOAD calibrations.o
@@ -98,11 +100,13 @@ LOAD ../core/pwm.o
 LOAD ../core/bk_system_defs.o
 LOAD ../core/OS_timers.o
 LOAD ../core/configuration.o
-LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a
-LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a
-LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a
-LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a
-LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a
+LOAD /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a
+LOAD /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a
+START GROUP
+LOAD /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a
+LOAD /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a
+LOAD /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libc.a
+END GROUP
 
 .hash
  *(.hash)
@@ -194,22 +198,22 @@ LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x4998
+.text           0x00000000     0x3f82
  *(.vectors)
- .vectors       0x00000000       0x7c /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm16m1.o
+ .vectors       0x00000000       0x7c /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm16m1.o
                 0x00000000                __vectors
                 0x00000000                __vector_default
  *(.vectors)
  *(.progmem.gcc*)
+                0x0000007c                . = ALIGN (0x2)
+                0x0000007c                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0000007c        0x0 linker stubs
+ *(.trampolines*)
+                0x0000007c                __trampolines_end = .
  *(.progmem*)
  .progmem.data  0x0000007c       0x10 ../core/can_board_msg.o
-                0x0000007c                BoardDescription
                 0x0000008c                . = ALIGN (0x2)
-                0x0000008c                __trampolines_start = .
- *(.trampolines)
- .trampolines   0x0000008c        0x0 linker stubs
- *(.trampolines*)
-                0x0000008c                __trampolines_end = .
  *(.jumptables)
  *(.jumptables*)
  *(.lowtext)
@@ -223,20 +227,20 @@ LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x0000008c        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm16m1.o
+ .init0         0x0000008c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm16m1.o
                 0x0000008c                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x0000008c        0xc /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm16m1.o
+ .init2         0x0000008c        0xc /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm16m1.o
  *(.init2)
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x00000098       0x16 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_copy_data.o)
+ .init4         0x00000098       0x16 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_copy_data.o)
                 0x00000098                __do_copy_data
- .init4         0x000000ae       0x10 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clear_bss.o)
+ .init4         0x000000ae       0x10 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_clear_bss.o)
                 0x000000ae                __do_clear_bss
  *(.init4)
  *(.init5)
@@ -248,10 +252,10 @@ LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x000000be        0x8 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm16m1.o
+ .init9         0x000000be        0x8 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm16m1.o
  *(.init9)
  *(.text)
- .text          0x000000c6        0x4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm16m1.o
+ .text          0x000000c6        0x4 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm16m1.o
                 0x000000c6                __vector_20
                 0x000000c6                __vector_1
                 0x000000c6                __vector_24
@@ -279,311 +283,466 @@ LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a
                 0x000000c6                __vector_10
                 0x000000c6                __vector_16
                 0x000000c6                __vector_28
- .text          0x000000ca      0x192 bigmotor_main.o
+ .text          0x000000ca      0x14e bigmotor_main.o
                 0x000000ca                _Z24can_prep_eeprom_dump_msgP4sCANPh
-                0x00000190                _Z25can_prep_eeprom_dump1_msgv
-                0x000001b0                _Z25can_prep_eeprom_dump2_msgv
-                0x000001d0                _Z25can_prep_eeprom_dump3_msgv
-                0x000001f0                _Z4initv
-                0x0000023e                main
- .text          0x0000025c      0x9f8 can_msg.o
-                0x0000025c                _Z17extract_float_msgPh
-                0x0000029c                _Z15extract_word_bePh
-                0x000002be                _Z15extract_word_lePh
-                0x000002e0                _Z19extract_long_int_bePh
-                0x00000336                _Z19extract_long_int_lePh
-                0x00000388                _Z17can_proc_tilt_msgP4sCAN
-                0x000003f6                _Z21can_proc_set_stop_msgP4sCAN
-                0x00000490                _Z26can_proc_move_to_angle_msgP4sCAN
-                0x000004f4                _Z23can_proc_move_speed_msgP4sCAN
-                0x0000059a                _Z23can_proc_stop_motor_msgP4sCAN
-                0x00000602                _Z28can_proc_move_dual_speed_msgP4sCAN
-                0x00000696                _Z29can_proc_max_acceleration_msgP4sCAN
-                0x00000698                _Z13can_prep_stopP4sCANh
-                0x00000740                _Z16can_file_messageP4sCAN
-                0x000009dc                _Z20can_prep_motor_angleP4sCAN
-                0x00000a1c                _Z25can_prep_motor_values_rawP4sCAN
-                0x00000b32                _Z20can_prep_motor_speedP4sCAN11float_array
-                0x00000bd0                _Z20can_prep_motor_accelP4sCAN11float_array
-                0x00000c24                _Z21can_prep_motor_statusP4sCAN
- .text          0x00000c54      0x30c calibrations.o
-                0x00000c54                _Z25app_default_configurationv
-                0x00000c78                _Z13config_changeh
-                0x00000c96                _Z17save_stops_eepromPh
-                0x00000cf8                _Z17read_stops_eepromPh
-                0x00000d4c                _Z29save_currentThresholds_eepromPh
-                0x00000da8                _Z29read_currentThresholds_eepromPh
-                0x00000df4                _Z27save_latest_position_eepromPh
-                0x00000e70                _Z27read_latest_position_eepromPh
-                0x00000ee8                _Z13getReportRatev
-                0x00000f2c                _Z18isReportingEnabledv
-                0x00000f3c                _Z8save_calv
-                0x00000f4e                _Z8read_calv
- .text          0x00000f60      0x2ce motor.o
-                0x00000f60                _Z16SetBaseFrequencyv
-                0x00000fc0                _Z10motor_initv
-                0x00000ff4                _Z21report_timeslice_10msv
-                0x00001076                _Z15get_motor_anglev
-                0x00001092                _Z12motor_enableh
-                0x000010a6                _Z11motor_brakev
-                0x000010ca                _Z10motor_stopv
-                0x000010d4                _Z11stop_actionh
-                0x000010e6                _Z11motor_coastf
-                0x00001112                _Z19set_motor_directionh
-                0x00001122                _Z14motor_set_dutyfh
-                0x0000117a                _Z20motor_timeslice_10msv
- .text          0x0000122e      0x786 pot.o
-                0x0000122e                _Z8pot_initv
-                0x000012a2                _Z13pot_timeslicev
-                0x000012f4                _Z7get_potv
-                0x000012fe                _Z27get_distance_to_destinationv
-                0x00001316                _Z28get_direction_to_destinationv
-                0x0000134a                _Z17compute_pot_speedv
-                0x00001378                _Z24compute_pot_accelerationv
-                0x000013a6                _Z11pot_percentv
-                0x00001400                _Z16convert_to_anglet
-                0x000014c6                _Z13get_pot_anglev
-                0x000014d8                _Z21convert_to_fixedpointf
-                0x000014ea                _Z16convert_to_valuel
-                0x000015c0                _Z21compute_default_stopsv
-                0x00001602                _Z13compute_rangev
-                0x00001658                _Z18get_min_stop_valuev
-                0x00001674                _Z18get_min_stop_anglev
-                0x000016a8                _Z18get_max_stop_valuev
-                0x000016c4                _Z18get_max_stop_anglev
-                0x000016f8                _Z20order_stops_by_valuev
-                0x00001760                _Z20order_stops_by_anglev
-                0x000017f2                _Z11check_stopst
-                0x0000189c                _Z11check_stalltt
-                0x000018bc                _Z19destination_reachedv
- .text          0x000019b4      0x144 encoder.o
-                0x000019b4                __vector_22
-                0x00001a20                _Z12encoder_initv
-                0x00001a3c                _Z15encoder_disablev
-                0x00001a52                _Z17encoder_timeslicev
-                0x00001af0                _Z17get_encoder_anglev
- .text          0x00001af8       0x48 OS_Dispatch.o
-                0x00001af8                _Z11OS_Dispatchv
- .text          0x00001b40      0x27a adc.o
-                0x00001b40                __vector_27
-                0x00001cd6                _Z9adc_sleepv
-                0x00001ce2                _Z8adc_initv
-                0x00001d0a                _Z14start_samplingv
-                0x00001d1c                _Z36calc_load_current_from_sense_currentt
-                0x00001d50                _Z15convert_to_ampst
-                0x00001d52                _Z17read_current_leftv
-                0x00001d86                _Z18read_current_rightv
- .text          0x00001dba      0x790 ../core/can.o
-                0x00001dba                _Z15set_rx_callbackPFvP4sCANE
-                0x00001dc4                _Z15set_tx_callbackPFvvE
-                0x00001dce                _Z26can_add_instance_to_filterht
-                0x00001e2e                _Z31can_remove_instance_from_filterh
-                0x00001e52                _Z10can_set_idh6idType
-                0x00001eb2                _Z20can_add_id_to_filterhtt
-                0x00001f7a                _Z25can_remove_id_from_filterh
-                0x00001fa6                _Z12can_set_maskhss
-                0x00001fc6                _Z11can_set_taghss
-                0x00001fe6                _Z21can_setup_receive_mobhssh
-                0x00002042                _Z13can_init_mobsv
-                0x000020f2                _Z15can_disable_mobh
-                0x0000210a                _Z15can_retrieve_idP4sCAN
-                0x00002178                _Z17can_retrieve_dataP4sCAN
-                0x000021ba                __vector_18
-                0x00002308                _Z20can_send_msg_no_waithP4sCAN
-                0x0000236e                _Z12can_send_msghP4sCAN
-                0x0000237c                _Z17can_get_timestampv
-                0x00002392                _Z11can_get_msgP4sCAN
-                0x000023c4                _Z8set_baudh
-                0x00002408                _Z8can_inith
-                0x00002444                _Z15can_set_baud_1Mh
-                0x0000246e                _Z17can_set_baud_500Kh
-                0x0000249a                _Z17can_set_baud_250Kh
-                0x000024c6                _Z17can_set_baud_200Kh
-                0x000024f2                _Z17can_set_baud_125Kh
-                0x0000251e                _Z17can_set_baud_100Kh
- .text          0x0000254a      0x2ac ../core/can_instance.o
-                0x0000254a                _Z22random_number_adc_initv
-                0x00002562                _Z18pick_random_numberv
-                0x000025b6                _Z24setup_instance_claim_mobv
-                0x000025dc                _Z17can_instance_initv
-                0x00002644                _Z25can_prep_instance_requestP4sCANh
-                0x0000268c                _Z22can_instance_timeslicev
-                0x000027b4                _Z23can_prep_instance_queryP4sCAN
-                0x000027e2                _Z28can_process_instance_requestP4sCAN
- .text          0x000027f6       0x60 ../core/can_eid.o
-                0x000027f6                _Z14create_CAN_eidth
-                0x00002802                _Z14create_CAN_eidhth
-                0x00002810                _Z9get_block6idType
-                0x00002814                _Z12get_instance6idType
-                0x00002818                _Z6get_id6idType
-                0x0000281e                _Z5match6idTypeS_
-                0x00002830                _Z11block_match6idTypeS_
-                0x00002838                _Z8id_match6idTypeS_
-                0x0000284e                _Z14instance_match6idTypeh
- .text          0x00002856      0x4e4 ../core/can_board_msg.o
-                0x00002856                _Z22set_configure_callbackPFvhE
-                0x00002860                _Z27can_prep_board_presence_msgP4sCAN
-                0x0000289e                _Z27can_prep_board_revision_msgP4sCAN
-                0x000028da                _Z26can_prep_serial_number_msgP4sCAN
-                0x00002916                _Z30can_prep_board_description_msgP4sCAN
-                0x00002962                _Z24can_board_presence_replyv
-                0x000029c8                _Z19can_board_timeslicev
-                0x00002a98                _Z18can_prep_configureP4sCAN
-                0x00002ad8                _Z23can_board_msg_responderP4sCAN
- .text          0x00002d3a      0x1e0 ../core/can_buff.o
-                0x00002d3a                _Z11FindMailBox6idType
-                0x00002da6                _Z12copy_can_msgP4sCANS0_
-                0x00002dbe                _Z16addNormalHistoryP4sCAN
-                0x00002dfa                _Z17addMailboxHistoryP4sCAN
-                0x00002e7a                _Z12QueueMessageP4sCAN
-                0x00002e8e                _Z15RetrieveMessagev
-                0x00002ee2                _Z13GetMessagePtrh
-                0x00002f04                _Z15CAN_Q_Timeslicev
- .text          0x00002f1a      0x1d8 ../core/leds.o
-                0x00002f1a                _Z9init_ledsv
-                0x00002f2c                _Z16protected_led_onh
-                0x00002f3e                _Z17protected_led_offh
-                0x00002f50                _Z11strobe_ledsh
-                0x00002fb2                _Z6led_onh
-                0x00002fc0                _Z7led_offh
-                0x00002fce                _Z17protected_set_ledhh
-                0x00002fde                _Z7set_ledhh
-                0x00002fec                _Z19protected_show_bytehh
-                0x00003014                _Z9show_bytehh
-                0x00003026                _Z18show_result_toggleh
-                0x0000305a                _Z21can_parse_led_requestP4sCAN
-                0x00003096                _Z19led_timeslice_100msv
- .text          0x000030f2      0x384 ../core/pwm.o
-                0x000030f2                _Z11OCR1A_Writej
-                0x00003102                _Z11OCR1B_Writej
-                0x00003112                _Z13get_top_valuef
-                0x00003154                _Z7set_topt
-                0x00003166                _Z16select_prescalerf
-                0x00003242                _Z20get_tccr1b_prescalert
-                0x00003282                _Z17set_base_PWM_freqf
-                0x000032d2                _Z8pwm_initfhh
-                0x00003386                _Z13set_polarityAh
-                0x000033a4                _Z13set_polarityBh
-                0x000033c2                _Z9set_dutyAf
-                0x0000341c                _Z9set_dutyBf
- .text          0x00003476       0x88 ../core/bk_system_defs.o
-                0x00003476                _Z5delayl
-                0x000034e6                _Z9chip_initv
- .text          0x000034fe      0x162 ../core/OS_timers.o
-                0x000034fe                _Z11OS_InitTaskv
-                0x00003518                _Z13Enter_HS_Modev
-                0x00003520                _Z17Enter_Normal_Modev
-                0x00003526                _Z15System_Dispatchv
-                0x00003582                __vector_15
-                0x00003646                _Z11OS_tmr_initv
- .text          0x00003660      0x288 ../core/configuration.o
-                0x00003660                _Z27can_parse_configure_requestP4sCAN
-                0x000036b8                _Z21default_configurationv
-                0x000036e4                _Z11config_initv
-                0x000036f6                _Z20save_instance_numberPh
-                0x0000371a                _Z20read_instance_numberPh
-                0x00003734                _Z21save_confirmed_statusPh
-                0x00003758                _Z21read_confirmed_statusPh
-                0x00003772                _Z25save_configuration_eepromPh
-                0x00003822                _Z18save_configurationv
-                0x00003834                _Z21save_configuration_div
-                0x0000383c                _Z21make_system_new_boardt
-                0x0000385e                _Z25read_configuration_eepromPh
-                0x000038d6                _Z18read_configurationv
- .text          0x000038e8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodhi4.o)
- .text          0x000038e8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodhi4.o)
- .text          0x000038e8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodsi4.o)
- .text          0x000038e8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
- .text          0x000038e8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_copy_data.o)
- .text          0x000038e8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clear_bss.o)
- .text          0x000038e8       0x58 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
-                0x000038e8                __fixunssfsi
- .text          0x00003940      0x350 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o)
-                0x00003bd4                __addsf3
-                0x00003c2e                __subsf3
- .text          0x00003c90      0x1f4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
-                0x00003c90                __mulsf3
- .text          0x00003e84      0x15c /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
-                0x00003e84                __divsf3
- .text          0x00003fe0       0x60 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o)
-                0x00003fe0                __gtsf2
- .text          0x00004040       0x60 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_ge_sf.o)
-                0x00004040                __gesf2
- .text          0x000040a0       0x60 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_lt_sf.o)
-                0x000040a0                __ltsf2
- .text          0x00004100       0xc0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
-                0x00004100                __floatsisf
- .text          0x000041c0       0xa4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_sf_to_si.o)
-                0x000041c0                __fixsfsi
- .text          0x00004264        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_thenan_sf.o)
- .text          0x00004264       0xf0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_usi_to_sf.o)
-                0x00004264                __floatunsisf
- .text          0x00004354        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodsi4.o)
- .text          0x00004354        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_prologue.o)
- .text          0x00004354        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_epilogue.o)
- .text          0x00004354       0xb4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o)
-                0x00004354                __clzsi2
- .text          0x00004408      0x19a /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_pack_sf.o)
-                0x00004408                __pack_f
- .text          0x000045a2       0xd2 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
-                0x000045a2                __unpack_f
- .text          0x00004674       0xb2 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
-                0x00004674                __fpcmp_parts_f
- .text          0x00004726        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clz.o)
- .text          0x00004726        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(ceil.o)
- .text          0x00004726        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_mintl.o)
- .text          0x00004726        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_mpack.o)
- .text          0x00004726        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_trunc.o)
- .text          0x00004726        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_zero.o)
- .text          0x00004726        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(round.o)
- .text          0x00004726        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_split3.o)
-                0x00004726                . = ALIGN (0x2)
+                0x0000018a                _Z25can_prep_eeprom_dump1_msgv
+                0x000001a0                _Z25can_prep_eeprom_dump2_msgv
+                0x000001b6                _Z25can_prep_eeprom_dump3_msgv
+                0x000001cc                _Z4initv
+ .text          0x00000218      0xa10 can_msg.o
+                0x00000218                _Z17extract_float_msgPh
+                0x0000024e                _Z15extract_word_bePh
+                0x00000266                _Z15extract_word_lePh
+                0x0000027e                _Z19extract_long_int_bePh
+                0x0000029c                _Z19extract_long_int_lePh
+                0x000002da                _Z17can_proc_tilt_msgP4sCAN
+                0x00000346                _Z21can_proc_set_stop_msgP4sCAN
+                0x000003e4                _Z26can_proc_move_to_angle_msgP4sCAN
+                0x0000045e                _Z23can_proc_move_speed_msgP4sCAN
+                0x000004f2                _Z23can_proc_stop_motor_msgP4sCAN
+                0x00000558                _Z28can_proc_move_dual_speed_msgP4sCAN
+                0x000005e0                _Z29can_proc_max_acceleration_msgP4sCAN
+                0x000005e2                _Z13can_prep_stopP4sCANh
+                0x0000069c                _Z16can_file_messageP4sCAN
+                0x000009c0                _Z20can_prep_motor_angleP4sCAN
+                0x00000a02                _Z25can_prep_motor_values_rawP4sCAN
+                0x00000af6                _Z20can_prep_motor_speedP4sCAN11float_array
+                0x00000ba0                _Z20can_prep_motor_accelP4sCAN11float_array
+                0x00000bf6                _Z21can_prep_motor_statusP4sCAN
+ .text          0x00000c28      0x2d0 calibrations.o
+                0x00000c28                _Z25app_default_configurationv
+                0x00000c4c                _Z13config_changeh
+                0x00000c6a                _Z17save_stops_eepromPh
+                0x00000cc4                _Z17read_stops_eepromPh
+                0x00000d1a                _Z29save_currentThresholds_eepromPh
+                0x00000d70                _Z29read_currentThresholds_eepromPh
+                0x00000db6                _Z27save_latest_position_eepromPh
+                0x00000e28                _Z27read_latest_position_eepromPh
+                0x00000e98                _Z13getReportRatev
+                0x00000ec8                _Z18isReportingEnabledv
+                0x00000ed8                _Z8save_calv
+                0x00000ee8                _Z8read_calv
+ .text          0x00000ef8      0x2da motor.o
+                0x00000efe                _Z16SetBaseFrequencyv
+                0x00000f54                _Z10motor_initv
+                0x00000f88                _Z21report_timeslice_10msv
+                0x0000100a                _Z15get_motor_anglev
+                0x00001026                _Z12motor_enableh
+                0x0000103a                _Z11motor_brakev
+                0x0000105e                _Z11stop_actionh
+                0x00001074                _Z10motor_stopv
+                0x0000107e                _Z11motor_coastf
+                0x000010aa                _Z19set_motor_directionh
+                0x000010b8                _Z14motor_set_dutyfh
+                0x0000110a                _Z20motor_timeslice_10msv
+ .text          0x000011d2      0x768 pot.o
+                0x000011d2                _Z8pot_initv
+                0x00001246                _Z13pot_timeslicev
+                0x00001294                _Z7get_potv
+                0x0000129e                _Z27get_distance_to_destinationv
+                0x000012b4                _Z28get_direction_to_destinationv
+                0x000012e8                _Z17compute_pot_speedv
+                0x00001312                _Z24compute_pot_accelerationv
+                0x0000133c                _Z11pot_percentv
+                0x00001396                _Z16convert_to_anglet
+                0x00001464                _Z13get_pot_anglev
+                0x00001476                _Z21convert_to_fixedpointf
+                0x00001488                _Z16convert_to_valuel
+                0x0000155e                _Z21compute_default_stopsv
+                0x000015a0                _Z13compute_rangev
+                0x000015f6                _Z18get_min_stop_valuev
+                0x00001610                _Z18get_min_stop_anglev
+                0x00001648                _Z18get_max_stop_valuev
+                0x00001662                _Z18get_max_stop_anglev
+                0x0000169a                _Z20order_stops_by_valuev
+                0x00001702                _Z20order_stops_by_anglev
+                0x0000178c                _Z11check_stopst
+                0x00001836                _Z11check_stalltt
+                0x00001856                _Z19destination_reachedv
+ .text          0x0000193a      0x140 encoder.o
+                0x0000193a                __vector_22
+                0x000019a6                _Z12encoder_initv
+                0x000019c2                _Z15encoder_disablev
+                0x000019d8                _Z17encoder_timeslicev
+                0x00001a72                _Z17get_encoder_anglev
+ .text          0x00001a7a       0x20 OS_Dispatch.o
+                0x00001a7a                _Z11OS_Dispatchv
+ .text          0x00001a9a      0x27a adc.o
+                0x00001a9a                __vector_27
+                0x00001c30                _Z9adc_sleepv
+                0x00001c3c                _Z8adc_initv
+                0x00001c64                _Z14start_samplingv
+                0x00001c76                _Z36calc_load_current_from_sense_currentt
+                0x00001caa                _Z15convert_to_ampst
+                0x00001cac                _Z17read_current_leftv
+                0x00001ce0                _Z18read_current_rightv
+ .text          0x00001d14      0x794 ../core/can.o
+                0x00001d14                _Z15set_rx_callbackPFvP4sCANE
+                0x00001d1e                _Z15set_tx_callbackPFvvE
+                0x00001d28                _Z26can_add_instance_to_filterht
+                0x00001d88                _Z31can_remove_instance_from_filterh
+                0x00001dac                _Z10can_set_idh6idType
+                0x00001e0c                _Z20can_add_id_to_filterhtt
+                0x00001ed4                _Z25can_remove_id_from_filterh
+                0x00001f00                _Z12can_set_maskhss
+                0x00001f20                _Z11can_set_taghss
+                0x00001f40                _Z21can_setup_receive_mobhssh
+                0x00001f9a                _Z13can_init_mobsv
+                0x00002048                _Z15can_disable_mobh
+                0x00002060                _Z15can_retrieve_idP4sCAN
+                0x000020c6                _Z17can_retrieve_dataP4sCAN
+                0x0000210a                __vector_18
+                0x00002244                _Z20can_send_msg_no_waithP4sCAN
+                0x000022ac                _Z12can_send_msghP4sCAN
+                0x000022ba                _Z17can_get_timestampv
+                0x000022c8                _Z11can_get_msgP4sCAN
+                0x00002326                _Z8set_baudh
+                0x00002366                _Z8can_inith
+                0x000023a2                _Z15can_set_baud_1Mh
+                0x000023cc                _Z17can_set_baud_500Kh
+                0x000023f8                _Z17can_set_baud_250Kh
+                0x00002424                _Z17can_set_baud_200Kh
+                0x00002450                _Z17can_set_baud_125Kh
+                0x0000247c                _Z17can_set_baud_100Kh
+ .text          0x000024a8      0x2a8 ../core/can_instance.o
+                0x000024a8                _Z22random_number_adc_initv
+                0x000024c0                _Z18pick_random_numberv
+                0x0000250e                _Z24setup_instance_claim_mobv
+                0x00002532                _Z17can_instance_initv
+                0x0000259a                _Z25can_prep_instance_requestP4sCANh
+                0x000025e4                _Z22can_instance_timeslicev
+                0x0000270c                _Z23can_prep_instance_queryP4sCAN
+                0x0000273c                _Z28can_process_instance_requestP4sCAN
+ .text          0x00002750       0x60 ../core/can_eid.o
+                0x00002750                _Z14create_CAN_eidth
+                0x0000275c                _Z14create_CAN_eidhth
+                0x0000276a                _Z9get_block6idType
+                0x0000276e                _Z12get_instance6idType
+                0x00002772                _Z6get_id6idType
+                0x00002778                _Z5match6idTypeS_
+                0x0000278a                _Z11block_match6idTypeS_
+                0x00002792                _Z8id_match6idTypeS_
+                0x000027a8                _Z14instance_match6idTypeh
+ .text          0x000027b0      0x4dc ../core/can_board_msg.o
+                0x000027b0                _Z22set_configure_callbackPFvhE
+                0x000027ba                _Z27can_prep_board_presence_msgP4sCAN
+                0x000027fa                _Z27can_prep_board_revision_msgP4sCAN
+                0x00002838                _Z26can_prep_serial_number_msgP4sCAN
+                0x00002876                _Z30can_prep_board_description_msgP4sCAN
+                0x000028be                _Z24can_board_presence_replyv
+                0x0000291a                _Z19can_board_timeslicev
+                0x000029ea                _Z18can_prep_configureP4sCAN
+                0x00002a2c                _Z23can_board_msg_responderP4sCAN
+ .text          0x00002c8c      0x19e ../core/can_buff.o
+                0x00002c8c                _Z11FindMailBox6idType
+                0x00002cf2                _Z12copy_can_msgP4sCANS0_
+                0x00002d02                _Z16addNormalHistoryP4sCAN
+                0x00002d2e                _Z17addMailboxHistoryP4sCAN
+                0x00002d94                _Z12QueueMessageP4sCAN
+                0x00002da2                _Z15RetrieveMessagev
+                0x00002de0                _Z13GetMessagePtrh
+                0x00002dee                _Z15CAN_Q_Timeslicev
+ .text          0x00002e2a      0x1dc ../core/leds.o
+                0x00002e2a                _Z9init_ledsv
+                0x00002e3c                _Z16protected_led_onh
+                0x00002e4e                _Z17protected_led_offh
+                0x00002e60                _Z17protected_set_ledhh
+                0x00002e7a                _Z11strobe_ledsh
+                0x00002ee6                _Z6led_onh
+                0x00002ef2                _Z7led_offh
+                0x00002efe                _Z7set_ledhh
+                0x00002f0a                _Z19protected_show_bytehh
+                0x00002f58                _Z9show_bytehh
+                0x00002f66                _Z18show_result_toggleh
+                0x00002f78                _Z21can_parse_led_requestP4sCAN
+                0x00002fae                _Z19led_timeslice_100msv
+ .text          0x00003006      0x476 ../core/pwm.o
+                0x00003006                _Z11OCR1A_Writej
+                0x00003016                _Z11OCR1B_Writej
+                0x00003026                _Z13get_top_valuef
+                0x00003068                _Z7set_topt
+                0x0000307a                _Z16select_prescalerf
+                0x0000315e                _Z20get_tccr1b_prescalert
+                0x00003196                _Z17set_base_PWM_freqf
+                0x000031e6                _Z8pwm_initfhh
+                0x0000338c                _Z13set_polarityAh
+                0x000033aa                _Z13set_polarityBh
+                0x000033c8                _Z9set_dutyAf
+                0x00003422                _Z9set_dutyBf
+ .text          0x0000347c       0x8e ../core/bk_system_defs.o
+                0x0000347c                _Z5delayl
+                0x000034f2                _Z9chip_initv
+ .text          0x0000350a      0x182 ../core/OS_timers.o
+                0x0000350a                _Z11OS_InitTaskv
+                0x00003524                _Z13Enter_HS_Modev
+                0x0000352c                _Z17Enter_Normal_Modev
+                0x00003532                _Z15System_Dispatchv
+                0x0000358c                __vector_15
+                0x00003672                _Z11OS_tmr_initv
+ .text          0x0000368c      0x2a4 ../core/configuration.o
+                0x0000368c                _Z27can_parse_configure_requestP4sCAN
+                0x000036e4                _Z21default_configurationv
+                0x00003710                _Z11config_initv
+                0x00003742                _Z20save_instance_numberPh
+                0x00003760                _Z20read_instance_numberPh
+                0x00003774                _Z21save_confirmed_statusPh
+                0x00003792                _Z21read_confirmed_statusPh
+                0x000037a6                _Z25save_configuration_eepromPh
+                0x00003854                _Z18save_configurationv
+                0x00003864                _Z21make_system_new_boardt
+                0x00003884                _Z21save_configuration_div
+                0x0000388a                _Z25read_configuration_eepromPh
+                0x00003900                _Z18read_configurationv
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_udivmodhi4.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_divmodhi4.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_divmodsi4.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_negsi2.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_exit.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_copy_data.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_clear_bss.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_umulhisi3.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_udivmodsi4.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(addsf3.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(addsf3x.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(ceil.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(cmpsf2.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(divsf3.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(divsf3x.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fixsfsi.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fixunssfsi.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(floatsisf.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_cmp.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_inf.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_mintl.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_mpack.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_nan.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_pscA.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_pscB.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_round.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_split3.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_trunc.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_zero.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(gesf2.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(mulsf3.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(mulsf3x.o)
+ .text          0x00003930        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(round.o)
+                0x00003930                . = ALIGN (0x2)
  *(.text.*)
- .text.libgcc   0x00004726       0x28 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodhi4.o)
-                0x00004726                __udivmodhi4
- .text.libgcc   0x0000474e       0x26 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodhi4.o)
-                0x0000474e                __divmodhi4
-                0x0000474e                _div
- .text.libgcc   0x00004774       0x36 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodsi4.o)
-                0x00004774                __divmodsi4
- .text.libgcc   0x000047aa        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
- .text.libgcc   0x000047aa        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_copy_data.o)
- .text.libgcc   0x000047aa        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clear_bss.o)
- .text.libgcc   0x000047aa       0x44 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodsi4.o)
-                0x000047aa                __udivmodsi4
- .text.libgcc   0x000047ee       0x38 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_prologue.o)
-                0x000047ee                __prologue_saves__
- .text.libgcc   0x00004826       0x36 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_epilogue.o)
-                0x00004826                __epilogue_restores__
+ .text.startup  0x00003930       0x42 bigmotor_main.o
+                0x00003930                main
+ .text.libgcc.mul
+                0x00003972        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.div
+                0x00003972       0x28 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_udivmodhi4.o)
+                0x00003972                __udivmodhi4
+ .text.libgcc   0x0000399a        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.prologue
+                0x0000399a        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.builtins
+                0x0000399a        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fmul
+                0x0000399a        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fixed
+                0x0000399a        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.mul
+                0x0000399a        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_divmodhi4.o)
+ .text.libgcc.div
+                0x0000399a       0x28 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_divmodhi4.o)
+                0x0000399a                __divmodhi4
+                0x0000399a                _div
+ .text.libgcc   0x000039c2        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_divmodhi4.o)
+ .text.libgcc.prologue
+                0x000039c2        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_divmodhi4.o)
+ .text.libgcc.builtins
+                0x000039c2        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_divmodhi4.o)
+ .text.libgcc.fmul
+                0x000039c2        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_divmodhi4.o)
+ .text.libgcc.fixed
+                0x000039c2        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_divmodhi4.o)
+ .text.libgcc.mul
+                0x000039c2        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_divmodsi4.o)
+ .text.libgcc.div
+                0x000039c2       0x2e /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_divmodsi4.o)
+                0x000039c2                __divmodsi4
+ .text.libgcc   0x000039f0        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_divmodsi4.o)
+ .text.libgcc.prologue
+                0x000039f0        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_divmodsi4.o)
+ .text.libgcc.builtins
+                0x000039f0        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_divmodsi4.o)
+ .text.libgcc.fmul
+                0x000039f0        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_divmodsi4.o)
+ .text.libgcc.fixed
+                0x000039f0        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_divmodsi4.o)
+ .text.libgcc.mul
+                0x000039f0        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_negsi2.o)
+ .text.libgcc.div
+                0x000039f0       0x10 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_negsi2.o)
+                0x000039f0                __negsi2
+ .text.libgcc   0x00003a00        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_negsi2.o)
+ .text.libgcc.prologue
+                0x00003a00        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_negsi2.o)
+ .text.libgcc.builtins
+                0x00003a00        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_negsi2.o)
+ .text.libgcc.fmul
+                0x00003a00        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_negsi2.o)
+ .text.libgcc.fixed
+                0x00003a00        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_negsi2.o)
+ .text.libgcc.mul
+                0x00003a00        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x00003a00        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_exit.o)
+ .text.libgcc   0x00003a00        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x00003a00        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x00003a00        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x00003a00        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_exit.o)
+ .text.libgcc.fixed
+                0x00003a00        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x00003a00        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x00003a00        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc   0x00003a00        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x00003a00        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x00003a00        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x00003a00        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.fixed
+                0x00003a00        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x00003a00        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x00003a00        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00003a00        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x00003a00        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x00003a00        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x00003a00        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.fixed
+                0x00003a00        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.mul
+                0x00003a00       0x1e /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_umulhisi3.o)
+                0x00003a00                __umulhisi3
+ .text.libgcc.div
+                0x00003a1e        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_umulhisi3.o)
+ .text.libgcc   0x00003a1e        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_umulhisi3.o)
+ .text.libgcc.prologue
+                0x00003a1e        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_umulhisi3.o)
+ .text.libgcc.builtins
+                0x00003a1e        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_umulhisi3.o)
+ .text.libgcc.fmul
+                0x00003a1e        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_umulhisi3.o)
+ .text.libgcc.fixed
+                0x00003a1e        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_umulhisi3.o)
+ .text.libgcc.mul
+                0x00003a1e        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.div
+                0x00003a1e       0x44 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_udivmodsi4.o)
+                0x00003a1e                __udivmodsi4
+ .text.libgcc   0x00003a62        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.prologue
+                0x00003a62        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.builtins
+                0x00003a62        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.fmul
+                0x00003a62        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.fixed
+                0x00003a62        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_udivmodsi4.o)
  .text.avr-libc.fplib
-                0x0000485c       0x26 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(ceil.o)
-                0x0000485c                ceil
+                0x00003a62        0xa /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(addsf3.o)
+                0x00003a62                __subsf3
+                0x00003a64                __addsf3
  .text.avr-libc.fplib
-                0x00004882       0x36 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_mintl.o)
-                0x00004882                __fp_mintl
+                0x00003a6c       0xc0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(addsf3x.o)
+                0x00003a86                __addsf3x
  .text.avr-libc.fplib
-                0x000048b8       0x1c /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_mpack.o)
-                0x000048b8                __fp_mpack
-                0x000048bc                __fp_mpack_finite
+                0x00003b2c       0x26 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(ceil.o)
+                0x00003b2c                ceil
  .text.avr-libc.fplib
-                0x000048d4       0x2e /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_trunc.o)
-                0x000048d4                __fp_trunc
+                0x00003b52        0x8 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(cmpsf2.o)
+                0x00003b52                __lesf2
+                0x00003b52                __nesf2
+                0x00003b52                __eqsf2
+                0x00003b52                __cmpsf2
+                0x00003b52                __ltsf2
  .text.avr-libc.fplib
-                0x00004902        0xe /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_zero.o)
-                0x00004902                __fp_zero
-                0x00004904                __fp_szero
+                0x00003b5a        0x4 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(divsf3.o)
+                0x00003b5a                __divsf3
  .text.avr-libc.fplib
-                0x00004910       0x40 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(round.o)
-                0x00004910                round
+                0x00003b5e       0xcc /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(divsf3x.o)
+                0x00003b74                __divsf3x
+                0x00003b78                __divsf3_pse
  .text.avr-libc.fplib
-                0x00004950       0x44 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_split3.o)
-                0x00004950                __fp_split3
-                0x00004960                __fp_splitA
-                0x00004994                . = ALIGN (0x2)
+                0x00003c2a        0xa /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fixsfsi.o)
+                0x00003c2a                __fixsfsi
+ .text.avr-libc.fplib
+                0x00003c34       0x58 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fixunssfsi.o)
+                0x00003c34                __fixunssfsi
+ .text.avr-libc.fplib
+                0x00003c8c       0x7a /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(floatsisf.o)
+                0x00003c8c                __floatunsisf
+                0x00003c90                __floatsisf
+ .text.avr-libc.fplib
+                0x00003d06       0x48 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_cmp.o)
+                0x00003d06                __fp_cmp
+ .text.avr-libc.fplib
+                0x00003d4e        0xc /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_inf.o)
+                0x00003d4e                __fp_inf
+ .text.avr-libc.fplib
+                0x00003d5a       0x36 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_mintl.o)
+                0x00003d5a                __fp_mintl
+ .text.avr-libc.fplib
+                0x00003d90       0x1c /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_mpack.o)
+                0x00003d90                __fp_mpack
+                0x00003d94                __fp_mpack_finite
+ .text.avr-libc.fplib
+                0x00003dac        0x6 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_nan.o)
+                0x00003dac                __fp_nan
+ .text.avr-libc.fplib
+                0x00003db2        0xe /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_pscA.o)
+                0x00003db2                __fp_pscA
+ .text.avr-libc.fplib
+                0x00003dc0        0xe /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_pscB.o)
+                0x00003dc0                __fp_pscB
+ .text.avr-libc.fplib
+                0x00003dce       0x22 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_round.o)
+                0x00003dce                __fp_round
+ .text.avr-libc.fplib
+                0x00003df0       0x44 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_split3.o)
+                0x00003df0                __fp_split3
+                0x00003e00                __fp_splitA
+ .text.avr-libc.fplib
+                0x00003e34       0x2e /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_trunc.o)
+                0x00003e34                __fp_trunc
+ .text.avr-libc.fplib
+                0x00003e62        0xe /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_zero.o)
+                0x00003e62                __fp_zero
+                0x00003e64                __fp_szero
+ .text.avr-libc.fplib
+                0x00003e70        0x8 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(gesf2.o)
+                0x00003e70                __gtsf2
+                0x00003e70                __gesf2
+ .text.avr-libc.fplib
+                0x00003e78        0x4 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(mulsf3.o)
+                0x00003e78                __mulsf3
+ .text.avr-libc.fplib
+                0x00003e7c       0xc2 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(mulsf3x.o)
+                0x00003e90                __mulsf3x
+                0x00003e94                __mulsf3_pse
+ .text.avr-libc.fplib
+                0x00003f3e       0x40 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(round.o)
+                0x00003f3e                round
+                0x00003f7e                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00004994        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
-                0x00004994                exit
-                0x00004994                _exit
+ .fini9         0x00003f7e        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_exit.o)
+                0x00003f7e                exit
+                0x00003f7e                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -602,20 +761,20 @@ LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00004994        0x4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
+ .fini0         0x00003f7e        0x4 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_exit.o)
  *(.fini0)
-                0x00004998                _etext = .
+                0x00003f82                _etext = .
 
-.data           0x00800100      0x11e load address 0x00004998
+.data           0x00800100       0x16 load address 0x00003f82
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
- .data          0x00800100        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm16m1.o
+ .data          0x00800100        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm16m1.o
  .data          0x00800100        0x0 bigmotor_main.o
  .data          0x00800100        0x1 can_msg.o
                 0x00800100                size
  .data          0x00800101        0x4 calibrations.o
-                0x00800101                current_1_threshold
-                0x00800103                current_2_threshold
+                0x00800101                current_2_threshold
+                0x00800103                current_1_threshold
  .data          0x00800105        0x2 motor.o
  .data          0x00800107        0x0 pot.o
  .data          0x00800107        0x0 encoder.o
@@ -630,190 +789,190 @@ LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a
                 0x0080010c                Board_presence_delay
  .data          0x0080010e        0x0 ../core/can_buff.o
  .data          0x0080010e        0x4 ../core/leds.o
-                0x0080010e                hi_low
+                0x00800111                hi_low
  .data          0x00800112        0x3 ../core/pwm.o
-                0x00800112                Prescaler
-                0x00800113                TOP
+                0x00800112                TOP
+                0x00800114                Prescaler
  .data          0x00800115        0x0 ../core/bk_system_defs.o
  .data          0x00800115        0x0 ../core/OS_timers.o
  .data          0x00800115        0x0 ../core/configuration.o
- .data          0x00800115        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodhi4.o)
- .data          0x00800115        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodhi4.o)
- .data          0x00800115        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodsi4.o)
- .data          0x00800115        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
- .data          0x00800115        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_copy_data.o)
- .data          0x00800115        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clear_bss.o)
- .data          0x00800115        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
- .data          0x00800115        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o)
- .data          0x00800115        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
- .data          0x00800115        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
- .data          0x00800115        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o)
- .data          0x00800115        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_ge_sf.o)
- .data          0x00800115        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_lt_sf.o)
- .data          0x00800115        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
- .data          0x00800115        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_sf_to_si.o)
- .data          0x00800115        0x8 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_thenan_sf.o)
-                0x00800115                __thenan_sf
- .data          0x0080011d        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_usi_to_sf.o)
- .data          0x0080011d        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodsi4.o)
- .data          0x0080011d        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_prologue.o)
- .data          0x0080011d        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_epilogue.o)
- .data          0x0080011d        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o)
- .data          0x0080011d        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_pack_sf.o)
- .data          0x0080011d        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
- .data          0x0080011d        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
- .data          0x0080011d      0x100 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clz.o)
-                0x0080011d                __clz_tab
- .data          0x0080021d        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(ceil.o)
- .data          0x0080021d        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_mintl.o)
- .data          0x0080021d        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_mpack.o)
- .data          0x0080021d        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_trunc.o)
- .data          0x0080021d        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_zero.o)
- .data          0x0080021d        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(round.o)
- .data          0x0080021d        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_split3.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_udivmodhi4.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_divmodhi4.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_divmodsi4.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_negsi2.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_exit.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_copy_data.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_clear_bss.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_umulhisi3.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_udivmodsi4.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(addsf3.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(addsf3x.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(ceil.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(cmpsf2.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(divsf3.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(divsf3x.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fixsfsi.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fixunssfsi.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(floatsisf.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_cmp.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_inf.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_mintl.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_mpack.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_nan.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_pscA.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_pscB.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_round.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_split3.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_trunc.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_zero.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(gesf2.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(mulsf3.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(mulsf3x.o)
+ .data          0x00800115        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(round.o)
  *(.data*)
  *(.rodata)
  *(.rodata*)
  *(.gnu.linkonce.d*)
-                0x0080021e                . = ALIGN (0x2)
- *fill*         0x0080021d        0x1 00
-                0x0080021e                _edata = .
-                0x0080021e                PROVIDE (__data_end, .)
+                0x00800116                . = ALIGN (0x2)
+ *fill*         0x00800115        0x1 
+                0x00800116                _edata = .
+                0x00800116                PROVIDE (__data_end, .)
 
-.bss            0x0080021e      0x126
-                0x0080021e                PROVIDE (__bss_start, .)
+.bss            0x00800116      0x126
+                0x00800116                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0x0080021e        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm16m1.o
- .bss           0x0080021e        0x4 bigmotor_main.o
-                0x0080021e                okay_to_read_cal
-                0x0080021f                ResetReason
-                0x00800220                prevPosition
- .bss           0x00800222        0x0 can_msg.o
- .bss           0x00800222       0x12 calibrations.o
-                0x00800222                EndPoint1
-                0x00800228                EndPoint2
-                0x0080022e                Range
- .bss           0x00800234        0x5 motor.o
-                0x00800234                MotorDutyRequest
-                0x00800238                MotorState
- .bss           0x00800239       0x25 pot.o
-                0x00800239                PotSpeed
-                0x0080023d                PotAcceleration
-                0x00800241                minStop
-                0x00800247                maxStop
-                0x0080024d                Destination
- .bss           0x0080025e       0x11 encoder.o
-                0x0080025e                EncoderCountPrev
-                0x00800260                EncoderSpeedPrev
-                0x00800264                EncoderCount
-                0x00800266                EncoderSpeed
-                0x00800268                EncoderAcceleration
-                0x0080026c                prev_q1
-                0x0080026d                prev_q2
-                0x0080026e                prev_direction
- .bss           0x0080026f        0x2 OS_Dispatch.o
-                0x0080026f                t
- .bss           0x00800271       0x16 adc.o
-                0x00800271                LeftCurrentSampleAvg
-                0x00800275                RightCurrentSampleAvg
-                0x00800279                LeftCurrentSample
-                0x0080027b                RightCurrentSample
-                0x0080027d                PotSample
-                0x00800281                next_channel
-                0x00800282                sample_counter
-                0x00800283                Ioffset
- .bss           0x00800287       0x3b ../core/can.o
-                0x00800287                msg1
-                0x00800296                msg2
-                0x008002a5                LastReceivedMsg
-                0x008002b4                NewMessageReceivedFlag
-                0x008002b5                TransmittedSuccesfully
-                0x008002b6                data
-                0x008002be                rx_call_back
-                0x008002c0                tx_call_back
- .bss           0x008002c2        0xa ../core/can_instance.o
-                0x008002c2                MyInstance
-                0x008002c3                Confirmed
-                0x008002c4                init_complete
-                0x008002c5                rand_delay
-                0x008002c7                rand_instance
-                0x008002c8                timeout_10ms_mult
-                0x008002ca                init_path
-                0x008002cb                ts_state
- .bss           0x008002cc        0x0 ../core/can_eid.o
- .bss           0x008002cc        0x8 ../core/can_board_msg.o
-                0x008002cc                BoardStatus
-                0x008002cd                MappedBlock
-                0x008002ce                Starting_Index
-                0x008002cf                System_Send_Status
-                0x008002d0                ShutDownState
-                0x008002d1                config_call_back
-                0x008002d3                Board_presence_response_type
- .bss           0x008002d4       0x5c ../core/can_buff.o
-                0x008002d4                Received
-                0x0080032e                RxHead
-                0x0080032f                RxTail
- .bss           0x00800330        0x3 ../core/leds.o
-                0x00800330                System_LED_Control
-                0x00800332                LED_state
- .bss           0x00800333        0x0 ../core/pwm.o
- .bss           0x00800333        0x4 ../core/bk_system_defs.o
-                0x00800333                time_delay
- .bss           0x00800337        0x8 ../core/OS_timers.o
-                0x00800337                OS_Event_HSTIC_Counter
-                0x00800339                OS_Event_TIC_Counter
-                0x0080033b                OS_Timer_Event_Flag
-                0x0080033d                OS_HighSpeedSampling
- .bss           0x0080033f        0x5 ../core/configuration.o
-                0x0080033f                config_byte_1
-                0x00800340                config_byte_2
-                0x00800341                config_byte_3
-                0x00800342                config_byte_4
-                0x00800343                sys_config_byte
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodhi4.o)
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodhi4.o)
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodsi4.o)
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_copy_data.o)
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clear_bss.o)
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o)
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o)
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_ge_sf.o)
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_lt_sf.o)
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_sf_to_si.o)
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_thenan_sf.o)
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_usi_to_sf.o)
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodsi4.o)
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_prologue.o)
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_epilogue.o)
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o)
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_pack_sf.o)
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clz.o)
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(ceil.o)
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_mintl.o)
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_mpack.o)
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_trunc.o)
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_zero.o)
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(round.o)
- .bss           0x00800344        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_split3.o)
+ .bss           0x00800116        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm16m1.o
+ .bss           0x00800116        0x4 bigmotor_main.o
+                0x00800116                prevPosition
+                0x00800118                ResetReason
+                0x00800119                okay_to_read_cal
+ .bss           0x0080011a        0x0 can_msg.o
+ .bss           0x0080011a       0x12 calibrations.o
+                0x0080011a                Range
+                0x00800120                EndPoint2
+                0x00800126                EndPoint1
+ .bss           0x0080012c        0x5 motor.o
+                0x0080012c                MotorState
+                0x0080012d                MotorDutyRequest
+ .bss           0x00800131       0x25 pot.o
+                0x00800131                Destination
+                0x00800140                maxStop
+                0x00800146                minStop
+                0x0080014c                PotAcceleration
+                0x00800150                PotSpeed
+ .bss           0x00800156       0x11 encoder.o
+                0x00800156                prev_direction
+                0x00800157                prev_q2
+                0x00800158                prev_q1
+                0x00800159                EncoderAcceleration
+                0x0080015d                EncoderSpeed
+                0x0080015f                EncoderCount
+                0x00800161                EncoderSpeedPrev
+                0x00800165                EncoderCountPrev
+ .bss           0x00800167        0x2 OS_Dispatch.o
+                0x00800167                t
+ .bss           0x00800169       0x16 adc.o
+                0x00800169                Ioffset
+                0x0080016d                sample_counter
+                0x0080016e                next_channel
+                0x0080016f                PotSample
+                0x00800173                RightCurrentSample
+                0x00800175                LeftCurrentSample
+                0x00800177                RightCurrentSampleAvg
+                0x0080017b                LeftCurrentSampleAvg
+ .bss           0x0080017f       0x3b ../core/can.o
+                0x0080017f                tx_call_back
+                0x00800181                rx_call_back
+                0x00800183                data
+                0x0080018b                TransmittedSuccesfully
+                0x0080018c                NewMessageReceivedFlag
+                0x0080018d                LastReceivedMsg
+                0x0080019c                msg2
+                0x008001ab                msg1
+ .bss           0x008001ba        0xa ../core/can_instance.o
+                0x008001ba                ts_state
+                0x008001bb                init_path
+                0x008001bc                timeout_10ms_mult
+                0x008001be                rand_instance
+                0x008001bf                rand_delay
+                0x008001c1                init_complete
+                0x008001c2                Confirmed
+                0x008001c3                MyInstance
+ .bss           0x008001c4        0x0 ../core/can_eid.o
+ .bss           0x008001c4        0x8 ../core/can_board_msg.o
+                0x008001c4                Board_presence_response_type
+                0x008001c5                config_call_back
+                0x008001c7                ShutDownState
+                0x008001c8                System_Send_Status
+                0x008001c9                Starting_Index
+                0x008001ca                MappedBlock
+                0x008001cb                BoardStatus
+ .bss           0x008001cc       0x5c ../core/can_buff.o
+                0x008001cc                RxTail
+                0x008001cd                RxHead
+                0x008001ce                Received
+ .bss           0x00800228        0x3 ../core/leds.o
+                0x00800228                LED_state
+                0x00800229                System_LED_Control
+ .bss           0x0080022b        0x0 ../core/pwm.o
+ .bss           0x0080022b        0x4 ../core/bk_system_defs.o
+                0x0080022b                time_delay
+ .bss           0x0080022f        0x8 ../core/OS_timers.o
+                0x0080022f                OS_HighSpeedSampling
+                0x00800230                OS_Timer_Event_Flag
+                0x00800232                OS_Event_TIC_Counter
+                0x00800234                OS_Event_HSTIC_Counter
+ .bss           0x00800237        0x5 ../core/configuration.o
+                0x00800237                sys_config_byte
+                0x00800238                config_byte_4
+                0x00800239                config_byte_3
+                0x0080023a                config_byte_2
+                0x0080023b                config_byte_1
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_udivmodhi4.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_divmodhi4.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_divmodsi4.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_negsi2.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_exit.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_copy_data.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_clear_bss.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_umulhisi3.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5/libgcc.a(_udivmodsi4.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(addsf3.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(addsf3x.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(ceil.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(cmpsf2.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(divsf3.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(divsf3x.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fixsfsi.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fixunssfsi.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(floatsisf.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_cmp.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_inf.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_mintl.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_mpack.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_nan.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_pscA.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_pscB.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_round.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_split3.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_trunc.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(fp_zero.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(gesf2.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(mulsf3.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(mulsf3x.o)
+ .bss           0x0080023c        0x0 /Applications/Arduino 2.app/Contents/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/libm.a(round.o)
  *(.bss*)
  *(COMMON)
-                0x00800344                PROVIDE (__bss_end, .)
-                0x00004998                __data_load_start = LOADADDR (.data)
-                0x00004ab6                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0080023c                PROVIDE (__bss_end, .)
+                0x00003f82                __data_load_start = LOADADDR (.data)
+                0x00003f98                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800344        0x0
-                0x00800344                PROVIDE (__noinit_start, .)
+.noinit         0x0080023c        0x0
+                0x0080023c                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x00800344                PROVIDE (__noinit_end, .)
-                0x00800344                _end = .
-                0x00800344                PROVIDE (__heap_start, .)
+                0x0080023c                PROVIDE (__noinit_end, .)
+                0x0080023c                _end = .
+                0x0080023c                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -831,27 +990,11 @@ LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a
 .signature
  *(.signature*)
 
-.stab           0x00000000      0xf90
+.stab
  *(.stab)
- .stab          0x00000000      0x6cc /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm16m1.o
- .stab          0x000006cc      0x114 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(ceil.o)
-                                0x120 (size before relaxing)
- .stab          0x000007e0      0x174 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_mintl.o)
-                                0x180 (size before relaxing)
- .stab          0x00000954       0xe4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_mpack.o)
-                                 0xf0 (size before relaxing)
- .stab          0x00000a38      0x144 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_trunc.o)
-                                0x150 (size before relaxing)
- .stab          0x00000b7c       0x90 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_zero.o)
-                                 0x9c (size before relaxing)
- .stab          0x00000c0c      0x1b0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(round.o)
-                                0x1bc (size before relaxing)
- .stab          0x00000dbc      0x1d4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a(fp_split3.o)
-                                0x1e0 (size before relaxing)
 
-.stabstr        0x00000000      0x2fe
+.stabstr
  *(.stabstr)
- .stabstr       0x00000000      0x2fe /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm16m1.o
 
 .stab.excl
  *(.stab.excl)
@@ -865,8 +1008,30 @@ LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a
 .stab.indexstr
  *(.stab.indexstr)
 
-.comment
+.comment        0x00000000       0x11
  *(.comment)
+ .comment       0x00000000       0x11 bigmotor_main.o
+                                 0x12 (size before relaxing)
+ .comment       0x00000011       0x12 can_msg.o
+ .comment       0x00000011       0x12 calibrations.o
+ .comment       0x00000011       0x12 motor.o
+ .comment       0x00000011       0x12 pot.o
+ .comment       0x00000011       0x12 encoder.o
+ .comment       0x00000011       0x12 OS_Dispatch.o
+ .comment       0x00000011       0x12 adc.o
+ .comment       0x00000011       0x12 ../core/can.o
+ .comment       0x00000011       0x12 ../core/can_instance.o
+ .comment       0x00000011       0x12 ../core/can_eid.o
+ .comment       0x00000011       0x12 ../core/can_board_msg.o
+ .comment       0x00000011       0x12 ../core/can_buff.o
+ .comment       0x00000011       0x12 ../core/leds.o
+ .comment       0x00000011       0x12 ../core/pwm.o
+ .comment       0x00000011       0x12 ../core/bk_system_defs.o
+ .comment       0x00000011       0x12 ../core/OS_timers.o
+ .comment       0x00000011       0x12 ../core/configuration.o
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
 
 .debug
  *(.debug)
@@ -880,484 +1045,229 @@ LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x400
+.debug_aranges  0x00000000      0x248
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0x20 bigmotor_main.o
+                0x00000000       0x28 bigmotor_main.o
  .debug_aranges
-                0x00000020       0x20 can_msg.o
+                0x00000028       0x20 can_msg.o
  .debug_aranges
-                0x00000040       0x20 calibrations.o
+                0x00000048       0x20 calibrations.o
  .debug_aranges
-                0x00000060       0x20 motor.o
+                0x00000068       0x20 motor.o
  .debug_aranges
-                0x00000080       0x20 pot.o
+                0x00000088       0x20 pot.o
  .debug_aranges
-                0x000000a0       0x20 encoder.o
+                0x000000a8       0x20 encoder.o
  .debug_aranges
-                0x000000c0       0x20 OS_Dispatch.o
+                0x000000c8       0x20 OS_Dispatch.o
  .debug_aranges
-                0x000000e0       0x20 adc.o
+                0x000000e8       0x20 adc.o
  .debug_aranges
-                0x00000100       0x20 ../core/can.o
+                0x00000108       0x20 ../core/can.o
  .debug_aranges
-                0x00000120       0x20 ../core/can_instance.o
+                0x00000128       0x20 ../core/can_instance.o
  .debug_aranges
-                0x00000140       0x20 ../core/can_eid.o
+                0x00000148       0x20 ../core/can_eid.o
  .debug_aranges
-                0x00000160       0x20 ../core/can_board_msg.o
+                0x00000168       0x20 ../core/can_board_msg.o
  .debug_aranges
-                0x00000180       0x20 ../core/can_buff.o
+                0x00000188       0x20 ../core/can_buff.o
  .debug_aranges
-                0x000001a0       0x20 ../core/leds.o
+                0x000001a8       0x20 ../core/leds.o
  .debug_aranges
-                0x000001c0       0x20 ../core/pwm.o
+                0x000001c8       0x20 ../core/pwm.o
  .debug_aranges
-                0x000001e0       0x20 ../core/bk_system_defs.o
+                0x000001e8       0x20 ../core/bk_system_defs.o
  .debug_aranges
-                0x00000200       0x20 ../core/OS_timers.o
+                0x00000208       0x20 ../core/OS_timers.o
  .debug_aranges
-                0x00000220       0x20 ../core/configuration.o
- .debug_aranges
-                0x00000240       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
- .debug_aranges
-                0x00000260       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o)
- .debug_aranges
-                0x00000280       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
- .debug_aranges
-                0x000002a0       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
- .debug_aranges
-                0x000002c0       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o)
- .debug_aranges
-                0x000002e0       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_ge_sf.o)
- .debug_aranges
-                0x00000300       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_lt_sf.o)
- .debug_aranges
-                0x00000320       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
- .debug_aranges
-                0x00000340       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_sf_to_si.o)
- .debug_aranges
-                0x00000360       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_usi_to_sf.o)
- .debug_aranges
-                0x00000380       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o)
- .debug_aranges
-                0x000003a0       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_pack_sf.o)
- .debug_aranges
-                0x000003c0       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
- .debug_aranges
-                0x000003e0       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
+                0x00000228       0x20 ../core/configuration.o
 
 .debug_pubnames
-                0x00000000     0x18fd
  *(.debug_pubnames)
- .debug_pubnames
-                0x00000000       0xd1 bigmotor_main.o
- .debug_pubnames
-                0x000000d1      0x1fd can_msg.o
- .debug_pubnames
-                0x000002ce      0x18b calibrations.o
- .debug_pubnames
-                0x00000459      0x11c motor.o
- .debug_pubnames
-                0x00000575      0x252 pot.o
- .debug_pubnames
-                0x000007c7      0x102 encoder.o
- .debug_pubnames
-                0x000008c9       0x28 OS_Dispatch.o
- .debug_pubnames
-                0x000008f1      0x15f adc.o
- .debug_pubnames
-                0x00000a50      0x2d1 ../core/can.o
- .debug_pubnames
-                0x00000d21      0x187 ../core/can_instance.o
- .debug_pubnames
-                0x00000ea8       0x9c ../core/can_eid.o
- .debug_pubnames
-                0x00000f44      0x1d7 ../core/can_board_msg.o
- .debug_pubnames
-                0x0000111b       0xcc ../core/can_buff.o
- .debug_pubnames
-                0x000011e7      0x133 ../core/leds.o
- .debug_pubnames
-                0x0000131a       0xf7 ../core/pwm.o
- .debug_pubnames
-                0x00001411       0x39 ../core/bk_system_defs.o
- .debug_pubnames
-                0x0000144a       0xe3 ../core/OS_timers.o
- .debug_pubnames
-                0x0000152d      0x1bc ../core/configuration.o
- .debug_pubnames
-                0x000016e9       0x23 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
- .debug_pubnames
-                0x0000170c       0x2c /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o)
- .debug_pubnames
-                0x00001738       0x1f /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
- .debug_pubnames
-                0x00001757       0x1f /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
- .debug_pubnames
-                0x00001776       0x1e /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o)
- .debug_pubnames
-                0x00001794       0x1e /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_ge_sf.o)
- .debug_pubnames
-                0x000017b2       0x1e /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_lt_sf.o)
- .debug_pubnames
-                0x000017d0       0x22 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
- .debug_pubnames
-                0x000017f2       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_sf_to_si.o)
- .debug_pubnames
-                0x00001812       0x22 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_thenan_sf.o)
- .debug_pubnames
-                0x00001834       0x24 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_usi_to_sf.o)
- .debug_pubnames
-                0x00001858       0x1f /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o)
- .debug_pubnames
-                0x00001877       0x1f /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_pack_sf.o)
- .debug_pubnames
-                0x00001896       0x21 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
- .debug_pubnames
-                0x000018b7       0x26 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
- .debug_pubnames
-                0x000018dd       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clz.o)
 
-.debug_info     0x00000000     0x849a
- *(.debug_info)
- .debug_info    0x00000000      0x4ed bigmotor_main.o
- .debug_info    0x000004ed      0xc85 can_msg.o
- .debug_info    0x00001172      0x774 calibrations.o
- .debug_info    0x000018e6      0x5e0 motor.o
- .debug_info    0x00001ec6      0x6d2 pot.o
- .debug_info    0x00002598      0x1b9 encoder.o
- .debug_info    0x00002751      0x11d OS_Dispatch.o
- .debug_info    0x0000286e      0x2e8 adc.o
- .debug_info    0x00002b56      0xd3b ../core/can.o
- .debug_info    0x00003891      0x4e0 ../core/can_instance.o
- .debug_info    0x00003d71      0x34c ../core/can_eid.o
- .debug_info    0x000040bd      0x5b9 ../core/can_board_msg.o
- .debug_info    0x00004676      0x4b1 ../core/can_buff.o
- .debug_info    0x00004b27      0x463 ../core/leds.o
- .debug_info    0x00004f8a      0x540 ../core/pwm.o
- .debug_info    0x000054ca       0xc0 ../core/bk_system_defs.o
- .debug_info    0x0000558a      0x177 ../core/OS_timers.o
- .debug_info    0x00005701      0x826 ../core/configuration.o
- .debug_info    0x00005f27       0xbd /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
- .debug_info    0x00005fe4      0x455 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o)
- .debug_info    0x00006439      0x3ec /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
- .debug_info    0x00006825      0x37f /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
- .debug_info    0x00006ba4      0x28a /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o)
- .debug_info    0x00006e2e      0x28a /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_ge_sf.o)
- .debug_info    0x000070b8      0x28a /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_lt_sf.o)
- .debug_info    0x00007342      0x22f /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
- .debug_info    0x00007571      0x2a5 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_sf_to_si.o)
- .debug_info    0x00007816      0x15e /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_thenan_sf.o)
- .debug_info    0x00007974      0x232 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_usi_to_sf.o)
- .debug_info    0x00007ba6      0x12c /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o)
- .debug_info    0x00007cd2      0x2d5 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_pack_sf.o)
- .debug_info    0x00007fa7      0x25c /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
- .debug_info    0x00008203      0x1f1 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
- .debug_info    0x000083f4       0xa6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clz.o)
- *(.gnu.linkonce.wi.*)
+.debug_info     0x00000000     0x7faa
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000      0x845 bigmotor_main.o
+ .debug_info    0x00000845     0x113c can_msg.o
+ .debug_info    0x00001981      0x886 calibrations.o
+ .debug_info    0x00002207      0xb2a motor.o
+ .debug_info    0x00002d31      0x803 pot.o
+ .debug_info    0x00003534      0x1c5 encoder.o
+ .debug_info    0x000036f9      0x140 OS_Dispatch.o
+ .debug_info    0x00003839      0x2f7 adc.o
+ .debug_info    0x00003b30     0x1053 ../core/can.o
+ .debug_info    0x00004b83      0x6bc ../core/can_instance.o
+ .debug_info    0x0000523f      0x35c ../core/can_eid.o
+ .debug_info    0x0000559b      0xab3 ../core/can_board_msg.o
+ .debug_info    0x0000604e      0x5d7 ../core/can_buff.o
+ .debug_info    0x00006625      0x712 ../core/leds.o
+ .debug_info    0x00006d37      0x64b ../core/pwm.o
+ .debug_info    0x00007382       0xd2 ../core/bk_system_defs.o
+ .debug_info    0x00007454      0x1f8 ../core/OS_timers.o
+ .debug_info    0x0000764c      0x95e ../core/configuration.o
 
-.debug_abbrev   0x00000000     0x3255
+.debug_abbrev   0x00000000     0x2861
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x1ca bigmotor_main.o
- .debug_abbrev  0x000001ca      0x2ff can_msg.o
- .debug_abbrev  0x000004c9      0x243 calibrations.o
- .debug_abbrev  0x0000070c      0x23b motor.o
- .debug_abbrev  0x00000947      0x200 pot.o
- .debug_abbrev  0x00000b47       0xa3 encoder.o
- .debug_abbrev  0x00000bea       0x9c OS_Dispatch.o
- .debug_abbrev  0x00000c86      0x12e adc.o
- .debug_abbrev  0x00000db4      0x32e ../core/can.o
- .debug_abbrev  0x000010e2      0x1fc ../core/can_instance.o
- .debug_abbrev  0x000012de       0xef ../core/can_eid.o
- .debug_abbrev  0x000013cd      0x221 ../core/can_board_msg.o
- .debug_abbrev  0x000015ee      0x1f4 ../core/can_buff.o
- .debug_abbrev  0x000017e2      0x16e ../core/leds.o
- .debug_abbrev  0x00001950      0x1a0 ../core/pwm.o
- .debug_abbrev  0x00001af0       0x7f ../core/bk_system_defs.o
- .debug_abbrev  0x00001b6f       0xbf ../core/OS_timers.o
- .debug_abbrev  0x00001c2e      0x274 ../core/configuration.o
- .debug_abbrev  0x00001ea2       0x5d /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
- .debug_abbrev  0x00001eff      0x1af /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o)
- .debug_abbrev  0x000020ae      0x1d9 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
- .debug_abbrev  0x00002287      0x1c4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
- .debug_abbrev  0x0000244b      0x151 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o)
- .debug_abbrev  0x0000259c      0x151 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_ge_sf.o)
- .debug_abbrev  0x000026ed      0x151 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_lt_sf.o)
- .debug_abbrev  0x0000283e      0x162 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
- .debug_abbrev  0x000029a0      0x160 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_sf_to_si.o)
- .debug_abbrev  0x00002b00       0xcb /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_thenan_sf.o)
- .debug_abbrev  0x00002bcb      0x173 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_usi_to_sf.o)
- .debug_abbrev  0x00002d3e       0xce /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o)
- .debug_abbrev  0x00002e0c      0x192 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_pack_sf.o)
- .debug_abbrev  0x00002f9e      0x14b /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
- .debug_abbrev  0x000030e9      0x10b /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
- .debug_abbrev  0x000031f4       0x61 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clz.o)
+ .debug_abbrev  0x00000000      0x27c bigmotor_main.o
+ .debug_abbrev  0x0000027c      0x3fd can_msg.o
+ .debug_abbrev  0x00000679      0x2af calibrations.o
+ .debug_abbrev  0x00000928      0x35c motor.o
+ .debug_abbrev  0x00000c84      0x31a pot.o
+ .debug_abbrev  0x00000f9e       0xc5 encoder.o
+ .debug_abbrev  0x00001063       0xc1 OS_Dispatch.o
+ .debug_abbrev  0x00001124      0x157 adc.o
+ .debug_abbrev  0x0000127b      0x3c6 ../core/can.o
+ .debug_abbrev  0x00001641      0x2b1 ../core/can_instance.o
+ .debug_abbrev  0x000018f2       0xf2 ../core/can_eid.o
+ .debug_abbrev  0x000019e4      0x2c7 ../core/can_board_msg.o
+ .debug_abbrev  0x00001cab      0x2d3 ../core/can_buff.o
+ .debug_abbrev  0x00001f7e      0x27d ../core/leds.o
+ .debug_abbrev  0x000021fb      0x1ee ../core/pwm.o
+ .debug_abbrev  0x000023e9       0x85 ../core/bk_system_defs.o
+ .debug_abbrev  0x0000246e       0xf9 ../core/OS_timers.o
+ .debug_abbrev  0x00002567      0x2fa ../core/configuration.o
 
-.debug_line     0x00000000     0x5bad
- *(.debug_line)
- .debug_line    0x00000000      0x39d bigmotor_main.o
- .debug_line    0x0000039d      0x85f can_msg.o
- .debug_line    0x00000bfc      0x60e calibrations.o
- .debug_line    0x0000120a      0x44d motor.o
- .debug_line    0x00001657      0x5b7 pot.o
- .debug_line    0x00001c0e      0x133 encoder.o
- .debug_line    0x00001d41       0xc7 OS_Dispatch.o
- .debug_line    0x00001e08      0x234 adc.o
- .debug_line    0x0000203c      0xa0f ../core/can.o
- .debug_line    0x00002a4b      0x3f6 ../core/can_instance.o
- .debug_line    0x00002e41      0x149 ../core/can_eid.o
- .debug_line    0x00002f8a      0x622 ../core/can_board_msg.o
- .debug_line    0x000035ac      0x2a5 ../core/can_buff.o
- .debug_line    0x00003851      0x34a ../core/leds.o
- .debug_line    0x00003b9b      0x3de ../core/pwm.o
- .debug_line    0x00003f79       0xc2 ../core/bk_system_defs.o
- .debug_line    0x0000403b      0x1aa ../core/OS_timers.o
- .debug_line    0x000041e5      0x61f ../core/configuration.o
- .debug_line    0x00004804       0x9d /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
- .debug_line    0x000048a1      0x2c2 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o)
- .debug_line    0x00004b63      0x25e /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
- .debug_line    0x00004dc1      0x1e4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
- .debug_line    0x00004fa5       0xd9 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o)
- .debug_line    0x0000507e       0xd9 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_ge_sf.o)
- .debug_line    0x00005157       0xd9 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_lt_sf.o)
- .debug_line    0x00005230      0x121 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
- .debug_line    0x00005351      0x113 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_sf_to_si.o)
- .debug_line    0x00005464       0x86 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_thenan_sf.o)
- .debug_line    0x000054ea      0x12f /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_usi_to_sf.o)
- .debug_line    0x00005619       0xc3 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o)
- .debug_line    0x000056dc      0x1c9 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_pack_sf.o)
- .debug_line    0x000058a5      0x149 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
- .debug_line    0x000059ee      0x14d /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
- .debug_line    0x00005b3b       0x72 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clz.o)
+.debug_line     0x00000000     0x1acf
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x00000000      0x22b bigmotor_main.o
+ .debug_line    0x0000022b      0x330 can_msg.o
+ .debug_line    0x0000055b      0x25e calibrations.o
+ .debug_line    0x000007b9      0x1ae motor.o
+ .debug_line    0x00000967      0x165 pot.o
+ .debug_line    0x00000acc       0x61 encoder.o
+ .debug_line    0x00000b2d       0x82 OS_Dispatch.o
+ .debug_line    0x00000baf       0xa2 adc.o
+ .debug_line    0x00000c51      0x2de ../core/can.o
+ .debug_line    0x00000f2f      0x14b ../core/can_instance.o
+ .debug_line    0x0000107a       0x96 ../core/can_eid.o
+ .debug_line    0x00001110      0x23d ../core/can_board_msg.o
+ .debug_line    0x0000134d      0x130 ../core/can_buff.o
+ .debug_line    0x0000147d      0x11c ../core/leds.o
+ .debug_line    0x00001599      0x165 ../core/pwm.o
+ .debug_line    0x000016fe       0x55 ../core/bk_system_defs.o
+ .debug_line    0x00001753       0xf6 ../core/OS_timers.o
+ .debug_line    0x00001849      0x286 ../core/configuration.o
 
-.debug_frame    0x00000000      0xf10
+.debug_frame    0x00000000     0x12d8
  *(.debug_frame)
- .debug_frame   0x00000000       0x70 bigmotor_main.o
- .debug_frame   0x00000070      0x140 can_msg.o
- .debug_frame   0x000001b0       0xd0 calibrations.o
- .debug_frame   0x00000280       0xd0 motor.o
- .debug_frame   0x00000350      0x180 pot.o
- .debug_frame   0x000004d0       0x60 encoder.o
- .debug_frame   0x00000530       0x20 OS_Dispatch.o
- .debug_frame   0x00000550       0x90 adc.o
- .debug_frame   0x000005e0      0x1c0 ../core/can.o
- .debug_frame   0x000007a0       0x90 ../core/can_instance.o
- .debug_frame   0x00000830       0xa0 ../core/can_eid.o
- .debug_frame   0x000008d0       0xa0 ../core/can_board_msg.o
- .debug_frame   0x00000970       0x90 ../core/can_buff.o
- .debug_frame   0x00000a00       0xe0 ../core/leds.o
- .debug_frame   0x00000ae0       0xd0 ../core/pwm.o
- .debug_frame   0x00000bb0       0x30 ../core/bk_system_defs.o
- .debug_frame   0x00000be0       0x70 ../core/OS_timers.o
- .debug_frame   0x00000c50       0xe0 ../core/configuration.o
- .debug_frame   0x00000d30       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
- .debug_frame   0x00000d50       0x40 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o)
- .debug_frame   0x00000d90       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
- .debug_frame   0x00000db0       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
- .debug_frame   0x00000dd0       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o)
- .debug_frame   0x00000df0       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_ge_sf.o)
- .debug_frame   0x00000e10       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_lt_sf.o)
- .debug_frame   0x00000e30       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
- .debug_frame   0x00000e50       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_sf_to_si.o)
- .debug_frame   0x00000e70       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_usi_to_sf.o)
- .debug_frame   0x00000e90       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o)
- .debug_frame   0x00000eb0       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_pack_sf.o)
- .debug_frame   0x00000ed0       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
- .debug_frame   0x00000ef0       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
+ .debug_frame   0x00000000       0x88 bigmotor_main.o
+ .debug_frame   0x00000088      0x260 can_msg.o
+ .debug_frame   0x000002e8       0xe0 calibrations.o
+ .debug_frame   0x000003c8      0x10c motor.o
+ .debug_frame   0x000004d4      0x250 pot.o
+ .debug_frame   0x00000724       0xa4 encoder.o
+ .debug_frame   0x000007c8       0x24 OS_Dispatch.o
+ .debug_frame   0x000007ec       0xf8 adc.o
+ .debug_frame   0x000008e4      0x28c ../core/can.o
+ .debug_frame   0x00000b70       0xac ../core/can_instance.o
+ .debug_frame   0x00000c1c       0xa4 ../core/can_eid.o
+ .debug_frame   0x00000cc0       0xec ../core/can_board_msg.o
+ .debug_frame   0x00000dac       0xc4 ../core/can_buff.o
+ .debug_frame   0x00000e70      0x100 ../core/leds.o
+ .debug_frame   0x00000f70      0x188 ../core/pwm.o
+ .debug_frame   0x000010f8       0x40 ../core/bk_system_defs.o
+ .debug_frame   0x00001138       0xbc ../core/OS_timers.o
+ .debug_frame   0x000011f4       0xe4 ../core/configuration.o
 
-.debug_str      0x00000000     0x29f9
+.debug_str      0x00000000     0x29da
  *(.debug_str)
- .debug_str     0x00000000      0x28e bigmotor_main.o
-                                0x2ed (size before relaxing)
- .debug_str     0x0000028e      0x585 can_msg.o
-                                0x772 (size before relaxing)
- .debug_str     0x00000813      0x281 calibrations.o
-                                0x424 (size before relaxing)
- .debug_str     0x00000a94      0x212 motor.o
-                                0x437 (size before relaxing)
- .debug_str     0x00000ca6      0x3cd pot.o
-                                0x5b4 (size before relaxing)
- .debug_str     0x00001073       0xed encoder.o
-                                0x1ef (size before relaxing)
- .debug_str     0x00001160       0x40 OS_Dispatch.o
-                                0x164 (size before relaxing)
- .debug_str     0x000011a0      0x185 adc.o
-                                0x2dc (size before relaxing)
- .debug_str     0x00001325      0x487 ../core/can.o
-                                0x6b9 (size before relaxing)
- .debug_str     0x000017ac      0x232 ../core/can_instance.o
-                                0x489 (size before relaxing)
- .debug_str     0x000019de      0x139 ../core/can_eid.o
-                                0x252 (size before relaxing)
- .debug_str     0x00001b17      0x2d4 ../core/can_board_msg.o
-                                0x5ad (size before relaxing)
- .debug_str     0x00001deb      0x16a ../core/can_buff.o
-                                0x3b4 (size before relaxing)
- .debug_str     0x00001f55      0x208 ../core/leds.o
-                                0x361 (size before relaxing)
- .debug_str     0x0000215d      0x1ac ../core/pwm.o
-                                0x276 (size before relaxing)
- .debug_str     0x00002309       0x4d ../core/bk_system_defs.o
-                                0x10a (size before relaxing)
- .debug_str     0x00002356       0xf8 ../core/OS_timers.o
-                                0x1e1 (size before relaxing)
- .debug_str     0x0000244e      0x2a9 ../core/configuration.o
-                                0x5b3 (size before relaxing)
- .debug_str     0x000026f7       0xc2 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
-                                0x13b (size before relaxing)
- .debug_str     0x000027b9      0x145 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o)
-                                0x24e (size before relaxing)
- .debug_str     0x000028fe       0x27 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
-                                0x207 (size before relaxing)
- .debug_str     0x00002925       0x35 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
-                                0x210 (size before relaxing)
- .debug_str     0x0000295a        0x8 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o)
-                                0x1d5 (size before relaxing)
- .debug_str     0x00002962        0x8 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_ge_sf.o)
-                                0x1d5 (size before relaxing)
- .debug_str     0x0000296a        0x8 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_lt_sf.o)
-                                0x1d5 (size before relaxing)
- .debug_str     0x00002972       0x27 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
-                                0x1c4 (size before relaxing)
- .debug_str     0x00002999        0xa /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_sf_to_si.o)
+ .debug_str     0x00000000      0x4e1 bigmotor_main.o
+                                0x549 (size before relaxing)
+ .debug_str     0x000004e1      0x706 can_msg.o
+                                0x973 (size before relaxing)
+ .debug_str     0x00000be7      0x387 calibrations.o
+                                0x588 (size before relaxing)
+ .debug_str     0x00000f6e      0x285 motor.o
+                                0x6d2 (size before relaxing)
+ .debug_str     0x000011f3      0x33f pot.o
+                                0x6dc (size before relaxing)
+ .debug_str     0x00001532       0x80 encoder.o
+                                0x240 (size before relaxing)
+ .debug_str     0x000015b2       0x40 OS_Dispatch.o
                                 0x1de (size before relaxing)
- .debug_str     0x00000000      0x180 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_thenan_sf.o)
- .debug_str     0x000029a3       0x14 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_usi_to_sf.o)
-                                0x1c0 (size before relaxing)
- .debug_str     0x000029b7       0x17 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o)
-                                0x147 (size before relaxing)
- .debug_str     0x000029ce       0x10 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_pack_sf.o)
-                                0x1dd (size before relaxing)
- .debug_str     0x000029de        0xb /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
-                                0x1bf (size before relaxing)
- .debug_str     0x000029e9       0x10 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
-                                0x1a3 (size before relaxing)
- .debug_str     0x00000000      0x12a /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clz.o)
+ .debug_str     0x000015f2      0x155 adc.o
+                                0x32d (size before relaxing)
+ .debug_str     0x00001747      0x51f ../core/can.o
+                                0x864 (size before relaxing)
+ .debug_str     0x00001c66      0x225 ../core/can_instance.o
+                                0x644 (size before relaxing)
+ .debug_str     0x00001e8b       0xcf ../core/can_eid.o
+                                0x2a3 (size before relaxing)
+ .debug_str     0x00001f5a      0x2cf ../core/can_board_msg.o
+                                0x8a3 (size before relaxing)
+ .debug_str     0x00002229      0x159 ../core/can_buff.o
+                                0x467 (size before relaxing)
+ .debug_str     0x00002382      0x1a3 ../core/leds.o
+                                0x3b2 (size before relaxing)
+ .debug_str     0x00002525      0x1aa ../core/pwm.o
+                                0x314 (size before relaxing)
+ .debug_str     0x000026cf       0x2b ../core/bk_system_defs.o
+                                0x15b (size before relaxing)
+ .debug_str     0x000026fa       0xec ../core/OS_timers.o
+                                0x2ed (size before relaxing)
+ .debug_str     0x000027e6      0x1f4 ../core/configuration.o
+                                0x636 (size before relaxing)
 
-.debug_loc      0x00000000     0x3874
+.debug_loc      0x00000000     0x576f
  *(.debug_loc)
- .debug_loc     0x00000000      0x2c1 bigmotor_main.o
- .debug_loc     0x000002c1      0x76a can_msg.o
- .debug_loc     0x00000a2b      0x4c1 calibrations.o
- .debug_loc     0x00000eec      0x14f motor.o
- .debug_loc     0x0000103b      0x132 pot.o
- .debug_loc     0x0000116d       0x8d encoder.o
- .debug_loc     0x000011fa       0x20 OS_Dispatch.o
- .debug_loc     0x0000121a       0xa1 adc.o
- .debug_loc     0x000012bb      0x652 ../core/can.o
- .debug_loc     0x0000190d      0x112 ../core/can_instance.o
- .debug_loc     0x00001a1f       0xa8 ../core/can_eid.o
- .debug_loc     0x00001ac7      0x1b4 ../core/can_board_msg.o
- .debug_loc     0x00001c7b      0x18e ../core/can_buff.o
- .debug_loc     0x00001e09      0x148 ../core/leds.o
- .debug_loc     0x00001f51      0x4dc ../core/pwm.o
- .debug_loc     0x0000242d       0x34 ../core/bk_system_defs.o
- .debug_loc     0x00002461      0x611 ../core/configuration.o
- .debug_loc     0x00002a72       0x34 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
- .debug_loc     0x00002aa6      0x31d /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o)
- .debug_loc     0x00002dc3      0x2a4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
- .debug_loc     0x00003067      0x1ac /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
- .debug_loc     0x00003213       0x48 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o)
- .debug_loc     0x0000325b       0x48 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_ge_sf.o)
- .debug_loc     0x000032a3       0x48 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_lt_sf.o)
- .debug_loc     0x000032eb       0xb4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
- .debug_loc     0x0000339f       0x56 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_sf_to_si.o)
- .debug_loc     0x000033f5       0x96 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_usi_to_sf.o)
- .debug_loc     0x0000348b       0xb2 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o)
- .debug_loc     0x0000353d      0x1d6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_pack_sf.o)
- .debug_loc     0x00003713      0x111 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
- .debug_loc     0x00003824       0x50 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
+ .debug_loc     0x00000000      0x4fd bigmotor_main.o
+ .debug_loc     0x000004fd     0x13ba can_msg.o
+ .debug_loc     0x000018b7      0x5e6 calibrations.o
+ .debug_loc     0x00001e9d      0x32b motor.o
+ .debug_loc     0x000021c8      0x600 pot.o
+ .debug_loc     0x000027c8      0x153 encoder.o
+ .debug_loc     0x0000291b       0x20 OS_Dispatch.o
+ .debug_loc     0x0000293b      0x1d7 adc.o
+ .debug_loc     0x00002b12      0xc0c ../core/can.o
+ .debug_loc     0x0000371e      0x1ce ../core/can_instance.o
+ .debug_loc     0x000038ec       0xc4 ../core/can_eid.o
+ .debug_loc     0x000039b0      0x3ae ../core/can_board_msg.o
+ .debug_loc     0x00003d5e      0x3a5 ../core/can_buff.o
+ .debug_loc     0x00004103      0x372 ../core/leds.o
+ .debug_loc     0x00004475      0xa56 ../core/pwm.o
+ .debug_loc     0x00004ecb       0x2f ../core/bk_system_defs.o
+ .debug_loc     0x00004efa       0xcb ../core/OS_timers.o
+ .debug_loc     0x00004fc5      0x7aa ../core/configuration.o
 
 .debug_macinfo
  *(.debug_macinfo)
-OUTPUT(bigmotor.elf elf32-avr)
-LOAD linker stubs
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
 
 .debug_pubtypes
-                0x00000000      0xa3c
- .debug_pubtypes
-                0x00000000       0x3f bigmotor_main.o
- .debug_pubtypes
-                0x0000003f       0x61 can_msg.o
- .debug_pubtypes
-                0x000000a0       0x39 calibrations.o
- .debug_pubtypes
-                0x000000d9       0x47 motor.o
- .debug_pubtypes
-                0x00000120       0x31 pot.o
- .debug_pubtypes
-                0x00000151       0x12 encoder.o
- .debug_pubtypes
-                0x00000163       0x12 OS_Dispatch.o
- .debug_pubtypes
-                0x00000175       0x12 adc.o
- .debug_pubtypes
-                0x00000187       0x31 ../core/can.o
- .debug_pubtypes
-                0x000001b8       0x26 ../core/can_instance.o
- .debug_pubtypes
-                0x000001de       0x1d ../core/can_eid.o
- .debug_pubtypes
-                0x000001fb       0x4a ../core/can_board_msg.o
- .debug_pubtypes
-                0x00000245       0x26 ../core/can_buff.o
- .debug_pubtypes
-                0x0000026b       0x35 ../core/leds.o
- .debug_pubtypes
-                0x000002a0       0x12 ../core/pwm.o
- .debug_pubtypes
-                0x000002b2       0x12 ../core/bk_system_defs.o
- .debug_pubtypes
-                0x000002c4       0x12 ../core/OS_timers.o
- .debug_pubtypes
-                0x000002d6       0x3f ../core/configuration.o
- .debug_pubtypes
-                0x00000315       0x34 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
- .debug_pubtypes
-                0x00000349       0x9d /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o)
- .debug_pubtypes
-                0x000003e6       0x86 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
- .debug_pubtypes
-                0x0000046c       0x86 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
- .debug_pubtypes
-                0x000004f2       0x91 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o)
- .debug_pubtypes
-                0x00000583       0x91 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_ge_sf.o)
- .debug_pubtypes
-                0x00000614       0x91 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_lt_sf.o)
- .debug_pubtypes
-                0x000006a5       0x7e /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
- .debug_pubtypes
-                0x00000723       0x91 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_sf_to_si.o)
- .debug_pubtypes
-                0x000007b4       0x5b /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_thenan_sf.o)
- .debug_pubtypes
-                0x0000080f       0x73 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_usi_to_sf.o)
- .debug_pubtypes
-                0x00000882       0x35 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o)
- .debug_pubtypes
-                0x000008b7       0x86 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_pack_sf.o)
- .debug_pubtypes
-                0x0000093d       0x86 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
- .debug_pubtypes
-                0x000009c3       0x5b /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
- .debug_pubtypes
-                0x00000a1e       0x1e /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clz.o)
+ *(.debug_pubtypes)
 
-.debug_ranges   0x00000000      0x378
- .debug_ranges  0x00000000       0xa8 can_msg.o
- .debug_ranges  0x000000a8       0x30 motor.o
- .debug_ranges  0x000000d8       0x98 pot.o
- .debug_ranges  0x00000170       0x18 encoder.o
- .debug_ranges  0x00000188       0x18 adc.o
- .debug_ranges  0x000001a0       0x60 ../core/can.o
- .debug_ranges  0x00000200       0x18 ../core/can_instance.o
- .debug_ranges  0x00000218       0x18 ../core/can_board_msg.o
- .debug_ranges  0x00000230       0x30 ../core/can_buff.o
- .debug_ranges  0x00000260       0x68 ../core/pwm.o
- .debug_ranges  0x000002c8       0x18 ../core/OS_timers.o
- .debug_ranges  0x000002e0       0x18 ../core/configuration.o
- .debug_ranges  0x000002f8       0x30 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
- .debug_ranges  0x00000328       0x38 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
- .debug_ranges  0x00000360       0x18 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
+.debug_ranges   0x00000000      0x358
+ *(.debug_ranges)
+ .debug_ranges  0x00000000       0x18 bigmotor_main.o
+ .debug_ranges  0x00000018       0xc0 can_msg.o
+ .debug_ranges  0x000000d8       0x18 calibrations.o
+ .debug_ranges  0x000000f0       0x48 motor.o
+ .debug_ranges  0x00000138       0x70 pot.o
+ .debug_ranges  0x000001a8       0x18 encoder.o
+ .debug_ranges  0x000001c0       0x18 adc.o
+ .debug_ranges  0x000001d8       0x18 ../core/can.o
+ .debug_ranges  0x000001f0       0x18 ../core/can_instance.o
+ .debug_ranges  0x00000208       0x18 ../core/can_board_msg.o
+ .debug_ranges  0x00000220       0x50 ../core/can_buff.o
+ .debug_ranges  0x00000270       0x50 ../core/leds.o
+ .debug_ranges  0x000002c0       0x68 ../core/pwm.o
+ .debug_ranges  0x00000328       0x18 ../core/OS_timers.o
+ .debug_ranges  0x00000340       0x18 ../core/configuration.o
+
+.debug_macro
+ *(.debug_macro)
+OUTPUT(bigmotor.elf elf32-avr)
+LOAD linker stubs

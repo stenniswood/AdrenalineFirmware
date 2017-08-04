@@ -52,6 +52,12 @@
 /******* BUTTON BOARD *******************************************************************/
 #define ID_BUTTON_PRESSED				0x0035  // (Instance goes with transmitter)
 #define ID_BUTTON_ROSTER				0x0036	// "
+/******* BATTERY MONITOR  BOARD *******************************************************************/
+#define ID_BMS_CURRENT_1				0x0037	// 
+#define ID_BMS_CURRENT_2				0x0038	// 
+#define ID_BMS_CURRENT_3				0x0039	// 
+#define ID_BMS_CURRENT_4				0x003A	// 
+
 
 /******* BIGMOTOR ***********************************************************************/
 // RECEIVING MESSAGE IDs (higher ids should prioritize higher):

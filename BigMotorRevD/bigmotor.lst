@@ -25,13 +25,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  10 .debug_frame  00000ec0  00000000  00000000  0001854c  2**2
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_str    000029a8  00000000  00000000  0001940c  2**0
+ 11 .debug_str    0000296c  00000000  00000000  0001940c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_loc    00003857  00000000  00000000  0001bdb4  2**0
+ 12 .debug_loc    00003857  00000000  00000000  0001bd78  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_pubtypes 00000a3c  00000000  00000000  0001f60b  2**0
+ 13 .debug_pubtypes 00000a3c  00000000  00000000  0001f5cf  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_ranges 00000378  00000000  00000000  00020047  2**0
+ 14 .debug_ranges 00000378  00000000  00000000  0002000b  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -8787,9 +8787,6 @@ void addMailboxHistory( struct sCAN* mMsg )
     2c9e:	08 95       	ret
 
 00002ca0 <_Z12QueueMessageP4sCAN>:
-extern byte sys_config_byte;
-
-inline byte isConfigured (byte Test)	{  return ((config_byte_1 & Test)>0); };
 inline byte isConfigured2(byte Test)	{  return ((config_byte_2 & Test)>0); };
 inline byte isConfigured3(byte Test)	{  return ((config_byte_3 & Test)>0); };
 inline byte isConfigured4(byte Test)	{  return ((config_byte_4 & Test)>0); };
@@ -9983,7 +9980,7 @@ void set_dutyA( float mDuty )
     31ee:	1f 93       	push	r17
     31f0:	7b 01       	movw	r14, r22
     31f2:	8c 01       	movw	r16, r24
-	if (mDuty<0)  mDuty = -mDuty;	// make it positive.
+	if (mDuty<0)  mDuty = -mDuty;	// make it positive
     31f4:	20 e0       	ldi	r18, 0x00	; 0
     31f6:	30 e0       	ldi	r19, 0x00	; 0
     31f8:	a9 01       	movw	r20, r18
@@ -10021,7 +10018,7 @@ void OCR1A_Write( unsigned int i )
     3236:	8f bf       	out	0x3f, r24	; 63
 void set_dutyA( float mDuty )
 {
-	if (mDuty<0)  mDuty = -mDuty;	// make it positive.
+	if (mDuty<0)  mDuty = -mDuty;	// make it positive
 	word counts = ceil( (float)TOP * mDuty );
 	OCR1A_Write( counts );
 }

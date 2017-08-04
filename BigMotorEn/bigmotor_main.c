@@ -8,12 +8,13 @@ avrdude -p atmega32m1 -b 19200 -c avrisp -P /dev/tty.usbmodemfd131 -Uefuse:w:0xF
 
 DATE 	:  8/8/2013
 AUTHOR	:  Stephen Tenniswood
-Product of Beyond Kinetics, Inc   
-============================== CAN MESSAGES ===========================
+Product of Beyond Kinetics, Inc 
+============================== CAN MESSAGES =========================== 
 To compile on MacBook Pro:
 Add : /usr/local/CrossPack-AVR-20120217/bin:
 to the front of PATH environment variable.  For example:
-> PATH=/usr/local/CrossPack-AVR-20120217/bin:/opt/local/bin:/opt/local/sbin:/sw/bin:/sw/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/stephentenniswood/Downloads/android-sdk-mac_x86/platform-tools/:/usr/local/bin:/opt/X11/bin
+> PATH=/usr/local/CrossPack-AVR-20120217/bin:$PATH
+/opt/local/bin:/opt/local/sbin:/sw/bin:/sw/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/stephentenniswood/Downloads/android-sdk-mac_x86/platform-tools/:/usr/local/bin:/opt/X11/bin
 
 
 // RECEIVING MESSAGE IDs (higher ids should prioritize higher):
@@ -131,13 +132,10 @@ void init()
 	set_configure_callback	( config_change    );
 	sei();
 
-	OS_InitTask();
+	//OS_InitTask();
 	pot_init();	
 	motor_init ();
 	//encoder_init();
-	
-//	can_prep_instance_request( &msg2, 0xBB );
-//	can_send_msg( 0, &msg2 );
 }
 
 //********** main *****************************************************
@@ -145,15 +143,26 @@ word prevPosition = 0;
 int main(void)
 {
 	init();
+	//motor_set_duty( 0.25, 1 );
+	set_dutyA( 0.25 );
+	set_dutyB( 0.50 );
+
     while (1)
     {
     	// CAN Messaging will directly Start/Stop the motor.
-		delay(one_second); delay(one_second); 
-
-//		can_prep_eeprom_dump1_msg( );
-//		can_prep_eeprom_dump2_msg( );
-//		can_prep_eeprom_dump3_msg( );			
+		set_motor_direction( 1 );
+		delay(one_second); 
+		set_motor_direction( 0 );		
+		delay(one_second); 
     }
     return (0);
 }
 
+
+
+
+//	can_prep_instance_request( &msg2, 0xBB );
+//	can_send_msg( 0, &msg2 );
+//		can_prep_eeprom_dump1_msg( );
+//		can_prep_eeprom_dump2_msg( );
+//		can_prep_eeprom_dump3_msg( );			

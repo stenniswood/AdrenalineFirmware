@@ -1152,7 +1152,7 @@ LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a
  .debug_frame   0x00000e80       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
  .debug_frame   0x00000ea0       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
 
-.debug_str      0x00000000     0x29a8
+.debug_str      0x00000000     0x296c
  *(.debug_str)
  .debug_str     0x00000000      0x290 bigmotor_main.o
                                 0x2ef (size before relaxing)
@@ -1170,54 +1170,54 @@ LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a
                                 0x10c (size before relaxing)
  .debug_str     0x00001113      0x185 adc.o
                                 0x2de (size before relaxing)
- .debug_str     0x00001298      0x4c3 ../core/can.o
-                                0x6b9 (size before relaxing)
- .debug_str     0x0000175b      0x232 ../core/can_instance.o
-                                0x489 (size before relaxing)
- .debug_str     0x0000198d      0x139 ../core/can_eid.o
-                                0x252 (size before relaxing)
- .debug_str     0x00001ac6      0x2d4 ../core/can_board_msg.o
-                                0x5ad (size before relaxing)
- .debug_str     0x00001d9a      0x16a ../core/can_buff.o
-                                0x3b4 (size before relaxing)
- .debug_str     0x00001f04      0x208 ../core/leds.o
-                                0x361 (size before relaxing)
- .debug_str     0x0000210c      0x1ac ../core/pwm.o
-                                0x276 (size before relaxing)
- .debug_str     0x000022b8       0x4d ../core/bk_system_defs.o
-                                0x10a (size before relaxing)
- .debug_str     0x00002305       0xf8 ../core/OS_timers.o
-                                0x1e1 (size before relaxing)
- .debug_str     0x000023fd      0x2a9 ../core/configuration.o
-                                0x5b3 (size before relaxing)
- .debug_str     0x000026a6       0xc2 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
+ .debug_str     0x00001298      0x487 ../core/can.o
+                                0x6bb (size before relaxing)
+ .debug_str     0x0000171f      0x232 ../core/can_instance.o
+                                0x48b (size before relaxing)
+ .debug_str     0x00001951      0x139 ../core/can_eid.o
+                                0x254 (size before relaxing)
+ .debug_str     0x00001a8a      0x2d4 ../core/can_board_msg.o
+                                0x5af (size before relaxing)
+ .debug_str     0x00001d5e      0x16a ../core/can_buff.o
+                                0x3b6 (size before relaxing)
+ .debug_str     0x00001ec8      0x208 ../core/leds.o
+                                0x363 (size before relaxing)
+ .debug_str     0x000020d0      0x1ac ../core/pwm.o
+                                0x278 (size before relaxing)
+ .debug_str     0x0000227c       0x4d ../core/bk_system_defs.o
+                                0x10c (size before relaxing)
+ .debug_str     0x000022c9       0xf8 ../core/OS_timers.o
+                                0x1e3 (size before relaxing)
+ .debug_str     0x000023c1      0x2a9 ../core/configuration.o
+                                0x5b5 (size before relaxing)
+ .debug_str     0x0000266a       0xc2 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fixunssfsi.o)
                                 0x13b (size before relaxing)
- .debug_str     0x00002768      0x145 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o)
+ .debug_str     0x0000272c      0x145 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_addsub_sf.o)
                                 0x24e (size before relaxing)
- .debug_str     0x000028ad       0x27 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
+ .debug_str     0x00002871       0x27 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_mul_sf.o)
                                 0x207 (size before relaxing)
- .debug_str     0x000028d4       0x35 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
+ .debug_str     0x00002898       0x35 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_div_sf.o)
                                 0x210 (size before relaxing)
- .debug_str     0x00002909        0x8 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o)
+ .debug_str     0x000028cd        0x8 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_gt_sf.o)
                                 0x1d5 (size before relaxing)
- .debug_str     0x00002911        0x8 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_ge_sf.o)
+ .debug_str     0x000028d5        0x8 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_ge_sf.o)
                                 0x1d5 (size before relaxing)
- .debug_str     0x00002919        0x8 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_lt_sf.o)
+ .debug_str     0x000028dd        0x8 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_lt_sf.o)
                                 0x1d5 (size before relaxing)
- .debug_str     0x00002921       0x27 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
+ .debug_str     0x000028e5       0x27 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_si_to_sf.o)
                                 0x1c4 (size before relaxing)
- .debug_str     0x00002948        0xa /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_sf_to_si.o)
+ .debug_str     0x0000290c        0xa /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_sf_to_si.o)
                                 0x1de (size before relaxing)
  .debug_str     0x00000000      0x180 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_thenan_sf.o)
- .debug_str     0x00002952       0x14 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_usi_to_sf.o)
+ .debug_str     0x00002916       0x14 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_usi_to_sf.o)
                                 0x1c0 (size before relaxing)
- .debug_str     0x00002966       0x17 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o)
+ .debug_str     0x0000292a       0x17 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clzsi2.o)
                                 0x147 (size before relaxing)
- .debug_str     0x0000297d       0x10 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_pack_sf.o)
+ .debug_str     0x00002941       0x10 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_pack_sf.o)
                                 0x1dd (size before relaxing)
- .debug_str     0x0000298d        0xb /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
+ .debug_str     0x00002951        0xb /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_unpack_sf.o)
                                 0x1bf (size before relaxing)
- .debug_str     0x00002998       0x10 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
+ .debug_str     0x0000295c       0x10 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_fpcmp_parts_sf.o)
                                 0x1a3 (size before relaxing)
  .debug_str     0x00000000      0x12a /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clz.o)
 

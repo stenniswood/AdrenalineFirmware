@@ -1,0 +1,19 @@
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include "slre.h"
+#include "protocol.h"
+
+
+int main()
+{
+	init_configuration();
+	
+	test();	
+	/*mot_test("motorspeed:v128 W324 x123 y234 z345");
+	mot_test("motorspeed:v128 W324 x123");	
+	mot_test("motorposition:x123");	
+	mot_test("motorspeed:y123");
+	*/
+	return 0;
+}

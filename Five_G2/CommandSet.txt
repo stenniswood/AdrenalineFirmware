@@ -1,0 +1,65 @@
+KINETIC DRIVE FIVE PROTOCOL : 
+
+        use encoder          - positioning & speed are determined by the encoders
+        use potentiometer    - positioning & speed are determined by the pots
+
+SETUP COMMANDS: 
+        select unit (counts|inches|feet|meter) - select active unit
+        read unit            - display the currently selected unit
+        set [number] counts_per_unit (v,w,x,y,z) - number of encoder counts 
+                                 that make up the unit (ie 400 counts/inch)
+        read counts_per_unit - displays counts per unit for all axes;
+        enable limits (v w x y z all)  - limit switches will stop motor action.
+        disable limits (v w x y z all) - limit switches are ignored.
+        set Kp v0.035 w0.15 x1.0 y0.5 z20.0 - Proportionality constant for PID control
+        set Ki v0.035 w0.15 x1.0 y0.5 z20.0 - Integral constant for PID control
+        set Kd v0.035 w0.15 z20.0           - Derivative constant for PID control
+
+
+MOTOR MOVE COMMANDS: 
+        PWM v0.2 w0.5 x0.0 y1.0 z0.5 - set the duty cycle of each axis
+                                       (values should range from 0.00 to 1.00) 
+        POS v10500 w9999.5 x500 y450.5 z607 - Move the motors until position
+                                             is reached (PID control).
+        set/read destination v[number] w[number] x[number] y[number] z[number]
+                   Change/show the motion end point. each axis is optional
+        speed v300 w999.5 x200 y450 z607 - Move the motors at specified speed
+                                    (PID control).
+        home                 - move all motors until near limit switch is triggered.
+        measure travel (all v w x y z) - measures the counts until far
+                                                 limit switch is triggered.
+        stop                 - stop all motors.
+
+FEEDBACK COMMANDS: 
+        read position        - read the position (based on pots or encoders);
+        read speed           - speed is deltas of the position;
+        read current         - the current through each motor;
+        read status          - okay, over temp, over current, etc;
+        read base frequency  - the frequency of the pwm drive signals;
+        set base frequency [number] - the frequency of the pwm drive signals (Hz);
+        zero encoder (v w x y z all) - mark current positions as 0 counts.
+		stream               - Continuously send current positions (toggle)
+
+2 WHEELED ROBOT COMMANDS:  v and w axes can be designated for a 2 wheel
+                              differential robot.
+        set wheel separation [number] - the distance (in selected unit) between the
+                                 left & right wheels.
+        set wheel diameter [number]  - the diameter (in selected unit) of the wheels
+        set counts_per_rev [number]  - the number of counts per rev for convenience 
+                              this will update the counts_per_unit configuration value
+        spin [number] degrees - this instructs it to spin in place ending up facing a
+                         new direction.
+
+        forward [number]     - move robot forward __ number of units
+                        (whatever is selected)
+        backward [number]    - move robot forward __ number of units
+                        (whatever is selected)
+        read robot info      - displays the calibrated info about the robot.
+
+CONFIGURATION:
+        save configuration    - Save all configurtion data to EEPROM.
+        read configuration    - Read all configurtion data from EEPROM..
+        default configuration - Initialize configurtion data.
+        read serial number    - for board identification.
+        read version          - of this firmware.
+	

@@ -1,6 +1,7 @@
 #ifndef _CANI_MSG_H_
 #define _CANI_MSG_H_
 
+
 // Each module sends a message to identify itself (type of device, and 
 // SerialNumber)
 const byte AdrenalineEdge_ID	  = 0x01;

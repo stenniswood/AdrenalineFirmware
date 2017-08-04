@@ -1,8 +1,3 @@
-						Join us:
-					http://www.beyond-kinetics.com
-		This archive contains the internals firmware for the Adrenaline product line.
-		
-
 If the make command does not work:
 	This is because a new XCode changed the path.  You need to put the CrossPack compiler path before the /usr/bin/
 

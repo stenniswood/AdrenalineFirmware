@@ -157,7 +157,7 @@ mDuty	- 	[0 to 1.00]  Fraction
 */
 void set_dutyA( float mDuty )
 {
-	if (mDuty<0)  mDuty = -mDuty;	// make it positive.
+	if (mDuty<0)  mDuty = -mDuty;	// make it positive
 	word counts = ceil( (float)TOP * mDuty );
 	OCR1A_Write( counts );
 }

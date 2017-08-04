@@ -48,13 +48,11 @@ void OS_Dispatch()
 {	
 	if ((OS_Event_TIC_Counter % 5) == 0)	// 5ms tasks
 	{
-		//FS_Timeslice();
+		//FS_Timeslice();		keep out.
 	}
 	if ((OS_Event_TIC_Counter % 10) == 0) 	// 10ms tasks
 	{		
-		motor_timeslice_10ms();
-		report_timeslice_10ms();
-		pot_timeslice();					// update speed,accel
+		//report_timeslice_10ms();
 	}
 	if ((OS_Event_TIC_Counter % 20) == 0)	// 20ms tasks
 	{	

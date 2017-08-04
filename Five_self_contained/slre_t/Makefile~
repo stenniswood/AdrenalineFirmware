@@ -1,0 +1,5 @@
+
+
+all:
+	gcc -c slre.c slre_main.c protocol.c
+	gcc -o test slre.o slre_main.o protocol.o

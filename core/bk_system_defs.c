@@ -1,7 +1,6 @@
 #include <avr/sfr_defs.h>
 #include "inttypes.h"
 #include "interrupt.h"
-
 #include "bk_system_defs.h"
 
 
@@ -16,8 +15,6 @@ void delay( long int mdelay )
 void chip_init(void)
 {
 // If using crystal oscillator of 16 Mhz   
-// Note - May want to set the CKDIV8 fuse if MCU is only supposed to run
-// at 8MHz so as not to exceed its operating conditions at startup.
 //   CLKPR = ( 1 << CLKPCE );       // Set Clock Prescaler change enable
 //   CLKPR = 0x01;            		// Clock Division Factor of 2
 // Note - CLKPR must be written within 4 clock cycles of setting CLKPCE
